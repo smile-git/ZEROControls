@@ -23,6 +23,7 @@
 @implementation ZEROListViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     self.title = @"ZEROControls";
@@ -32,11 +33,17 @@
     [self configureTableView];
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    
+    [super viewDidAppear:animated];
+    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+}
 
 - (void)configureDataSource{
     
     NSArray *array = @[[ZEROListModel initWithName:@"弧形列表(tableView)" controller:@"BezierTableViewController"],
-                       [ZEROListModel initWithName:@"弧形列表(collectionView)" controller:@"BezierCollectionViewController"]];
+                       [ZEROListModel initWithName:@"弧形列表(collectionView)" controller:@"BezierCollectionViewController"],
+                       [ZEROListModel initWithName:@"导航 + 弹出框" controller:@"AddListViewController"]];
     
     self.items = [NSMutableArray array];
     
@@ -81,9 +88,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CellDataItem *item = _items[indexPath.row];
-    ZEROListCell *cell = [tableView dequeueReusableCellWithIdentifier:item.cellReuseIdentifier];
-    cell.dataItem      = item;
+    CellDataItem *item  = _items[indexPath.row];
+    ZEROListCell *cell  = [tableView dequeueReusableCellWithIdentifier:item.cellReuseIdentifier];
+    cell.dataItem       = item;
+    cell.indexPath      = indexPath;
+    
     [cell loadContent];
     
     return cell;
