@@ -3,3 +3,5 @@
 
 ####学习：
 1.https://github.com/smile-git/Animations
+
+2.https://github.com/knutigro/COBezierTableView (swift版BezierTableView)
