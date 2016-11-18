@@ -46,11 +46,15 @@
 		879F5A301DDCD7BE000185F8 /* BezierTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F5A2F1DDCD7BE000185F8 /* BezierTableViewController.m */; };
 		879F5A341DDCEBD4000185F8 /* BezierCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F5A331DDCEBD4000185F8 /* BezierCollectionViewController.m */; };
 		879F5A371DDCEBFE000185F8 /* NavRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F5A361DDCEBFE000185F8 /* NavRootViewController.m */; };
-		87EBFACA1DDDF17700677DB9 /* AddSelectListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87EBFAC31DDDF17700677DB9 /* AddSelectListView.m */; };
 		87EBFACB1DDDF17700677DB9 /* AddSelectListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87EBFAC51DDDF17700677DB9 /* AddSelectListCell.m */; };
 		87EBFACC1DDDF17700677DB9 /* AddSelectListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 87EBFAC71DDDF17700677DB9 /* AddSelectListItem.m */; };
-		87EBFACD1DDDF17700677DB9 /* AddSelectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87EBFAC91DDDF17700677DB9 /* AddSelectListViewController.m */; };
 		87EBFAD11DDDF1FD00677DB9 /* AddListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87EBFAD01DDDF1FD00677DB9 /* AddListViewController.m */; };
+		87EBFAD71DDE028500677DB9 /* PhotoChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87EBFAD61DDE028500677DB9 /* PhotoChooseViewController.m */; };
+		87EBFADA1DDE155000677DB9 /* BezierLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 87EBFAD91DDE155000677DB9 /* BezierLayout.m */; };
+		87EBFADD1DDE157700677DB9 /* BezierCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87EBFADC1DDE157700677DB9 /* BezierCollectionCell.m */; };
+		87EBFAE01DDEA32B00677DB9 /* AddListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87EBFADF1DDEA32B00677DB9 /* AddListController.m */; };
+		87EBFAE31DDEA9AE00677DB9 /* AddListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87EBFAE21DDEA9AE00677DB9 /* AddListView.m */; };
+		87EBFAE71DDEC1E600677DB9 /* UIView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 87EBFAE61DDEC1E600677DB9 /* UIView+Ext.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,16 +169,24 @@
 		879F5A331DDCEBD4000185F8 /* BezierCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierCollectionViewController.m; sourceTree = "<group>"; };
 		879F5A351DDCEBFE000185F8 /* NavRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavRootViewController.h; sourceTree = "<group>"; };
 		879F5A361DDCEBFE000185F8 /* NavRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavRootViewController.m; sourceTree = "<group>"; };
-		87EBFAC21DDDF17700677DB9 /* AddSelectListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSelectListView.h; sourceTree = "<group>"; };
-		87EBFAC31DDDF17700677DB9 /* AddSelectListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSelectListView.m; sourceTree = "<group>"; };
 		87EBFAC41DDDF17700677DB9 /* AddSelectListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSelectListCell.h; sourceTree = "<group>"; };
 		87EBFAC51DDDF17700677DB9 /* AddSelectListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSelectListCell.m; sourceTree = "<group>"; };
 		87EBFAC61DDDF17700677DB9 /* AddSelectListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSelectListItem.h; sourceTree = "<group>"; };
 		87EBFAC71DDDF17700677DB9 /* AddSelectListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSelectListItem.m; sourceTree = "<group>"; };
-		87EBFAC81DDDF17700677DB9 /* AddSelectListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSelectListViewController.h; sourceTree = "<group>"; };
-		87EBFAC91DDDF17700677DB9 /* AddSelectListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSelectListViewController.m; sourceTree = "<group>"; };
 		87EBFACF1DDDF1FD00677DB9 /* AddListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddListViewController.h; sourceTree = "<group>"; };
 		87EBFAD01DDDF1FD00677DB9 /* AddListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddListViewController.m; sourceTree = "<group>"; };
+		87EBFAD51DDE028500677DB9 /* PhotoChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoChooseViewController.h; sourceTree = "<group>"; };
+		87EBFAD61DDE028500677DB9 /* PhotoChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoChooseViewController.m; sourceTree = "<group>"; };
+		87EBFAD81DDE155000677DB9 /* BezierLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierLayout.h; sourceTree = "<group>"; };
+		87EBFAD91DDE155000677DB9 /* BezierLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierLayout.m; sourceTree = "<group>"; };
+		87EBFADB1DDE157700677DB9 /* BezierCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierCollectionCell.h; sourceTree = "<group>"; };
+		87EBFADC1DDE157700677DB9 /* BezierCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierCollectionCell.m; sourceTree = "<group>"; };
+		87EBFADE1DDEA32B00677DB9 /* AddListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddListController.h; sourceTree = "<group>"; };
+		87EBFADF1DDEA32B00677DB9 /* AddListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddListController.m; sourceTree = "<group>"; };
+		87EBFAE11DDEA9AE00677DB9 /* AddListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddListView.h; sourceTree = "<group>"; };
+		87EBFAE21DDEA9AE00677DB9 /* AddListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddListView.m; sourceTree = "<group>"; };
+		87EBFAE51DDEC1E600677DB9 /* UIView+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Ext.h"; sourceTree = "<group>"; };
+		87EBFAE61DDEC1E600677DB9 /* UIView+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Ext.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,9 +299,10 @@
 		879F59BC1DDCB6AB000185F8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				87EBFACE1DDDF1B400677DB9 /* AddListViewController */,
-				879F5A311DDCEBB1000185F8 /* BezierCollectionViewController */,
 				879F5A211DDCD3F0000185F8 /* BezierTableViewController */,
+				879F5A311DDCEBB1000185F8 /* BezierCollectionViewController */,
+				87EBFACE1DDDF1B400677DB9 /* AddListViewController */,
+				87EBFAD41DDE026D00677DB9 /* PhotoChooseViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -325,6 +338,7 @@
 		879F59D31DDCCC64000185F8 /* UI-Component */ = {
 			isa = PBXGroup;
 			children = (
+				87EBFAE41DDEC1A900677DB9 /* UIView+Ext */,
 				879F59D41DDCCC8A000185F8 /* UIFont+Categories */,
 			);
 			path = "UI-Component";
@@ -444,6 +458,10 @@
 			children = (
 				879F5A321DDCEBD4000185F8 /* BezierCollectionViewController.h */,
 				879F5A331DDCEBD4000185F8 /* BezierCollectionViewController.m */,
+				87EBFAD81DDE155000677DB9 /* BezierLayout.h */,
+				87EBFAD91DDE155000677DB9 /* BezierLayout.m */,
+				87EBFADB1DDE157700677DB9 /* BezierCollectionCell.h */,
+				87EBFADC1DDE157700677DB9 /* BezierCollectionCell.m */,
 			);
 			name = BezierCollectionViewController;
 			sourceTree = "<group>";
@@ -451,14 +469,14 @@
 		87EBFAB51DDDEE5300677DB9 /* AddListView */ = {
 			isa = PBXGroup;
 			children = (
-				87EBFAC21DDDF17700677DB9 /* AddSelectListView.h */,
-				87EBFAC31DDDF17700677DB9 /* AddSelectListView.m */,
 				87EBFAC41DDDF17700677DB9 /* AddSelectListCell.h */,
 				87EBFAC51DDDF17700677DB9 /* AddSelectListCell.m */,
 				87EBFAC61DDDF17700677DB9 /* AddSelectListItem.h */,
 				87EBFAC71DDDF17700677DB9 /* AddSelectListItem.m */,
-				87EBFAC81DDDF17700677DB9 /* AddSelectListViewController.h */,
-				87EBFAC91DDDF17700677DB9 /* AddSelectListViewController.m */,
+				87EBFADE1DDEA32B00677DB9 /* AddListController.h */,
+				87EBFADF1DDEA32B00677DB9 /* AddListController.m */,
+				87EBFAE11DDEA9AE00677DB9 /* AddListView.h */,
+				87EBFAE21DDEA9AE00677DB9 /* AddListView.m */,
 			);
 			path = AddListView;
 			sourceTree = "<group>";
@@ -470,6 +488,24 @@
 				87EBFAD01DDDF1FD00677DB9 /* AddListViewController.m */,
 			);
 			name = AddListViewController;
+			sourceTree = "<group>";
+		};
+		87EBFAD41DDE026D00677DB9 /* PhotoChooseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				87EBFAD51DDE028500677DB9 /* PhotoChooseViewController.h */,
+				87EBFAD61DDE028500677DB9 /* PhotoChooseViewController.m */,
+			);
+			name = PhotoChooseViewController;
+			sourceTree = "<group>";
+		};
+		87EBFAE41DDEC1A900677DB9 /* UIView+Ext */ = {
+			isa = PBXGroup;
+			children = (
+				87EBFAE51DDEC1E600677DB9 /* UIView+Ext.h */,
+				87EBFAE61DDEC1E600677DB9 /* UIView+Ext.m */,
+			);
+			name = "UIView+Ext";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -611,10 +647,10 @@
 				879F5A1F1DDCD1C0000185F8 /* POPVector.mm in Sources */,
 				879F5A151DDCD1C0000185F8 /* POPAnimator.mm in Sources */,
 				879F5A1E1DDCD1C0000185F8 /* POPSpringAnimation.mm in Sources */,
-				87EBFACD1DDDF17700677DB9 /* AddSelectListViewController.m in Sources */,
 				87EBFACB1DDDF17700677DB9 /* AddSelectListCell.m in Sources */,
 				879F59C51DDCC14F000185F8 /* ZEROListModel.m in Sources */,
 				879F5A131DDCD1C0000185F8 /* POPAnimationRuntime.mm in Sources */,
+				87EBFADA1DDE155000677DB9 /* BezierLayout.m in Sources */,
 				879F59CE1DDCC340000185F8 /* CellDataItem.m in Sources */,
 				879F5A301DDCD7BE000185F8 /* BezierTableViewController.m in Sources */,
 				879F5A121DDCD1C0000185F8 /* POPAnimationExtras.mm in Sources */,
@@ -623,25 +659,29 @@
 				879F59D71DDCCC9F000185F8 /* UIFont+Fonts.m in Sources */,
 				879F59811DDC1F94000185F8 /* ViewController.m in Sources */,
 				879F5A0F1DDCD1C0000185F8 /* POPAnimatableProperty.mm in Sources */,
+				87EBFAD71DDE028500677DB9 /* PhotoChooseViewController.m in Sources */,
 				879F5A1C1DDCD1C0000185F8 /* POPMath.mm in Sources */,
 				879F5A341DDCEBD4000185F8 /* BezierCollectionViewController.m in Sources */,
 				879F5A201DDCD1C0000185F8 /* TransformationMatrix.cpp in Sources */,
+				87EBFAE01DDEA32B00677DB9 /* AddListController.m in Sources */,
 				879F5A1D1DDCD1C0000185F8 /* POPPropertyAnimation.mm in Sources */,
 				879F59CA1DDCC2FB000185F8 /* CustomCell.m in Sources */,
-				87EBFACA1DDDF17700677DB9 /* AddSelectListView.m in Sources */,
 				879F597E1DDC1F94000185F8 /* AppDelegate.m in Sources */,
 				879F59D21DDCC598000185F8 /* ZEROListCell.m in Sources */,
 				87EBFACC1DDDF17700677DB9 /* AddSelectListItem.m in Sources */,
 				879F5A371DDCEBFE000185F8 /* NavRootViewController.m in Sources */,
+				87EBFAE31DDEA9AE00677DB9 /* AddListView.m in Sources */,
 				879F59C21DDCC120000185F8 /* ZEROListViewController.m in Sources */,
 				879F5A111DDCD1C0000185F8 /* POPAnimationEvent.mm in Sources */,
 				879F5A271DDCD440000185F8 /* ZEROBezierCell.m in Sources */,
 				879F5A141DDCD1C0000185F8 /* POPAnimationTracer.mm in Sources */,
+				87EBFADD1DDE157700677DB9 /* BezierCollectionCell.m in Sources */,
 				879F5A291DDCD440000185F8 /* ZEROBezierTableView.m in Sources */,
 				879F5A1B1DDCD1C0000185F8 /* POPLayerExtras.mm in Sources */,
 				879F5A101DDCD1C0000185F8 /* POPAnimation.mm in Sources */,
 				879F5A1A1DDCD1C0000185F8 /* POPGeometry.mm in Sources */,
 				879F5A2D1DDCD545000185F8 /* NavPushViewController.m in Sources */,
+				87EBFAE71DDEC1E600677DB9 /* UIView+Ext.m in Sources */,
 				879F597B1DDC1F94000185F8 /* main.m in Sources */,
 				879F5A161DDCD1C0000185F8 /* POPBasicAnimation.mm in Sources */,
 				879F5A181DDCD1C0000185F8 /* POPCustomAnimation.mm in Sources */,

@@ -50,7 +50,7 @@
     _listIcon.image = [UIImage imageNamed:item.icon];
     _listTitle.text = item.title;
     
-    _listIcon.hidden  = item.icon == nil ? YES : NO;
+    _listIcon.hidden  = item.icon  == nil ? YES : NO;
     _listTitle.hidden = item.title == nil ? YES : NO;
 }
 
@@ -58,14 +58,16 @@
 {
     [super layoutSubviews];
     
-    _listIcon.frame  = CGRectMake(15,10,20,20);;
+    _listIcon.frame  = CGRectMake(15, 10, 20, 20);;
     _listTitle.frame = CGRectMake(45, 0, 80, self.frame.size.height);
     
     if (_listIcon.hidden) {
+        
         _listTitle.center = CGPointMake(self.frame.size.width / 2, self.frame.size.height / 2);
     }
     
     if (_listTitle.hidden) {
+        
         _listIcon.center = CGPointMake(self.frame.size.width / 2, self.frame.size.height / 2);
     }
 }

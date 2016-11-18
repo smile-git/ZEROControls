@@ -23,7 +23,6 @@
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:UIColorRGBA(220, 220, 220, 1)}];
     
     //开启系统右滑返回
-    //第一步
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
         self.navigationController.interactivePopGestureRecognizer.enabled  = YES;     // 手势有效设置为YES  无效为NO
         self.navigationController.interactivePopGestureRecognizer.delegate = self;    // 手势的代理设置为self
