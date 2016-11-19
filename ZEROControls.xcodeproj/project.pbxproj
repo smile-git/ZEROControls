@@ -53,6 +53,7 @@
 		871677931DE0C8A5003772C0 /* ResponseData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8716778E1DE0C8A5003772C0 /* ResponseData.m */; };
 		871677941DE0C8A5003772C0 /* WaterfallPictureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 871677901DE0C8A5003772C0 /* WaterfallPictureModel.m */; };
 		871677971DE0C90D003772C0 /* BezierCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 871677961DE0C90D003772C0 /* BezierCollectionViewController.m */; };
+		8716779B1DE0CBD4003772C0 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8716779A1DE0CBD4003772C0 /* FileManager.m */; };
 		879F597B1DDC1F94000185F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F597A1DDC1F94000185F8 /* main.m */; };
 		879F597E1DDC1F94000185F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F597D1DDC1F94000185F8 /* AppDelegate.m */; };
 		879F59811DDC1F94000185F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F59801DDC1F94000185F8 /* ViewController.m */; };
@@ -214,6 +215,8 @@
 		871677901DE0C8A5003772C0 /* WaterfallPictureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfallPictureModel.m; sourceTree = "<group>"; };
 		871677951DE0C90D003772C0 /* BezierCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierCollectionViewController.h; sourceTree = "<group>"; };
 		871677961DE0C90D003772C0 /* BezierCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierCollectionViewController.m; sourceTree = "<group>"; };
+		871677991DE0CBD4003772C0 /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
+		8716779A1DE0CBD4003772C0 /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
 		879F59761DDC1F94000185F8 /* ZEROControls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZEROControls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879F597A1DDC1F94000185F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		879F597C1DDC1F94000185F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -501,6 +504,15 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		871677981DE0CBC9003772C0 /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				871677991DE0CBD4003772C0 /* FileManager.h */,
+				8716779A1DE0CBD4003772C0 /* FileManager.m */,
+			);
+			path = FileManager;
+			sourceTree = "<group>";
+		};
 		879F596D1DDC1F94000185F8 = {
 			isa = PBXGroup;
 			children = (
@@ -645,6 +657,7 @@
 		879F59D91DDCD15C000185F8 /* General-Tools */ = {
 			isa = PBXGroup;
 			children = (
+				871677981DE0CBC9003772C0 /* FileManager */,
 				871677451DE0C852003772C0 /* Networking */,
 				871675F51DE04AFD003772C0 /* SDWebImage */,
 				87EBFAB51DDDEE5300677DB9 /* AddListView */,
@@ -981,6 +994,7 @@
 				871676321DE04AFD003772C0 /* UIView+WebCache.m in Sources */,
 				87EBFACC1DDDF17700677DB9 /* AddSelectListItem.m in Sources */,
 				871677731DE0C852003772C0 /* AFURLSessionManager.m in Sources */,
+				8716779B1DE0CBD4003772C0 /* FileManager.m in Sources */,
 				871676331DE04AFD003772C0 /* UIView+WebCacheOperation.m in Sources */,
 				871677911DE0C8A5003772C0 /* CmtsModel.m in Sources */,
 				8716777E1DE0C852003772C0 /* UIWebView+AFNetworking.m in Sources */,

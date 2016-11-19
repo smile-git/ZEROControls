@@ -11,6 +11,7 @@
 #import "WWaterFallLayout.h"
 #import "ResponseData.h"
 #import "WaterfallPictureModel.h"
+#import "FileManager.h"
 
 static NSString *picturesSource = @"http://www.duitang.com/album/1733789/masn/p/0/100/";
 
@@ -35,7 +36,7 @@ static NSString *picturesSource = @"http://www.duitang.com/album/1733789/masn/p/
     CGFloat gap               = 1;
     NSInteger rowCount        = 3;
     _rowHeight                = (self.view.frame.size.height - 64 - (rowCount + 1) * gap) / (CGFloat)rowCount;
-    WWaterFallLayout *layout        = [WWaterFallLayout new];
+    WWaterFallLayout *layout  = [WWaterFallLayout new];
     layout.manager.edgeInsets = UIEdgeInsetsMake(gap, gap, gap, gap);
     layout.manager.gap        = gap;
     layout.delegate           = self;
@@ -60,8 +61,19 @@ static NSString *picturesSource = @"http://www.duitang.com/album/1733789/masn/p/
     // 获取数据
     dispatch_async(dispatch_get_main_queue(), ^{
         
-        NSData *data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:picturesSource]];
-        //NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"7ddb96eb43d029942aa1b84243269073" ofType:nil]];
+        NSString *string       = @"waterFall";
+        NSString *realFilePath = [FileManager theRealFilePath:[NSString stringWithFormat:@"~/Documents/%@", string]];
+        NSData   *data         = nil;
+        
+        if (![FileManager fileExistWithRealFilePath:realFilePath]) {
+            
+            data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:picturesSource]];
+            [data writeToFile:realFilePath atomically:YES];
+        
+        }else{
+            
+            data = [NSData dataWithContentsOfFile:realFilePath];
+        }
         if (data == nil) {
             return;
         }
