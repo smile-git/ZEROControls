@@ -22,7 +22,6 @@ static NSString *cellId = @"cellId";
     [super viewDidLoad];
     
     [self createTableView];
-    [self setNavControllerLeftImage:[UIImage imageNamed:@"nav_back_white"]];
 }
 
 - (void)createTableView
@@ -35,7 +34,8 @@ static NSString *cellId = @"cellId";
     
 }
 
-#pragma mark - tableview delegate
+#pragma mark - tableview delegate & datasource
+
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
     return 20;
