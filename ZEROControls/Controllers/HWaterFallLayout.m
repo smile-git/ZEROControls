@@ -1,27 +1,27 @@
 //
-//  WWaterFallLayout.m
-//  WWaterFall
+//  HWaterFallLayout.m
+//  ZEROControls
 //
-//  Created by ZWX on 2016/11/19.
+//  Created by ZWX on 2016/11/20.
 //  Copyright © 2016年 ZWX. All rights reserved.
 //
 
-#import "WWaterFallLayout.h"
+#import "HWaterFallLayout.h"
 
-@interface WWaterFallLayout()
+@interface HWaterFallLayout()
 
 @property (nonatomic, strong) NSMutableArray *attributes;
 
 @end
 
-@implementation WWaterFallLayout
+@implementation HWaterFallLayout
 
 - (instancetype)init{
     
     if (self = [super init]) {
         
-        self.attributes = [NSMutableArray array];
-        self.wManager   = [[WWaterFallManager alloc] init];
+        self.hManager   = [[HWaterFallManager alloc] init];
+        self.attributes = [NSMutableArray arrayWithCapacity:0];
     }
     return self;
 }
@@ -30,40 +30,39 @@
     
     [super prepareLayout];
     
-    [self.wManager reset];
+    [self.hManager reset];
     
     NSInteger itemCount = [self.collectionView numberOfItemsInSection:0];
     
     for (int idx = 0; idx < itemCount; idx ++) {
         
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:idx inSection:0];
+        
         [self.attributes addObject:[self layoutAttributesForItemAtIndexPath:indexPath]];
     }
 }
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    UICollectionViewLayoutAttributes *layoutSttributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
+    UICollectionViewLayoutAttributes *layoutAttribures = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
     
-    CGFloat itemWidth = 0;
-    //获取item的宽度
-    if (self.delegate && [self.delegate respondsToSelector:@selector(itemWidthWithIndexPath:)]) {
-        itemWidth = [self.delegate itemWidthWithIndexPath:indexPath];
+    CGFloat height = 0;
+    if (self.delegate && [self.delegate respondsToSelector:@selector(itemHeightWithIndexPath:)]) {
+        
+        height = [self.delegate itemHeightWithIndexPath:indexPath];
     }
     
-    //获取item的frame
-    [self.wManager addElement:@(itemWidth)];
+    [self.hManager addElement:@(height)];
     
-    layoutSttributes.frame = [self.wManager frameAtIndex:indexPath.item];
+    layoutAttribures.frame = [self.hManager frameAtIndex:indexPath.item];
     
-    return layoutSttributes;
+    return layoutAttribures;
 }
 
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect{
     
     NSMutableArray *layoutAttribures = [NSMutableArray arrayWithCapacity:0];
-    
-    [self.attributes enumerateObjectsUsingBlock:^(UICollectionViewLayoutAttributes *_Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [_attributes enumerateObjectsUsingBlock:^(UICollectionViewLayoutAttributes * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
         if (CGRectIntersectsRect(obj.frame, rect)) {
             
@@ -72,16 +71,12 @@
     }];
     
     return layoutAttribures;
+
 }
 
 - (CGSize)collectionViewContentSize{
     
-    return self.wManager.contentSize;
+    return _hManager.contentSize;
 }
+
 @end
-
-
-
-
-
-

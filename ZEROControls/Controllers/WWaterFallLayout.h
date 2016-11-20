@@ -19,6 +19,6 @@
 
 @interface WWaterFallLayout : UICollectionViewLayout
 
-@property (nonatomic, strong) WWaterFallManager            *manager;
+@property (nonatomic, strong) WWaterFallManager            *wManager;
 @property (nonatomic, weak)   id<WWaterFallLayoutDelegate> delegate;
 @end

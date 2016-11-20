@@ -13,7 +13,7 @@
 #import "WaterfallPictureModel.h"
 #import "FileManager.h"
 
-static NSString *picturesSource = @"http://www.duitang.com/album/1733789/masn/p/0/100/";
+static NSString *picturesSource = @"http://www.duitang.com/album/1733789/masn/p/0/50/";
 
 @interface WWaterFallViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, WWaterFallLayoutDelegate>
 
@@ -33,22 +33,22 @@ static NSString *picturesSource = @"http://www.duitang.com/album/1733789/masn/p/
     _dataSource = [NSMutableArray new];
     
     // 初始化布局文件
-    CGFloat gap               = 1;
-    NSInteger rowCount        = 3;
-    _rowHeight                = (self.view.frame.size.height - 64 - (rowCount + 1) * gap) / (CGFloat)rowCount;
-    WWaterFallLayout *layout  = [WWaterFallLayout new];
-    layout.manager.edgeInsets = UIEdgeInsetsMake(gap, gap, gap, gap);
-    layout.manager.gap        = gap;
-    layout.delegate           = self;
+    CGFloat gap                = 1;
+    NSInteger rowCount         = 3;
+    _rowHeight                 = (self.view.height - 64 - (rowCount + 1) * gap) / (CGFloat)rowCount;
+    WWaterFallLayout *layout   = [WWaterFallLayout new];
+    layout.wManager.edgeInsets = UIEdgeInsetsMake(gap, gap, gap, gap);
+    layout.wManager.gap        = gap;
+    layout.delegate            = self;
     
     NSMutableArray *rowHeights = [NSMutableArray array];
     for (int i = 0; i < rowCount; i++) {
         
         [rowHeights addObject:@(_rowHeight)];
     }
-    layout.manager.itemHeights = rowHeights;
+    layout.wManager.itemHeights = rowHeights;
     
-    self.collectionView                                = [[UICollectionView alloc] initWithFrame:self.view.bounds
+    self.collectionView                                = [[UICollectionView alloc] initWithFrame:self.view.frame
                                                                             collectionViewLayout:layout];
     self.collectionView.delegate                       = self;
     self.collectionView.dataSource                     = self;
@@ -74,7 +74,7 @@ static NSString *picturesSource = @"http://www.duitang.com/album/1733789/masn/p/
             
             data = [NSData dataWithContentsOfFile:realFilePath];
         }
-        if (data == nil) {
+         if (data == nil) {
             return;
         }
         NSDictionary *dataDic = [NSJSONSerialization JSONObjectWithData:data
