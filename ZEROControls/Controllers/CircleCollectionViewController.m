@@ -6,13 +6,13 @@
 //  Copyright © 2016年 ZWX. All rights reserved.
 //
 
-#import "BezierCollectionViewController.h"
+#import "CircleCollectionViewController.h"
 
-@interface BezierCollectionViewController ()
+@interface CircleCollectionViewController ()
 
 @end
 
-@implementation BezierCollectionViewController
+@implementation CircleCollectionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

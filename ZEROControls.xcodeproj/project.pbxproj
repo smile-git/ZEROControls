@@ -33,7 +33,7 @@
 		871677921DE0C8A5003772C0 /* PictureData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8716778C1DE0C8A5003772C0 /* PictureData.m */; };
 		871677931DE0C8A5003772C0 /* ResponseData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8716778E1DE0C8A5003772C0 /* ResponseData.m */; };
 		871677941DE0C8A5003772C0 /* WaterfallPictureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 871677901DE0C8A5003772C0 /* WaterfallPictureModel.m */; };
-		871677971DE0C90D003772C0 /* BezierCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 871677961DE0C90D003772C0 /* BezierCollectionViewController.m */; };
+		871677971DE0C90D003772C0 /* CircleCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 871677961DE0C90D003772C0 /* CircleCollectionViewController.m */; };
 		8716779B1DE0CBD4003772C0 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8716779A1DE0CBD4003772C0 /* FileManager.m */; };
 		8716779E1DE1EE83003772C0 /* HWaterFallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8716779D1DE1EE83003772C0 /* HWaterFallCell.m */; };
 		871677A11DE1EE95003772C0 /* HWaterFallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 871677A01DE1EE95003772C0 /* HWaterFallManager.m */; };
@@ -174,8 +174,8 @@
 		8716778E1DE0C8A5003772C0 /* ResponseData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseData.m; sourceTree = "<group>"; };
 		8716778F1DE0C8A5003772C0 /* WaterfallPictureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterfallPictureModel.h; sourceTree = "<group>"; };
 		871677901DE0C8A5003772C0 /* WaterfallPictureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfallPictureModel.m; sourceTree = "<group>"; };
-		871677951DE0C90D003772C0 /* BezierCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierCollectionViewController.h; sourceTree = "<group>"; };
-		871677961DE0C90D003772C0 /* BezierCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierCollectionViewController.m; sourceTree = "<group>"; };
+		871677951DE0C90D003772C0 /* CircleCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleCollectionViewController.h; sourceTree = "<group>"; };
+		871677961DE0C90D003772C0 /* CircleCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleCollectionViewController.m; sourceTree = "<group>"; };
 		871677991DE0CBD4003772C0 /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
 		8716779A1DE0CBD4003772C0 /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
 		8716779C1DE1EE83003772C0 /* HWaterFallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWaterFallCell.h; sourceTree = "<group>"; };
@@ -599,7 +599,7 @@
 			isa = PBXGroup;
 			children = (
 				879F5A211DDCD3F0000185F8 /* BezierTableViewController */,
-				879F5A311DDCEBB1000185F8 /* BezierCollectionViewController */,
+				879F5A311DDCEBB1000185F8 /* CircleCollectionViewController */,
 				87EBFACE1DDDF1B400677DB9 /* AddListViewController */,
 				87EBFAD41DDE026D00677DB9 /* PhotoChooseViewController */,
 				871676351DE0674A003772C0 /* HWaterFallLayoutController */,
@@ -757,13 +757,13 @@
 			name = CustomControllers;
 			sourceTree = "<group>";
 		};
-		879F5A311DDCEBB1000185F8 /* BezierCollectionViewController */ = {
+		879F5A311DDCEBB1000185F8 /* CircleCollectionViewController */ = {
 			isa = PBXGroup;
 			children = (
-				871677951DE0C90D003772C0 /* BezierCollectionViewController.h */,
-				871677961DE0C90D003772C0 /* BezierCollectionViewController.m */,
+				871677951DE0C90D003772C0 /* CircleCollectionViewController.h */,
+				871677961DE0C90D003772C0 /* CircleCollectionViewController.m */,
 			);
-			name = BezierCollectionViewController;
+			name = CircleCollectionViewController;
 			sourceTree = "<group>";
 		};
 		87EBFAB51DDDEE5300677DB9 /* AddListView */ = {
@@ -997,7 +997,7 @@
 				871677941DE0C8A5003772C0 /* WaterfallPictureModel.m in Sources */,
 				879F5A371DDCEBFE000185F8 /* NavRootViewController.m in Sources */,
 				87EBFAE31DDEA9AE00677DB9 /* AddListView.m in Sources */,
-				871677971DE0C90D003772C0 /* BezierCollectionViewController.m in Sources */,
+				871677971DE0C90D003772C0 /* CircleCollectionViewController.m in Sources */,
 				871677D31DE208EC003772C0 /* UIImageView+HighlightedWebCache.m in Sources */,
 				871677D01DE208EC003772C0 /* UIImage+GIF.m in Sources */,
 				879F59C21DDCC120000185F8 /* ZEROListViewController.m in Sources */,

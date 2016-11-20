@@ -8,6 +8,6 @@
 
 #import "NavPushViewController.h"
 
-@interface BezierCollectionViewController : NavPushViewController
+@interface CircleCollectionViewController : NavPushViewController
 
 @end
