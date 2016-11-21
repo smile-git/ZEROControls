@@ -18,5 +18,13 @@
     
     [super viewDidLoad];
     
+    [self createPhotos];
+}
+
+#pragma mark - create method
+
+- (void)createPhotos{
+    
+    
 }
 @end

@@ -7,8 +7,11 @@
 //
 
 #import "CircleCollectionViewController.h"
+#import "CircleLayout.h"
+#import "CircleCell.h"
+@interface CircleCollectionViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
 
-@interface CircleCollectionViewController ()
+@property (nonatomic, strong)UICollectionView *collectionView;
 
 @end
 
@@ -16,22 +19,47 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    [self createCollectionView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - create method
+- (void)createCollectionView{
+    
+    CGFloat radius          = 350.0 / 667.0 * HEIGHT;
+    CGFloat angularSpacing  = 12.0 / HEIGHT * 667.0;
+    CGFloat xOffset         = 155.0 / 375.0 * WIDTH;
+    CGFloat cell_width      = 220.0 / 375.0 * WIDTH;
+    CGFloat cell_height     = 60.0 / 667.0 * HEIGHT;
+    
+    CircleLayout *layout = [[CircleLayout alloc] initWithRadius:radius angularSpacing:angularSpacing cellSize:CGSizeMake(cell_width, cell_height) xOffset:xOffset];
+    
+    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 64, WIDTH, HEIGHT - 64) collectionViewLayout:layout];
+    _collectionView.backgroundColor = [UIColor clearColor];
+    _collectionView.delegate        = self;
+    _collectionView.dataSource      = self;
+    
+    [_collectionView registerNib:[UINib nibWithNibName:@"CircleCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"CircleCell"];
+    
+    [self.view addSubview:_collectionView];
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - collectionview delegate & datasource
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    
+    return 1;
 }
-*/
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 20;
+}
 
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CircleCell" forIndexPath:indexPath];
+    
+    return cell;
+}
 @end
