@@ -5,3 +5,5 @@
 1.https://github.com/YouXianMing/Animations
 
 2.https://github.com/knutigro/COBezierTableView (swift版BezierTableView)
+
+3.https://github.com/awdigital/AWCollectionViewDialLayout (弧形collectionView)
