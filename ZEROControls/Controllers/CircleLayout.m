@@ -81,6 +81,9 @@
 
 //计算坐标，并且是每个item，随着不断变化的offset的联合坐标
 //这个计算还是有问题的，中间cell间隔大，上下两边cell间隔小，有可能会挡住最边缘的cell(！！！已改好！！！rY坐标计算有问题)
+
+//old:  rY = sinf(self.angularSpacing * newIndex * M_PI / 180) * (self.dialRadius + deltaY);
+//这样计算的rX和rY的中心点坐标实在 z 轴里的，并不是在xy平面。
 - (CGRect)getRectForItem:(NSInteger)item{
     
     double newIndex = (item - self.offset);
