@@ -12,16 +12,11 @@
 
 @property (nonatomic, assign) NSInteger itemCount;
 
-@property (nonatomic, assign) CGPoint   center;
-@property (nonatomic, assign) CGFloat   offset;
-@property (nonatomic, assign) CGFloat   xOffset;
-@property (nonatomic, assign) CGSize    itemSize;
-@property (nonatomic, assign) CGFloat   angularSpacing;
-@property (nonatomic, assign) CGFloat   dialRadius;
-
-@property (nonatomic, assign) NSInteger selectedItem;
-
-@property (nonatomic, assign, readonly) NSIndexPath *currentIndexPath;
+@property (nonatomic, assign) CGFloat   offset;         //偏移量（偏移item数量）
+@property (nonatomic, assign) CGFloat   xOffset;        //x偏移
+@property (nonatomic, assign) CGSize    itemSize;       //item size
+@property (nonatomic, assign) CGFloat   angularSpacing; //角间距
+@property (nonatomic, assign) CGFloat   dialRadius;     //半径
 
 -(id)initWithRadius: (CGFloat)dialRadius angularSpacing: (CGFloat)angularSpacing cellSize: (CGSize)itemSize xOffset: (CGFloat)xOffset;
 

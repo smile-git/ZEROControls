@@ -28,7 +28,7 @@
 - (void)createCollectionView{
     
     CGFloat radius          = 350.0 / 667.0 * HEIGHT;
-    CGFloat angularSpacing  = 12.0 / HEIGHT * 667.0;
+    CGFloat angularSpacing  = 12.0 / 667.0 * HEIGHT;
     CGFloat xOffset         = 155.0 / 375.0 * WIDTH;
     CGFloat cell_width      = 220.0 / 375.0 * WIDTH;
     CGFloat cell_height     = 60.0 / 667.0 * HEIGHT;

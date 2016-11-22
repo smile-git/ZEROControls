@@ -225,6 +225,7 @@
 		87320F2E1DE358AD00B19A3C /* CircleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleCell.h; sourceTree = "<group>"; };
 		87320F2F1DE358AD00B19A3C /* CircleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleCell.m; sourceTree = "<group>"; };
 		87320F301DE358AD00B19A3C /* CircleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleCell.xib; sourceTree = "<group>"; };
+		87320F331DE35EBD00B19A3C /* study.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = study.h; sourceTree = "<group>"; };
 		879F59761DDC1F94000185F8 /* ZEROControls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZEROControls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879F597A1DDC1F94000185F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		879F597C1DDC1F94000185F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -568,6 +569,7 @@
 				879F597A1DDC1F94000185F8 /* main.m */,
 				879F59CF1DDCC43F000185F8 /* ZEROControls.pch */,
 				879F59D81DDCCD7B000185F8 /* Define.h */,
+				87320F331DE35EBD00B19A3C /* study.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
