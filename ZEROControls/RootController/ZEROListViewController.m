@@ -47,7 +47,8 @@
                        [ZEROListModel initWithName:@"导航 + 弹出框" controller:@"AddListViewController"],
                        [ZEROListModel initWithName:@"图片选择可排序" controller:@"PhotoChooseViewController"],
                        [ZEROListModel initWithName:@"纵向瀑布流" controller:@"HWaterFallViewController"],
-                       [ZEROListModel initWithName:@"横向瀑布流" controller:@"WWaterFallViewController"]];
+                       [ZEROListModel initWithName:@"横向瀑布流" controller:@"WWaterFallViewController"],
+                       [ZEROListModel initWithName:@"标签筛选" controller:@"SiftTagViewController"]];
 
     self.items = [NSMutableArray array];
     

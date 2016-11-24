@@ -57,6 +57,13 @@
 		87320F2D1DE3589A00B19A3C /* CircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 87320F2C1DE3589A00B19A3C /* CircleLayout.m */; };
 		87320F311DE358AD00B19A3C /* CircleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87320F2F1DE358AD00B19A3C /* CircleCell.m */; };
 		87320F321DE358AD00B19A3C /* CircleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87320F301DE358AD00B19A3C /* CircleCell.xib */; };
+		8734CC371DE76D9800F5E976 /* SiftTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8734CC361DE76D9800F5E976 /* SiftTagViewController.m */; };
+		8734CC3B1DE76F1700F5E976 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 8734CC3A1DE76F1700F5E976 /* UIImage+ImageEffects.m */; };
+		8734CC3F1DE76F3900F5E976 /* NSString+LabelWidthAndHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 8734CC3E1DE76F3900F5E976 /* NSString+LabelWidthAndHeight.m */; };
+		8734CC481DE76F8B00F5E976 /* SiftTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8734CC411DE76F8B00F5E976 /* SiftTagCell.m */; };
+		8734CC491DE76F8B00F5E976 /* SiftTagFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8734CC431DE76F8B00F5E976 /* SiftTagFlowLayout.m */; };
+		8734CC4A1DE76F8B00F5E976 /* SiftTagManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8734CC451DE76F8B00F5E976 /* SiftTagManager.m */; };
+		8734CC4B1DE76F8B00F5E976 /* SiftTagSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8734CC471DE76F8B00F5E976 /* SiftTagSectionHeaderView.m */; };
 		879F597B1DDC1F94000185F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F597A1DDC1F94000185F8 /* main.m */; };
 		879F597E1DDC1F94000185F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F597D1DDC1F94000185F8 /* AppDelegate.m */; };
 		879F59811DDC1F94000185F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F59801DDC1F94000185F8 /* ViewController.m */; };
@@ -226,6 +233,20 @@
 		87320F2F1DE358AD00B19A3C /* CircleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleCell.m; sourceTree = "<group>"; };
 		87320F301DE358AD00B19A3C /* CircleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleCell.xib; sourceTree = "<group>"; };
 		87320F331DE35EBD00B19A3C /* study.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = study.h; sourceTree = "<group>"; };
+		8734CC351DE76D9800F5E976 /* SiftTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiftTagViewController.h; sourceTree = "<group>"; };
+		8734CC361DE76D9800F5E976 /* SiftTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiftTagViewController.m; sourceTree = "<group>"; };
+		8734CC391DE76F1700F5E976 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		8734CC3A1DE76F1700F5E976 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		8734CC3D1DE76F3900F5E976 /* NSString+LabelWidthAndHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LabelWidthAndHeight.h"; sourceTree = "<group>"; };
+		8734CC3E1DE76F3900F5E976 /* NSString+LabelWidthAndHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LabelWidthAndHeight.m"; sourceTree = "<group>"; };
+		8734CC401DE76F8B00F5E976 /* SiftTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiftTagCell.h; sourceTree = "<group>"; };
+		8734CC411DE76F8B00F5E976 /* SiftTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiftTagCell.m; sourceTree = "<group>"; };
+		8734CC421DE76F8B00F5E976 /* SiftTagFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiftTagFlowLayout.h; sourceTree = "<group>"; };
+		8734CC431DE76F8B00F5E976 /* SiftTagFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiftTagFlowLayout.m; sourceTree = "<group>"; };
+		8734CC441DE76F8B00F5E976 /* SiftTagManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiftTagManager.h; sourceTree = "<group>"; };
+		8734CC451DE76F8B00F5E976 /* SiftTagManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiftTagManager.m; sourceTree = "<group>"; };
+		8734CC461DE76F8B00F5E976 /* SiftTagSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiftTagSectionHeaderView.h; sourceTree = "<group>"; };
+		8734CC471DE76F8B00F5E976 /* SiftTagSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiftTagSectionHeaderView.m; sourceTree = "<group>"; };
 		879F59761DDC1F94000185F8 /* ZEROControls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZEROControls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879F597A1DDC1F94000185F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		879F597C1DDC1F94000185F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -522,6 +543,41 @@
 			path = FileManager;
 			sourceTree = "<group>";
 		};
+		8734CC341DE76D6700F5E976 /* SiftTagViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8734CC351DE76D9800F5E976 /* SiftTagViewController.h */,
+				8734CC361DE76D9800F5E976 /* SiftTagViewController.m */,
+				8734CC401DE76F8B00F5E976 /* SiftTagCell.h */,
+				8734CC411DE76F8B00F5E976 /* SiftTagCell.m */,
+				8734CC421DE76F8B00F5E976 /* SiftTagFlowLayout.h */,
+				8734CC431DE76F8B00F5E976 /* SiftTagFlowLayout.m */,
+				8734CC441DE76F8B00F5E976 /* SiftTagManager.h */,
+				8734CC451DE76F8B00F5E976 /* SiftTagManager.m */,
+				8734CC461DE76F8B00F5E976 /* SiftTagSectionHeaderView.h */,
+				8734CC471DE76F8B00F5E976 /* SiftTagSectionHeaderView.m */,
+			);
+			name = SiftTagViewController;
+			sourceTree = "<group>";
+		};
+		8734CC381DE76EBA00F5E976 /* UIImage+Category */ = {
+			isa = PBXGroup;
+			children = (
+				8734CC391DE76F1700F5E976 /* UIImage+ImageEffects.h */,
+				8734CC3A1DE76F1700F5E976 /* UIImage+ImageEffects.m */,
+			);
+			name = "UIImage+Category";
+			sourceTree = "<group>";
+		};
+		8734CC3C1DE76F2600F5E976 /* NSString+Category */ = {
+			isa = PBXGroup;
+			children = (
+				8734CC3D1DE76F3900F5E976 /* NSString+LabelWidthAndHeight.h */,
+				8734CC3E1DE76F3900F5E976 /* NSString+LabelWidthAndHeight.m */,
+			);
+			name = "NSString+Category";
+			sourceTree = "<group>";
+		};
 		879F596D1DDC1F94000185F8 = {
 			isa = PBXGroup;
 			children = (
@@ -614,6 +670,7 @@
 				87EBFAD41DDE026D00677DB9 /* PhotoChooseViewController */,
 				871676351DE0674A003772C0 /* HWaterFallLayoutController */,
 				871676341DE06729003772C0 /* WWaterFallLayoutController */,
+				8734CC341DE76D6700F5E976 /* SiftTagViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -649,19 +706,21 @@
 		879F59D31DDCCC64000185F8 /* UI-Component */ = {
 			isa = PBXGroup;
 			children = (
-				87EBFAE41DDEC1A900677DB9 /* UIView+Ext */,
-				879F59D41DDCCC8A000185F8 /* UIFont+Categories */,
+				8734CC3C1DE76F2600F5E976 /* NSString+Category */,
+				8734CC381DE76EBA00F5E976 /* UIImage+Category */,
+				87EBFAE41DDEC1A900677DB9 /* UIView+Category */,
+				879F59D41DDCCC8A000185F8 /* UIFont+Category */,
 			);
 			path = "UI-Component";
 			sourceTree = "<group>";
 		};
-		879F59D41DDCCC8A000185F8 /* UIFont+Categories */ = {
+		879F59D41DDCCC8A000185F8 /* UIFont+Category */ = {
 			isa = PBXGroup;
 			children = (
 				879F59D51DDCCC9F000185F8 /* UIFont+Fonts.h */,
 				879F59D61DDCCC9F000185F8 /* UIFont+Fonts.m */,
 			);
-			name = "UIFont+Categories";
+			name = "UIFont+Category";
 			sourceTree = "<group>";
 		};
 		879F59D91DDCD15C000185F8 /* General-Tools */ = {
@@ -814,13 +873,13 @@
 			name = PhotoChooseViewController;
 			sourceTree = "<group>";
 		};
-		87EBFAE41DDEC1A900677DB9 /* UIView+Ext */ = {
+		87EBFAE41DDEC1A900677DB9 /* UIView+Category */ = {
 			isa = PBXGroup;
 			children = (
 				87EBFAE51DDEC1E600677DB9 /* UIView+Ext.h */,
 				87EBFAE61DDEC1E600677DB9 /* UIView+Ext.m */,
 			);
-			name = "UIView+Ext";
+			name = "UIView+Category";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -979,6 +1038,7 @@
 				87320F311DE358AD00B19A3C /* CircleCell.m in Sources */,
 				871677A11DE1EE95003772C0 /* HWaterFallManager.m in Sources */,
 				879F5A301DDCD7BE000185F8 /* BezierTableViewController.m in Sources */,
+				8734CC3F1DE76F3900F5E976 /* NSString+LabelWidthAndHeight.m in Sources */,
 				871677921DE0C8A5003772C0 /* PictureData.m in Sources */,
 				8716763B1DE067B5003772C0 /* WWaterFallViewController.m in Sources */,
 				879F5A121DDCD1C0000185F8 /* POPAnimationExtras.mm in Sources */,
@@ -990,6 +1050,7 @@
 				879F5A0F1DDCD1C0000185F8 /* POPAnimatableProperty.mm in Sources */,
 				8716776F1DE0C852003772C0 /* AFNetworkReachabilityManager.m in Sources */,
 				871676381DE067A7003772C0 /* HWaterFallViewController.m in Sources */,
+				8734CC4B1DE76F8B00F5E976 /* SiftTagSectionHeaderView.m in Sources */,
 				871677741DE0C852003772C0 /* ApiPostData.m in Sources */,
 				87EBFAD71DDE028500677DB9 /* PhotoChooseViewController.m in Sources */,
 				879F5A1C1DDCD1C0000185F8 /* POPMath.mm in Sources */,
@@ -1003,8 +1064,10 @@
 				871677CE1DE208EC003772C0 /* SDWebImagePrefetcher.m in Sources */,
 				871677871DE0C87D003772C0 /* WWaterFallManager.m in Sources */,
 				871677CA1DE208EC003772C0 /* SDWebImageDecoder.m in Sources */,
+				8734CC491DE76F8B00F5E976 /* SiftTagFlowLayout.m in Sources */,
 				879F597E1DDC1F94000185F8 /* AppDelegate.m in Sources */,
 				879F59D21DDCC598000185F8 /* ZEROListCell.m in Sources */,
+				8734CC371DE76D9800F5E976 /* SiftTagViewController.m in Sources */,
 				87EBFACC1DDDF17700677DB9 /* AddSelectListItem.m in Sources */,
 				871677731DE0C852003772C0 /* AFURLSessionManager.m in Sources */,
 				8716779B1DE0CBD4003772C0 /* FileManager.m in Sources */,
@@ -1027,6 +1090,8 @@
 				871677CD1DE208EC003772C0 /* SDWebImageManager.m in Sources */,
 				879F5A141DDCD1C0000185F8 /* POPAnimationTracer.mm in Sources */,
 				879F5A291DDCD440000185F8 /* ZEROBezierTableView.m in Sources */,
+				8734CC481DE76F8B00F5E976 /* SiftTagCell.m in Sources */,
+				8734CC4A1DE76F8B00F5E976 /* SiftTagManager.m in Sources */,
 				879F5A1B1DDCD1C0000185F8 /* POPLayerExtras.mm in Sources */,
 				871677711DE0C852003772C0 /* AFURLRequestSerialization.m in Sources */,
 				879F5A101DDCD1C0000185F8 /* POPAnimation.mm in Sources */,
@@ -1044,6 +1109,7 @@
 				879F597B1DDC1F94000185F8 /* main.m in Sources */,
 				879F5A161DDCD1C0000185F8 /* POPBasicAnimation.mm in Sources */,
 				871677781DE0C852003772C0 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				8734CC3B1DE76F1700F5E976 /* UIImage+ImageEffects.m in Sources */,
 				871677701DE0C852003772C0 /* AFSecurityPolicy.m in Sources */,
 				8716777B1DE0C852003772C0 /* UIImageView+AFNetworking.m in Sources */,
 				879F5A181DDCD1C0000185F8 /* POPCustomAnimation.mm in Sources */,
