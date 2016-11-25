@@ -21,47 +21,62 @@
 
 #pragma mark - UICollectionViewLayout
 
+- (void)prepareLayout{
+    
+    [super prepareLayout];
+}
+
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect {
     
-    NSArray * original = [super layoutAttributesForElementsInRect:rect];
-    NSArray * array    = [[NSArray alloc] initWithArray:original copyItems:YES];
+    NSArray *original = [super layoutAttributesForElementsInRect:rect];
+    NSArray *array    = [[NSArray alloc] initWithArray:original copyItems:YES];
+    
+    [array enumerateObjectsUsingBlock:^(UICollectionViewLayoutAttributes *_Nonnull attributes, NSUInteger idx, BOOL *_Nonnull stop) {
+        
+        if (attributes.representedElementKind == nil) {
+            
+            NSIndexPath *indexPath  = attributes.indexPath;
+            attributes.frame        = [self layoutAttributesForItemAtIndexPath:indexPath].frame;
+        }
+    }];
+    
     return array;
 }
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewLayoutAttributes* currentItemAttributes = [super layoutAttributesForItemAtIndexPath:indexPath];
-    UIEdgeInsets sectionInset = self.sectionInset;
     
-    BOOL isFirstItemInSection = indexPath.item == 0;
+    UIEdgeInsets sectionInset                        = self.sectionInset;
+    UICollectionViewLayoutAttributes* itemAttributes = [super layoutAttributesForItemAtIndexPath:indexPath];
+    BOOL isFirstItemInSection                        = indexPath.item == 0;     //判断是否是此section的第一个item
+    
+    //容器宽度，最大长度
     CGFloat layoutWidth = CGRectGetWidth(self.collectionView.frame) - sectionInset.left - sectionInset.right;
     
     if (isFirstItemInSection) {
-        CGRectMake(sectionInset.left, currentItemAttributes.frame.origin.y, currentItemAttributes.frame.size.width, currentItemAttributes.frame.size.height);
-        return currentItemAttributes;
+
+        return itemAttributes;
     }
     
-    NSIndexPath* previousIndexPath = [NSIndexPath indexPathForItem:indexPath.item-1 inSection:indexPath.section];
-    CGRect previousFrame = [self layoutAttributesForItemAtIndexPath:previousIndexPath].frame;
+    //上一个tag的 indexPath、frame、最右点、
+    NSIndexPath *previousIndexPath  = [NSIndexPath indexPathForItem:indexPath.item-1 inSection:indexPath.section];
+    CGRect  previousFrame           = [self layoutAttributesForItemAtIndexPath:previousIndexPath].frame;
     CGFloat previousFrameRightPoint = previousFrame.origin.x + previousFrame.size.width;
-    CGRect currentFrame = currentItemAttributes.frame;
-    CGRect strecthedCurrentFrame = CGRectMake(sectionInset.left,
-                                              currentFrame.origin.y,
-                                              layoutWidth,
-                                              currentFrame.size.height);
-    // if the current frame, once left aligned to the left and stretched to the full collection view
-    // widht intersects the previous frame then they are on the same line
+    CGRect  currentFrame            = itemAttributes.frame;
+    CGRect  strecthedCurrentFrame   = CGRectMake(sectionInset.left, currentFrame.origin.y, layoutWidth, currentFrame.size.height);
+
+    //是否是此行的第一个tag
     BOOL isFirstItemInRow = !CGRectIntersectsRect(previousFrame, strecthedCurrentFrame);
     
     if (isFirstItemInRow) {
-        // make sure the first item on a line is left aligned
-        currentItemAttributes.frame = CGRectMake(sectionInset.left + currentItemAttributes.frame.origin.x, currentItemAttributes.frame.origin.y, currentItemAttributes.frame.size.width, currentItemAttributes.frame.size.height);
-        return currentItemAttributes;
+
+        itemAttributes.frame = CGRectMake(sectionInset.left + itemAttributes.frame.origin.x, itemAttributes.frame.origin.y, itemAttributes.frame.size.width, itemAttributes.frame.size.height);
+        return itemAttributes;
     }
     
-    CGRect frame = currentItemAttributes.frame;
-    frame.origin.x = previousFrameRightPoint + [self.siftManager minimumInteritemSpacingWithSection:indexPath.section];
-    currentItemAttributes.frame = frame;
-    return currentItemAttributes;
+    CGRect frame         = itemAttributes.frame;
+    frame.origin.x       = previousFrameRightPoint + [self.siftManager minimumInteritemSpacingWithSection:indexPath.section];
+    itemAttributes.frame = frame;
+    return itemAttributes;
 }
 
 @end

@@ -61,9 +61,9 @@
 		8734CC3B1DE76F1700F5E976 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 8734CC3A1DE76F1700F5E976 /* UIImage+ImageEffects.m */; };
 		8734CC3F1DE76F3900F5E976 /* NSString+LabelWidthAndHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 8734CC3E1DE76F3900F5E976 /* NSString+LabelWidthAndHeight.m */; };
 		8734CC481DE76F8B00F5E976 /* SiftTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8734CC411DE76F8B00F5E976 /* SiftTagCell.m */; };
-		8734CC491DE76F8B00F5E976 /* SiftTagFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8734CC431DE76F8B00F5E976 /* SiftTagFlowLayout.m */; };
 		8734CC4A1DE76F8B00F5E976 /* SiftTagManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8734CC451DE76F8B00F5E976 /* SiftTagManager.m */; };
 		8734CC4B1DE76F8B00F5E976 /* SiftTagSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8734CC471DE76F8B00F5E976 /* SiftTagSectionHeaderView.m */; };
+		8734CC4E1DE7F50C00F5E976 /* SiftTagFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8734CC4D1DE7F50C00F5E976 /* SiftTagFlowLayout.m */; };
 		879F597B1DDC1F94000185F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F597A1DDC1F94000185F8 /* main.m */; };
 		879F597E1DDC1F94000185F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F597D1DDC1F94000185F8 /* AppDelegate.m */; };
 		879F59811DDC1F94000185F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F59801DDC1F94000185F8 /* ViewController.m */; };
@@ -241,12 +241,12 @@
 		8734CC3E1DE76F3900F5E976 /* NSString+LabelWidthAndHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LabelWidthAndHeight.m"; sourceTree = "<group>"; };
 		8734CC401DE76F8B00F5E976 /* SiftTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiftTagCell.h; sourceTree = "<group>"; };
 		8734CC411DE76F8B00F5E976 /* SiftTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiftTagCell.m; sourceTree = "<group>"; };
-		8734CC421DE76F8B00F5E976 /* SiftTagFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiftTagFlowLayout.h; sourceTree = "<group>"; };
-		8734CC431DE76F8B00F5E976 /* SiftTagFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiftTagFlowLayout.m; sourceTree = "<group>"; };
 		8734CC441DE76F8B00F5E976 /* SiftTagManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiftTagManager.h; sourceTree = "<group>"; };
 		8734CC451DE76F8B00F5E976 /* SiftTagManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiftTagManager.m; sourceTree = "<group>"; };
 		8734CC461DE76F8B00F5E976 /* SiftTagSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiftTagSectionHeaderView.h; sourceTree = "<group>"; };
 		8734CC471DE76F8B00F5E976 /* SiftTagSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiftTagSectionHeaderView.m; sourceTree = "<group>"; };
+		8734CC4C1DE7F50C00F5E976 /* SiftTagFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiftTagFlowLayout.h; sourceTree = "<group>"; };
+		8734CC4D1DE7F50C00F5E976 /* SiftTagFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiftTagFlowLayout.m; sourceTree = "<group>"; };
 		879F59761DDC1F94000185F8 /* ZEROControls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZEROControls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879F597A1DDC1F94000185F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		879F597C1DDC1F94000185F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -550,8 +550,8 @@
 				8734CC361DE76D9800F5E976 /* SiftTagViewController.m */,
 				8734CC401DE76F8B00F5E976 /* SiftTagCell.h */,
 				8734CC411DE76F8B00F5E976 /* SiftTagCell.m */,
-				8734CC421DE76F8B00F5E976 /* SiftTagFlowLayout.h */,
-				8734CC431DE76F8B00F5E976 /* SiftTagFlowLayout.m */,
+				8734CC4C1DE7F50C00F5E976 /* SiftTagFlowLayout.h */,
+				8734CC4D1DE7F50C00F5E976 /* SiftTagFlowLayout.m */,
 				8734CC441DE76F8B00F5E976 /* SiftTagManager.h */,
 				8734CC451DE76F8B00F5E976 /* SiftTagManager.m */,
 				8734CC461DE76F8B00F5E976 /* SiftTagSectionHeaderView.h */,
@@ -1064,7 +1064,6 @@
 				871677CE1DE208EC003772C0 /* SDWebImagePrefetcher.m in Sources */,
 				871677871DE0C87D003772C0 /* WWaterFallManager.m in Sources */,
 				871677CA1DE208EC003772C0 /* SDWebImageDecoder.m in Sources */,
-				8734CC491DE76F8B00F5E976 /* SiftTagFlowLayout.m in Sources */,
 				879F597E1DDC1F94000185F8 /* AppDelegate.m in Sources */,
 				879F59D21DDCC598000185F8 /* ZEROListCell.m in Sources */,
 				8734CC371DE76D9800F5E976 /* SiftTagViewController.m in Sources */,
@@ -1086,6 +1085,7 @@
 				879F5A111DDCD1C0000185F8 /* POPAnimationEvent.mm in Sources */,
 				871677D21DE208EC003772C0 /* UIImage+WebP.m in Sources */,
 				879F5A271DDCD440000185F8 /* ZEROBezierCell.m in Sources */,
+				8734CC4E1DE7F50C00F5E976 /* SiftTagFlowLayout.m in Sources */,
 				8716779E1DE1EE83003772C0 /* HWaterFallCell.m in Sources */,
 				871677CD1DE208EC003772C0 /* SDWebImageManager.m in Sources */,
 				879F5A141DDCD1C0000185F8 /* POPAnimationTracer.mm in Sources */,

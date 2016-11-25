@@ -35,4 +35,21 @@
     _tagLabel.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
 }
 
+- (void)setChooseTag:(BOOL)chooseTag{
+    
+    _chooseTag = chooseTag;
+    if (chooseTag) {
+        
+        self.tagLabel.textColor       = UIColorRGBA(100, 100, 110, 0.9);
+        self.tagLabel.backgroundColor = [UIColor whiteColor];
+    }
+    else{
+        
+        self.tagLabel.textColor       = [UIColor whiteColor];
+        self.tagLabel.backgroundColor = [UIColor clearColor];
+    }
+    
+}
+
+
 @end

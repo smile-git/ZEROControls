@@ -24,13 +24,27 @@
 
 @implementation SiftTagManager
 
+- (instancetype)init{
+    
+    if (self = [super init]) {
+        
+        _sizes                      = [NSMutableArray array];
+        _minimumInteritemSpacings   = [NSMutableArray array];
+        _singleChoose               = NO;
+    }
+    return self;
+}
+
 - (void)setData:(NSArray *)data{
     
-    _sizes                      = [NSMutableArray array];
-    _minimumInteritemSpacings   = [NSMutableArray array];
-    _data                       = data;
+    _data = data;
     
     [self calculate];
+}
+
+- (void)setSingleChoose:(BOOL)singleChoose{
+    
+    _singleChoose = singleChoose;
 }
 
 /**
