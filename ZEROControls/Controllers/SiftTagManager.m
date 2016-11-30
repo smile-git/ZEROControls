@@ -9,7 +9,6 @@
 #import "SiftTagManager.h"
 #import "NSString+LabelWidthAndHeight.h"
 
-#define tag_Height                  40
 #define tag_Margin                  10
 #define edgeInsets                  UIEdgeInsetsMake(8, 50, 15, 30)
 #define minimumInteritemSpacing     10
@@ -31,6 +30,7 @@
         _sizes                      = [NSMutableArray array];
         _minimumInteritemSpacings   = [NSMutableArray array];
         _singleChoose               = NO;
+        _tagHeight                  = 40.0;
     }
     return self;
 }
@@ -73,7 +73,7 @@
         [tags enumerateObjectsUsingBlock:^(NSString *_Nonnull tag, NSUInteger idx, BOOL * _Nonnull stop) {
             
             CGFloat tagWidth = [tag widthWithStringFont:[UIFont systemFontOfSize:16]];
-            CGSize tagSize   = CGSizeMake((tagWidth + tag_Margin * 2) > minTagWidth ? (tagWidth + tag_Margin * 2) : minTagWidth, tag_Height);
+            CGSize tagSize   = CGSizeMake((tagWidth + tag_Margin * 2) > minTagWidth ? (tagWidth + tag_Margin * 2) : minTagWidth, _tagHeight);
             
             [tagSizes addObject:NSStringFromCGSize(tagSize)];
             
@@ -107,7 +107,7 @@
             CGFloat okTagWidth = (containerWidth - max_minimumInteritemSpacing * 2) / 3;
             [tags enumerateObjectsUsingBlock:^(NSString *_Nonnull stringSize, NSUInteger idx, BOOL * _Nonnull stop) {
                 //如果宽度不够适宜宽度，改变
-                CGSize tagSize = CGSizeMake(CGSizeFromString(tagSizes[idx]).width > okTagWidth ? CGSizeFromString(tagSizes[idx]).width : okTagWidth, tag_Height);
+                CGSize tagSize = CGSizeMake(CGSizeFromString(tagSizes[idx]).width > okTagWidth ? CGSizeFromString(tagSizes[idx]).width : okTagWidth, _tagHeight);
                 [tagSizes replaceObjectAtIndex:idx withObject:NSStringFromCGSize(tagSize)];
             }];
         }
@@ -118,6 +118,10 @@
 
 - (CGSize)sizeWithIndexPath:(NSIndexPath *)indexPath{
     
+    if (_data.count == 0) {
+        
+        return CGSizeMake(tag_Margin * 4, _tagHeight);
+    }
     return CGSizeFromString(_sizes[indexPath.section][indexPath.item]);
 }
 
@@ -128,6 +132,10 @@
 
 - (CGFloat)minimumInteritemSpacingWithSection:(NSInteger)section{
     
+    if (_data.count == 0) {
+        
+        return minimumInteritemSpacing;
+    }
     return [_minimumInteritemSpacings[section] floatValue];
 }
 @end

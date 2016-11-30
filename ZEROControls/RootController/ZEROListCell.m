@@ -55,7 +55,6 @@
         
         self.backgroundColor = [UIColor whiteColor];
     }
-
 }
 
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {

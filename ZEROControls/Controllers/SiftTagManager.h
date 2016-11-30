@@ -11,8 +11,9 @@
 
 @interface SiftTagManager : NSObject
 
-@property (nonatomic, strong) NSArray *data;
-@property (nonatomic)         BOOL     singleChoose;   //是否单选 default: NO
+@property (nonatomic, strong) NSArray   *data;
+@property (nonatomic)         CGFloat   tagHeight;
+@property (nonatomic)         BOOL      singleChoose;   //是否单选 default: NO
 
 - (CGSize)sizeWithIndexPath:(NSIndexPath *)indexPath;
 

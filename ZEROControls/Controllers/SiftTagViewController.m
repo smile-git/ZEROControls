@@ -30,12 +30,32 @@
     self.siftData    = [NSMutableArray array];
     self.chooseTags  = [NSMutableArray array];
     
+    
+    
     [self createBlurBg];
     
     [self createCollectionView];
     
     [self loadSiftData];
 
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+    
+    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+    
+    self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    
+    [super viewWillDisappear:animated];
+    
+    [self.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
+    
+    self.navigationController.navigationBar.shadowImage = nil;
 }
 
 #pragma mark - set UI & NAV &
