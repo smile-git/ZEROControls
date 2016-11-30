@@ -64,6 +64,13 @@
 		8734CC4A1DE76F8B00F5E976 /* SiftTagManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8734CC451DE76F8B00F5E976 /* SiftTagManager.m */; };
 		8734CC4B1DE76F8B00F5E976 /* SiftTagSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8734CC471DE76F8B00F5E976 /* SiftTagSectionHeaderView.m */; };
 		8734CC4E1DE7F50C00F5E976 /* SiftTagFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8734CC4D1DE7F50C00F5E976 /* SiftTagFlowLayout.m */; };
+		874475F01DEF522700E5FF2A /* ZEROAlertButtonsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 874475E31DEF522700E5FF2A /* ZEROAlertButtonsCell.m */; };
+		874475F11DEF522700E5FF2A /* ZEROAlertFrameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 874475E51DEF522700E5FF2A /* ZEROAlertFrameManager.m */; };
+		874475F21DEF522700E5FF2A /* ZEROAlertItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 874475E71DEF522700E5FF2A /* ZEROAlertItem.m */; };
+		874475F31DEF522700E5FF2A /* ZEROAlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 874475E91DEF522700E5FF2A /* ZEROAlertManager.m */; };
+		874475F41DEF522700E5FF2A /* ZEROAlertRootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 874475EB1DEF522700E5FF2A /* ZEROAlertRootView.m */; };
+		874475F51DEF522700E5FF2A /* ZEROAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 874475ED1DEF522700E5FF2A /* ZEROAlertView.m */; };
+		874475F61DEF522700E5FF2A /* ZEROSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 874475EF1DEF522700E5FF2A /* ZEROSheetView.m */; };
 		879F597B1DDC1F94000185F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F597A1DDC1F94000185F8 /* main.m */; };
 		879F597E1DDC1F94000185F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F597D1DDC1F94000185F8 /* AppDelegate.m */; };
 		879F59811DDC1F94000185F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F59801DDC1F94000185F8 /* ViewController.m */; };
@@ -247,6 +254,20 @@
 		8734CC471DE76F8B00F5E976 /* SiftTagSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiftTagSectionHeaderView.m; sourceTree = "<group>"; };
 		8734CC4C1DE7F50C00F5E976 /* SiftTagFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiftTagFlowLayout.h; sourceTree = "<group>"; };
 		8734CC4D1DE7F50C00F5E976 /* SiftTagFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiftTagFlowLayout.m; sourceTree = "<group>"; };
+		874475E21DEF522700E5FF2A /* ZEROAlertButtonsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEROAlertButtonsCell.h; sourceTree = "<group>"; };
+		874475E31DEF522700E5FF2A /* ZEROAlertButtonsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEROAlertButtonsCell.m; sourceTree = "<group>"; };
+		874475E41DEF522700E5FF2A /* ZEROAlertFrameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEROAlertFrameManager.h; sourceTree = "<group>"; };
+		874475E51DEF522700E5FF2A /* ZEROAlertFrameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEROAlertFrameManager.m; sourceTree = "<group>"; };
+		874475E61DEF522700E5FF2A /* ZEROAlertItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEROAlertItem.h; sourceTree = "<group>"; };
+		874475E71DEF522700E5FF2A /* ZEROAlertItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEROAlertItem.m; sourceTree = "<group>"; };
+		874475E81DEF522700E5FF2A /* ZEROAlertManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEROAlertManager.h; sourceTree = "<group>"; };
+		874475E91DEF522700E5FF2A /* ZEROAlertManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEROAlertManager.m; sourceTree = "<group>"; };
+		874475EA1DEF522700E5FF2A /* ZEROAlertRootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEROAlertRootView.h; sourceTree = "<group>"; };
+		874475EB1DEF522700E5FF2A /* ZEROAlertRootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEROAlertRootView.m; sourceTree = "<group>"; };
+		874475EC1DEF522700E5FF2A /* ZEROAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEROAlertView.h; sourceTree = "<group>"; };
+		874475ED1DEF522700E5FF2A /* ZEROAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEROAlertView.m; sourceTree = "<group>"; };
+		874475EE1DEF522700E5FF2A /* ZEROSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEROSheetView.h; sourceTree = "<group>"; };
+		874475EF1DEF522700E5FF2A /* ZEROSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEROSheetView.m; sourceTree = "<group>"; };
 		879F59761DDC1F94000185F8 /* ZEROControls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZEROControls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879F597A1DDC1F94000185F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		879F597C1DDC1F94000185F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -578,6 +599,27 @@
 			name = "NSString+Category";
 			sourceTree = "<group>";
 		};
+		874475E11DEF522700E5FF2A /* ZEROAlert */ = {
+			isa = PBXGroup;
+			children = (
+				874475E21DEF522700E5FF2A /* ZEROAlertButtonsCell.h */,
+				874475E31DEF522700E5FF2A /* ZEROAlertButtonsCell.m */,
+				874475E41DEF522700E5FF2A /* ZEROAlertFrameManager.h */,
+				874475E51DEF522700E5FF2A /* ZEROAlertFrameManager.m */,
+				874475E61DEF522700E5FF2A /* ZEROAlertItem.h */,
+				874475E71DEF522700E5FF2A /* ZEROAlertItem.m */,
+				874475E81DEF522700E5FF2A /* ZEROAlertManager.h */,
+				874475E91DEF522700E5FF2A /* ZEROAlertManager.m */,
+				874475EA1DEF522700E5FF2A /* ZEROAlertRootView.h */,
+				874475EB1DEF522700E5FF2A /* ZEROAlertRootView.m */,
+				874475EC1DEF522700E5FF2A /* ZEROAlertView.h */,
+				874475ED1DEF522700E5FF2A /* ZEROAlertView.m */,
+				874475EE1DEF522700E5FF2A /* ZEROSheetView.h */,
+				874475EF1DEF522700E5FF2A /* ZEROSheetView.m */,
+			);
+			path = ZEROAlert;
+			sourceTree = "<group>";
+		};
 		879F596D1DDC1F94000185F8 = {
 			isa = PBXGroup;
 			children = (
@@ -726,6 +768,7 @@
 		879F59D91DDCD15C000185F8 /* General-Tools */ = {
 			isa = PBXGroup;
 			children = (
+				874475E11DEF522700E5FF2A /* ZEROAlert */,
 				871677981DE0CBC9003772C0 /* FileManager */,
 				871677451DE0C852003772C0 /* Networking */,
 				871675F51DE04AFD003772C0 /* SDWebImage */,
@@ -1029,6 +1072,8 @@
 				87EBFACB1DDDF17700677DB9 /* AddSelectListCell.m in Sources */,
 				8716777A1DE0C852003772C0 /* UIButton+AFNetworking.m in Sources */,
 				879F59C51DDCC14F000185F8 /* ZEROListModel.m in Sources */,
+				874475F51DEF522700E5FF2A /* ZEROAlertView.m in Sources */,
+				874475F61DEF522700E5FF2A /* ZEROSheetView.m in Sources */,
 				879F5A131DDCD1C0000185F8 /* POPAnimationRuntime.mm in Sources */,
 				871677CC1DE208EC003772C0 /* SDWebImageDownloaderOperation.m in Sources */,
 				871677771DE0C852003772C0 /* AFImageDownloader.m in Sources */,
@@ -1042,13 +1087,17 @@
 				871677921DE0C8A5003772C0 /* PictureData.m in Sources */,
 				8716763B1DE067B5003772C0 /* WWaterFallViewController.m in Sources */,
 				879F5A121DDCD1C0000185F8 /* POPAnimationExtras.mm in Sources */,
+				874475F01DEF522700E5FF2A /* ZEROAlertButtonsCell.m in Sources */,
 				879F5A191DDCD1C0000185F8 /* POPDecayAnimation.mm in Sources */,
+				874475F31DEF522700E5FF2A /* ZEROAlertManager.m in Sources */,
 				879F5A171DDCD1C0000185F8 /* POPCGUtils.mm in Sources */,
 				8716776E1DE0C852003772C0 /* AFHTTPSessionManager.m in Sources */,
 				879F59D71DDCCC9F000185F8 /* UIFont+Fonts.m in Sources */,
 				879F59811DDC1F94000185F8 /* ViewController.m in Sources */,
 				879F5A0F1DDCD1C0000185F8 /* POPAnimatableProperty.mm in Sources */,
 				8716776F1DE0C852003772C0 /* AFNetworkReachabilityManager.m in Sources */,
+				874475F41DEF522700E5FF2A /* ZEROAlertRootView.m in Sources */,
+				874475F11DEF522700E5FF2A /* ZEROAlertFrameManager.m in Sources */,
 				871676381DE067A7003772C0 /* HWaterFallViewController.m in Sources */,
 				8734CC4B1DE76F8B00F5E976 /* SiftTagSectionHeaderView.m in Sources */,
 				871677741DE0C852003772C0 /* ApiPostData.m in Sources */,
@@ -1105,6 +1154,7 @@
 				871677751DE0C852003772C0 /* ApiTool.m in Sources */,
 				871677861DE0C87D003772C0 /* WWaterFallLayout.m in Sources */,
 				871677931DE0C8A5003772C0 /* ResponseData.m in Sources */,
+				874475F21DEF522700E5FF2A /* ZEROAlertItem.m in Sources */,
 				87EBFAE71DDEC1E600677DB9 /* UIView+Ext.m in Sources */,
 				879F597B1DDC1F94000185F8 /* main.m in Sources */,
 				879F5A161DDCD1C0000185F8 /* POPBasicAnimation.mm in Sources */,
