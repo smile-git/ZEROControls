@@ -11,8 +11,6 @@
 
 @interface ZEROAlertRootView()
 
-
-
 @end
 
 @implementation ZEROAlertRootView
@@ -35,7 +33,7 @@
     }
 }
 
-#pragma mark 子类继承, config视图
+#pragma mark 子类重写, config子控件frame
 
 - (void)configAlert{
     

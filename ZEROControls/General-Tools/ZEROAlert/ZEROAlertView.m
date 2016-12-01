@@ -8,90 +8,57 @@
 
 #import "ZEROAlertView.h"
 #import "ZEROAlertItem.h"
-#import "NSString+LabelWidthAndHeight.h"
-#import "UIView+Ext.h"
 #import "ZEROAlertButtonsCell.h"
+#import "ZEROAlertFrameManager.h"
 
 
-#define UIColorRGBA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
-#define WIDTH   [UIScreen mainScreen].bounds.size.width
-#define HEIGHT  [UIScreen mainScreen].bounds.size.height
+@interface ZEROAlertView()<UITableViewDelegate, UITableViewDataSource, ZEROAlertButtonsCellDelegate>
+
+@property (nonatomic, strong) NSArray           *buttons;
+@property (nonatomic, copy)   NSString          *title;
+@property (nonatomic, copy)   NSString          *message;
+@property (nonatomic, copy)   NSString          *cancelButtonTitle;
+@property (nonatomic, strong) UIView            *customView;
+@property (nonatomic)         ZEROAlertViewType alertViewType;
+
+@property (nonatomic, strong) UILabel           *titleLabel;
+@property (nonatomic, strong) UILabel           *messageLabel;
+@property (nonatomic, strong) UIScrollView      *contentScroll;
+@property (nonatomic, strong) UIView            *horizontalLine;
+@property (nonatomic, strong) UITableView       *buttonsList;
 
 
-static       CGFloat Alert_Width            = 270;      //alert宽度，可随着customView宽度改变270~(WIDTH - AlertGap * 2)
-static const CGFloat AlertDefaultWidth      = 270;      //alert默认宽度
-static const CGFloat AlertGap               = 20;       //间隔
-static const CGFloat TitleMarginTop         = 20;       //标题上边距(也当无message时的下边距)
-static const CGFloat TitleMarginLeft        = 20;       //标题左边距
-static const CGFloat MessageMarginTop       = 18;       //title和message间距(也当messageLabel与下面控件边距)
-static const CGFloat MessageMarginLeft      = 15;       //alert内容左边距
-static const CGFloat CustomScrollHeightMin  = 70;       //customScrollView最小高度
-static const CGFloat NormalButtonHeight     = 46;       //标准alert 按钮高度(左右两个的时候)
-static const CGFloat ButtonsCellHeight      = 50;       //多个按钮alert 按钮列表cell高度
-static const CGFloat ButtonsButtonHeight    = 40;       //多个按钮alert 按钮高度
-static const CGFloat ButtonsLeftMargin      = 20;       //按钮列表 按钮左边距
-static const CGFloat ButtonsTopMargin       = 10;       //按钮列表上边距
+@property (nonatomic, strong) UIColor *alertColor;
+@property (nonatomic, strong) UIColor *titleTextColor;
+@property (nonatomic, strong) UIColor *messageTextColor;
+@property (nonatomic, strong) UIColor *lineColor;
 
-static const NSInteger buttonTag            = 10086;    //按钮的默认tag值
+@property (nonatomic, strong) UIFont *titleFont;
+@property (nonatomic, strong) UIFont *messageFont;
 
-#define Z_Alert_BackgroundColor [UIColor whiteColor]
-#define Z_Alert_Title_Color     UIColorRGBA(55, 52, 71, 1)
-#define Z_Alert_Message_Color   UIColorRGBA(55, 52, 71, 1)
-#define Z_Alert_Line_Color      [UIColor colorWithWhite:0.2 alpha:0.2]
-#define Z_Alert_Title_Font      [UIFont systemFontOfSize:19]
-#define Z_Alert_Message_Font    [UIFont systemFontOfSize:17]
-
-// -----存放不固定的值
-#define Z_Alert_Width_Max                 (WIDTH - AlertGap * 2)                 //alert最大宽度
-#define Z_Alert_Height_Max                (HEIGHT - AlertGap * 2)                 //alert最大高度
-#define Z_Alert_Buttons_Cell_Width        (Alert_Width - ButtonsLeftMargin * 2)   //
-#define Z_Alert_ButtonsTable_Height_Max   (Z_Alert_Height_Max / 2.0 )             //按钮选择列表最大高度
-#define Z_Alert_ButtonsTable_Height       ((_buttons.count * ButtonsCellHeight) > Z_Alert_ButtonsTable_Height_Max ? Z_Alert_ButtonsTable_Height_Max : _buttons.count * ButtonsCellHeight)        //按钮列表计算之后的高度
-#define Z_Alert_CustomScroll_Height_Max   (Z_Alert_Height_Max - Z_Alert_ButtonsTable_Height)  //customScroll的高度
-
-@interface ZEROAlertView()<UITableViewDelegate, UITableViewDataSource>
-
-@property (nonatomic)         ZEROAlertViewType     alertViewType;
-
-@property (nonatomic, copy)   NSString              *title;
-@property (nonatomic, copy)   NSString              *message;
-@property (nonatomic, strong) NSArray               *buttons;
-@property (nonatomic, strong) UIView                *customView;
-
-@property (nonatomic, strong) UILabel               *titleLabel;
-@property (nonatomic, strong) UILabel               *messageLabel;
-@property (nonatomic, strong) UIScrollView          *customScollView;
-@property (nonatomic, strong) UIView                *horizontalLine;
-@property (nonatomic, strong) UITableView           *buttonsTable;
-
-@property (nonatomic)         CGFloat               customHeight;
+@property (nonatomic, strong) ZEROAlertFrameManager *frameManager;
 @end
 
 @implementation ZEROAlertView
 
 #pragma mark - init method
-- (instancetype)initWithTitle:(NSString *)title message:(NSString *)message cancle:(NSString *)cancle ok:(NSString *)ok click:(ClickHandleWithIndex)clickIndexHandle{
-    
-    NSString *cancleStr = cancle ? cancle : @"Cancel";
-    NSString *okStr     = ok ? ok : @"OK";
-    return [self initWithType:ZEROAlertViewTypeDefault
-                        title:title
-                      message:message
-                   customView:nil
-                        click:clickIndexHandle
-                      buttons:@[@{@(0): cancleStr}, @{@(1): okStr}]];
-}
 
-- (instancetype)initWithTitle:(NSString *)title message:(NSString *)message click:(ClickHandleWithIndex)clickIndexHandle buttons:(NSDictionary *)buttons, ...{
+- (instancetype)initWithTitle:(NSString *)title message:(NSString *)message clickHandle:(ClickHandleWithIndex)clickHandle cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ...{
     
     NSMutableArray *btnArray  = [NSMutableArray array];
+    
+    if (cancelButtonTitle) {
+        
+        [btnArray addObject:cancelButtonTitle];
+    }
+    
     NSString* curStr;
     va_list list;
-    if(buttons){
+    if(otherButtonTitles){
         
-        [btnArray addObject:buttons];
+        [btnArray addObject:otherButtonTitles];
         
-        va_start(list, buttons);
+        va_start(list, otherButtonTitles);
         while ((curStr = va_arg(list, NSString*))) {
             
             [btnArray addObject:curStr];
@@ -99,36 +66,25 @@ static const NSInteger buttonTag            = 10086;    //按钮的默认tag值
         va_end(list);
     }
     
-    return [self initWithType:ZEROAlertViewTypeButtons
-                        title:title
-                      message:message
-                   customView:nil
-                        click:clickIndexHandle
-                      buttons:btnArray];
+    ZEROAlertViewType type = btnArray.count == 2 ? ZEROAlertViewTypeDefault : ZEROAlertViewTypeButtons;
+    return [self initWithType:type Title:title message:message clickHandle:clickHandle cancelButtonTitle:cancelButtonTitle customView:nil buttons:btnArray];
 }
 
-- (instancetype)initWithCustomView:(UIView *)customView cancle:(NSString *)cancle ok:(NSString *)ok click:(ClickHandleWithIndex)clickIndexHandle{
-    
-    NSString *cancleStr = cancle ? cancle : @"Cancel";
-    NSString *okStr     = ok ? ok : @"OK";
-    return [self initWithType:ZEROAlertViewTypeCustomDefault
-                        title:nil
-                      message:nil
-                   customView:customView
-                        click:clickIndexHandle
-                      buttons:@[@{@(0): cancleStr}, @{@(1): okStr}]];
-}
-
-- (instancetype)initWithCustomView:(UIView *)customView click:(ClickHandleWithIndex)clickIndexHandle buttons:(NSDictionary *)buttons, ...{
+- (instancetype)initWithCustomView:(UIView *)customView clickHandle:(ClickHandleWithIndex)clickHandle cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ...{
     
     NSMutableArray *btnArray  = [NSMutableArray array];
+    
+    if (cancelButtonTitle) {
+        
+        [btnArray addObject:cancelButtonTitle];
+    }
     NSString* curStr;
     va_list list;
-    if(buttons){
+    if(otherButtonTitles){
         
-        [btnArray addObject:buttons];
+        [btnArray addObject:otherButtonTitles];
         
-        va_start(list, buttons);
+        va_start(list, otherButtonTitles);
         while ((curStr = va_arg(list, NSString*))) {
             
             [btnArray addObject:curStr];
@@ -136,193 +92,167 @@ static const NSInteger buttonTag            = 10086;    //按钮的默认tag值
         va_end(list);
     }
     
-    
-    return [self initWithType:ZEROAlertViewTypeCustomButtons
-                        title:nil
-                      message:nil
-                   customView:customView
-                        click:clickIndexHandle
-                      buttons:btnArray];
+    ZEROAlertViewType type = btnArray.count == 2 ? ZEROAlertViewTypeCustomDefault : ZEROAlertViewTypeCustomButtons;
+    return [self initWithType:type Title:nil message:nil clickHandle:clickHandle cancelButtonTitle:cancelButtonTitle customView:customView buttons:btnArray];
 }
 
-- (instancetype)initWithType:(ZEROAlertViewType)type title:(NSString *)title message:(NSString *)message customView:(UIView *)customView click:(ClickHandleWithIndex)clickIndexHandle buttons:(NSArray *)buttons{
+- (instancetype)initWithType:(ZEROAlertViewType)type Title:(NSString *)title message:(NSString *)message clickHandle:(ClickHandleWithIndex)clickHandle cancelButtonTitle:(NSString *)cancelButtonTitle customView:(UIView *)customView buttons:(NSArray *)buttons{
     
     if (self = [super initWithFrame:CGRectZero]) {
         
-        self.alertStyle                 = ZEROAlertStyleAlert;
-        self.alertViewType              = type;
-        self.title                      = title;
-        self.message                    = message;
-        self.customView                 = [customView copy];
-        self.customHeight               = customView.height;
-        self.clickIndexHandle           = clickIndexHandle;
-        self.dismissWhenTouchBackground = YES;
+        self.dismissWhenTouchBackground = NO;
         
-        Alert_Width = customView.width > Z_Alert_Width_Max ? Z_Alert_Width_Max : customView.width;
-        Alert_Width = Alert_Width <= AlertDefaultWidth ? AlertDefaultWidth : Alert_Width;
-
-        __block NSMutableArray *items = [NSMutableArray arrayWithCapacity:0];
-        [buttons enumerateObjectsUsingBlock:^(NSDictionary *_Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            
-            ZEROAlertItem *item = [[ZEROAlertItem alloc] initWithText:[[obj allValues] firstObject]
-                                                                index:idx buttonType:[[[obj allKeys] firstObject] integerValue]
-                                                          buttonFrame:CGRectMake(ButtonsLeftMargin, (ButtonsCellHeight - ButtonsButtonHeight) / 2.0, Z_Alert_Buttons_Cell_Width, ButtonsButtonHeight)];
-            [items addObject:item];
-        }];
+        self.alertViewType      = type;
+        self.title              = title;
+        self.message            = message;
+        self.clickIndexHandle   = clickHandle;
+        self.cancelButtonTitle  = cancelButtonTitle;
+        self.customView         = customView;
+        self.buttons            = buttons;
+        self.backgroundColor    = [UIColor whiteColor];
         
-        self.buttons = items;
-        
-        [self setUp];
+        [self initialize];
     }
     return self;
 }
 
-#pragma mark - set method
-
-- (void)setUp{
+- (void)initialize{
     
-    self.titleLabel      = [[UILabel alloc] initWithFrame:CGRectZero];
-    self.messageLabel    = [[UILabel alloc] initWithFrame:CGRectZero];
-    self.customScollView = [[UIScrollView alloc] initWithFrame:CGRectZero];
-    self.buttonsTable    = [[UITableView alloc] initWithFrame:CGRectZero];
-    self.horizontalLine  = [[UIView alloc] initWithFrame:CGRectZero];
+    self.layer.cornerRadius  = 10;
+    self.layer.masksToBounds = YES;
     
-    self.layer.cornerRadius         = 10;
-    self.layer.masksToBounds        = YES;
-    self.backgroundColor            = Z_Alert_BackgroundColor;
+    self.titleLabel     = [[UILabel alloc] initWithFrame:CGRectZero];
+    self.messageLabel   = [[UILabel alloc] initWithFrame:CGRectZero];
+    self.contentScroll  = [[UIScrollView alloc] initWithFrame:CGRectZero];
+    self.horizontalLine = [[UIView alloc] initWithFrame:CGRectZero];
+    self.buttonsList    = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     
-    _titleLabel.font                = Z_Alert_Title_Font;
-    _titleLabel.textColor           = Z_Alert_Title_Color;
     _titleLabel.textAlignment       = NSTextAlignmentCenter;
     _titleLabel.numberOfLines       = 0;
-    _messageLabel.font              = Z_Alert_Message_Font;
-    _messageLabel.textColor         = Z_Alert_Message_Color;
+    _titleLabel.text                = _title;
+    
     _messageLabel.textAlignment     = NSTextAlignmentCenter;
     _messageLabel.numberOfLines     = 0;
-    _horizontalLine.backgroundColor = Z_Alert_Line_Color;
-    
-    _titleLabel.text                = _title;
     _messageLabel.text              = _message;
     
-    _buttonsTable = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
-    _buttonsTable.delegate       = self;
-    _buttonsTable.dataSource     = self;
-    _buttonsTable.scrollEnabled  = NO;
-
-    _buttonsTable.separatorStyle = UITableViewCellSeparatorStyleNone;
+    _buttonsList.delegate           = self;
+    _buttonsList.dataSource         = self;
+    _buttonsList.scrollEnabled      = NO;
+    _buttonsList.separatorStyle     = UITableViewCellSeparatorStyleNone;
     
     switch (_alertViewType) {
             
         case ZEROAlertViewTypeDefault:{
             
-            [_customScollView addSubview:_messageLabel];
+            [_contentScroll addSubview:_messageLabel];
+            [self addSubview:_horizontalLine];
             [self addSubview:_titleLabel];
         }
             break;
         case ZEROAlertViewTypeButtons:{
             
-            [_customScollView addSubview:_messageLabel];
+            [_contentScroll addSubview:_messageLabel];
             [self addSubview:_titleLabel];
-            [self addSubview:_buttonsTable];
+            [self addSubview:_buttonsList];
         }
             break;
         case ZEROAlertViewTypeCustomDefault:{
             
-            [_customScollView addSubview:_customView];
+            [_contentScroll addSubview:_customView];
+            [self addSubview:_horizontalLine];
         }
             break;
         case ZEROAlertViewTypeCustomButtons:{
             
-            [_customScollView addSubview:_customView];
-            [self addSubview:_buttonsTable];
+            [_contentScroll addSubview:_customView];
+            [self addSubview:_buttonsList];
         }
             break;
         default:
             break;
     }
-    [self addSubview:_customScollView];
-    [self addSubview:_horizontalLine];
     
+    [self addSubview:_contentScroll];
 }
 
+#pragma mark - config Alert subviews
 
-/**
- * @brief alert及子控件坐标排布
- * @discussion 根据title、message、customView、buttons来计算各个控件的frame。整个alert的size、center
- */
 - (void)configAlert{
     
-    _titleLabel.frame       = [self titleFrame];
-    _messageLabel.frame     = [self messageFrame];
-    _customScollView.frame  = [self customScrollFrame];
-    _customView.frame       = [self customFrame];   //比较迷得一个bug，xib创建view。在customScroll设置frame之后，宽高会增加一倍。再更新下frame
-    _horizontalLine.frame   = [self horizontalLineFrame];
-    _buttonsTable.frame     = [self buttonsTableFrame];
+    self.backgroundColor            = self.alertColor;
+    _titleLabel.font                = self.titleFont;
+    _titleLabel.textColor           = self.titleTextColor;
+    _messageLabel.font              = self.messageFont;
+    _messageLabel.textColor         = self.messageTextColor;
+    _titleLabel.backgroundColor     = self.backgroundColor;
+    _messageLabel.backgroundColor   = [UIColor clearColor];
+    _contentScroll.backgroundColor  = self.backgroundColor;
+    _horizontalLine.backgroundColor = self.lineColor;
+    _buttonsList.backgroundColor    = self.backgroundColor;
+    
+    self.frameManager = [[ZEROAlertFrameManager alloc] initWithType:_alertViewType title:_title titleFont:_titleFont message:_message messageFont:_messageFont customView:_customView buttons:_buttons];
+    
+    _titleLabel.frame           = _frameManager.titleLabelFrame;
+    _messageLabel.frame         = _frameManager.messageLabelFrame;
+    _contentScroll.frame        = _frameManager.contentScrollViewFrame;
+    _customView.frame           = _frameManager.customViewFrame;   //比较迷得一个bug，xib创建view。在customScroll设置frame之后，宽高会增加一倍。再更新下frame
+    _horizontalLine.frame       = _frameManager.horizontalLineFrame;
+    _buttonsList.frame          = _frameManager.buttonsListFrame;
+    _contentScroll.contentSize  = _frameManager.contentScolllViewContentSize;
     
     switch (_alertViewType) {
             
         case ZEROAlertViewTypeDefault:{
             
-            UIView *verticalLine = [[UIView alloc] initWithFrame:[self verticalLineFrame]];
-            verticalLine.backgroundColor = Z_Alert_Line_Color;
+            UIView *verticalLine = [[UIView alloc] initWithFrame:[_frameManager verticalLineFrame]];
+            verticalLine.backgroundColor = self.lineColor;
             [self addSubview:verticalLine];
             
             [_buttons enumerateObjectsUsingBlock:^(ZEROAlertItem *_Nonnull item, NSUInteger idx, BOOL * _Nonnull stop) {
                 
                 UIButton *button = [self alertButtonWith:item];
-                button.frame     = [self normalButtonFrame:idx];
+                button.frame     = [_frameManager calculateNormalButtonFrame:idx];
                 button.tag       = buttonTag + idx;
                 
                 [self addSubview:button];
             }];
-            
-            self.frame  = CGRectMake(0, 0, Alert_Width, verticalLine.bottom);
         }
             break;
         case ZEROAlertViewTypeButtons:{
             
-            _horizontalLine.height = 0;
-            self.frame = CGRectMake(0, 0, Alert_Width, _buttonsTable.bottom + ButtonsTopMargin);
+            _buttonsList.scrollEnabled = _frameManager.buttonsListScrollEnabled;
+            _horizontalLine.hidden = YES;
         }
             break;
         case ZEROAlertViewTypeCustomDefault:{
             
-            UIView *verticalLine = [[UIView alloc] initWithFrame:[self verticalLineFrame]];
-            verticalLine.backgroundColor = Z_Alert_Line_Color;
+            UIView *verticalLine = [[UIView alloc] initWithFrame:[_frameManager verticalLineFrame]];
+            verticalLine.backgroundColor = self.lineColor;
             [self addSubview:verticalLine];
             
             [_buttons enumerateObjectsUsingBlock:^(ZEROAlertItem *_Nonnull item, NSUInteger idx, BOOL * _Nonnull stop) {
                 
                 UIButton *button = [self alertButtonWith:item];
-                button.frame     = [self normalButtonFrame:idx];
+                button.frame     = [_frameManager calculateNormalButtonFrame:idx];
                 button.tag       = buttonTag + idx;
                 
                 [self addSubview:button];
             }];
             
-            _customScollView.bounces = NO;
-            self.frame               = CGRectMake(0, 0, Alert_Width, verticalLine.bottom);
-            
+            _contentScroll.bounces = NO;
         }
             break;
         case ZEROAlertViewTypeCustomButtons:{
             
-            _customScollView.bounces = NO;
-            if (_buttonsTable.height <= 0) {
-                
-                _horizontalLine.height = 0;
-                self.frame = CGRectMake(0, 0, Alert_Width, _buttonsTable.bottom - _horizontalLine.height);
-            }
-            else{
-                
-                self.frame = CGRectMake(0, 0, Alert_Width, _buttonsTable.bottom + ButtonsTopMargin);
-            }
+            _buttonsList.scrollEnabled = _frameManager.buttonsListScrollEnabled;
+            _contentScroll.bounces = NO;
         }
             break;
         default:
             break;
     }
     
+    self.frame  = CGRectMake(0, 0, _frameManager.alertWidth, _frameManager.alertHeight);
     self.center = CGPointMake(WIDTH / 2, HEIGHT / 2);
     
 }
@@ -334,7 +264,7 @@ static const NSInteger buttonTag            = 10086;    //按钮的默认tag值
     [button setBackgroundColor:item.backgroundColor];
     [button setTitleColor:item.textColor forState:UIControlStateNormal];
     [button setTitle:item.text forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self action:@selector(buttonsButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     
     if (item.layerColor) {
         
@@ -347,19 +277,35 @@ static const NSInteger buttonTag            = 10086;    //按钮的默认tag值
     return button;
 }
 
-
 #pragma mark - event method
 
 #pragma mark -
 #pragma mark button click
-- (void)buttonClick:(UIButton *)sender{
+- (void)buttonsButtonClick:(UIButton *)sender{
+    
+    NSInteger index = 0;
+    
+    switch (_alertViewType) {
+            
+        case ZEROAlertViewTypeDefault:
+        case ZEROAlertViewTypeCustomDefault:
+            
+            index = sender.tag - buttonTag;
+            break;
+        case ZEROAlertViewTypeButtons:
+        case ZEROAlertViewTypeCustomButtons:
+            
+            index = sender.tag - buttonTag;
+            break;
+        default:
+            break;
+    }
     
     [self dismissWithCompletion:^{
         
-        NSInteger tag = sender.tag - buttonTag;
-        
         if (self.clickIndexHandle) {
-            self.clickIndexHandle(tag);
+            
+            self.clickIndexHandle(index);
         }
     }];
 }
@@ -370,20 +316,11 @@ static const NSInteger buttonTag            = 10086;    //按钮的默认tag值
 #pragma mark UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    return ButtonsCellHeight;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    NSInteger index = _buttons.count - 1 - indexPath.row;
-
-    [self dismissWithCompletion:^{
+    if (_frameManager) {
         
-        if (self.clickIndexHandle) {
-            
-            self.clickIndexHandle(index);
-        }
-    }];
+        return _frameManager.buttonsListCellHeight;
+    }
+    return 50.0;
 }
 
 #pragma mark UITableViewDataSource
@@ -398,8 +335,11 @@ static const NSInteger buttonTag            = 10086;    //按钮的默认tag值
     if (!cell) {
         
         cell = [[ZEROAlertButtonsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ZEROAlertButtonsCell"];
+        cell.delegate = self;
     }
     
+    ZEROAlertItem *item = _buttons[indexPath.row];
+    item.buttonFrame = [_frameManager calculateButtonListButtonFrame];
     [cell configAlertButtons:_buttons[indexPath.row]];
     
     return cell;
@@ -407,240 +347,158 @@ static const NSInteger buttonTag            = 10086;    //按钮的默认tag值
     
 }
 
-#pragma mark - frame method
-
-
-/**
- * @brief 计算标题的坐标
- *  
- * @discussion 有title，则是 ZEROAlertViewTypeDefault 和 ZEROAlertViewTypeButtons 其中一种Alert。其宽度都是固定的270
- * @return titleLabel's frame
- */
-- (CGRect)titleFrame{
+#pragma mark - set method
+- (void)setButtons:(NSArray *)buttons{
     
-    CGFloat TitleWidth  = Alert_Width - TitleMarginLeft * 2;
+    __block NSMutableArray *items = [NSMutableArray arrayWithCapacity:0];
+    __block NSInteger buttonType  = 0;
     
-    CGFloat titleHeight = [_title heightWithStringFont:Z_Alert_Title_Font fixedWidth:TitleWidth];
-    
-    CGFloat top         = titleHeight > 0 ? TitleMarginTop : 0;
-    
-    return CGRectMake(TitleMarginLeft, top, TitleWidth, titleHeight);
-}
-
-
-/**
- * @brief 计算Alert内容坐标
- *
- *
- * @return messageLabel's frame
- */
-- (CGRect)messageFrame{
-
-    CGFloat MessageWidth  = Alert_Width - MessageMarginLeft * 2;
-    CGFloat messageHeight = [_message heightWithStringFont:Z_Alert_Message_Font fixedWidth:MessageWidth];
-    CGFloat top           = 0.0;
-    
-    if (_titleLabel.height > 0) {
-        // -----如果title不为nil
-        if (messageHeight > 0) {
-            // -----message不为nil，message的originY就是 MessageMarginTop的1/2(customScroll的originY 也是1/2)
-            top = MessageMarginTop / 2.0;
-        }
-        else{
-            // -----message为nil时，message高度为0，customScroll高度也为0，调整titleLabel的高度
-            _titleLabel.height = _titleLabel.bottom < (CustomScrollHeightMin - TitleMarginTop) ? (CustomScrollHeightMin - TitleMarginTop * 2) : _titleLabel.height;
-            top = 0.0;
-        }
-    }
-    else{
-        // -----如果title为nil，message不为nil时，messageLabel的originY为 3/4(另 1/4 是customScroll的originY)
-        top = messageHeight > 0 ? (MessageMarginTop / 2.0 + MessageMarginTop / 4.0) : 0;
-    }
-    
-    return CGRectMake(MessageMarginLeft, top, MessageWidth, messageHeight);
-}
-
-- (CGRect)customFrame{
-    
-    return CGRectMake(0, 0, Alert_Width, _customHeight);
-}
-
-
-/**
- * @brief 计算customScroll的坐标
- *
- * @discussion customScroll的子控件不固定，所以坐标计算比较麻烦。
- *
- * @return customScrollView's frame
- */
-- (CGRect)customScrollFrame{
-    
-    CGFloat top             = 0.0;
-    CGFloat height          = 0.0;
-    CGFloat contentHeight   = 0.0;
-    
-    switch (_alertViewType) {
-            
-        case ZEROAlertViewTypeDefault:{
-            
-            top     = [self customScrollViewTop];
-            height  = _messageLabel.height > 0 ? _messageLabel.bottom + MessageMarginTop: 0;
-            height  = height > (Z_Alert_Height_Max - NormalButtonHeight - top) ? (Z_Alert_Height_Max - NormalButtonHeight - top) : height;
-            
-            contentHeight   = _messageLabel.bottom > 0 ? _messageLabel.bottom + MessageMarginTop : 0;
-        }
-            break;
-        case ZEROAlertViewTypeButtons:{
-            
-            top     = [self customScrollViewTop];
-            height  = _messageLabel.height > 0 ? _messageLabel.bottom : 0;
-            height  = [self configCustomScrollHeight:height top:top];
-            
-            contentHeight   = _messageLabel.bottom > 0 ? _messageLabel.bottom: 0;
-        }
-            break;
-        case ZEROAlertViewTypeCustomDefault:{
-            
-            height          = _customView.height;
-            height          = height > (Z_Alert_Height_Max - NormalButtonHeight) ? (Z_Alert_Height_Max - NormalButtonHeight) : height;
-            contentHeight   = _customView.height;
-        }
-            break;
-        case ZEROAlertViewTypeCustomButtons:{
-            
-            height          = _customView.height;
-            height          = [self configCustomScrollHeight:height top:top];
-            contentHeight   = _customView.height;
-        }
-            break;
-        default:
-            break;
-    }
-    
-    _customScollView.contentSize = CGSizeMake(Alert_Width, contentHeight);
-    
-    if ((top + height) < CustomScrollHeightMin && _titleLabel <= 0) {
+    [buttons enumerateObjectsUsingBlock:^(NSString *_Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
-        _messageLabel.center = CGPointMake(Alert_Width / 2.0, CustomScrollHeightMin / 2.0);
-        return CGRectMake(0, 0, Alert_Width, CustomScrollHeightMin);
-    }
-    return CGRectMake(0, top, Alert_Width, height);
-}
-
-
-/**
- * @brief alertViewType = 0,1 时，customScroll的top
- * @return customScroll'top
- */
-- (CGFloat)customScrollViewTop{
-    
-    CGFloat top = 0.0;
-    if (_titleLabel.height > 0) {
-        
-        if (_messageLabel.height > 0) {
-            
-            top = _titleLabel.bottom + MessageMarginTop / 2.0;
-        }
-        else{
-            
-            top = _titleLabel.bottom + TitleMarginTop;
-        }
-    }
-    else{
-        // -----1/4是为了视图美观。。。。。。。
-        top = _messageLabel.height > 0 ? MessageMarginTop / 4.0 : 0;
-    }
-    return top;
-}
-
-
-- (CGRect)horizontalLineFrame{
-    
-    CGFloat top     = _customScollView.bottom > 0 ? _customScollView.bottom : 0;
-    CGFloat height  = _customScollView.bottom > 0 ? 1 : 0;
-    
-    return CGRectMake(0, top, Alert_Width, height);
-}
-
-- (CGRect)verticalLineFrame{
-    
-    CGFloat top = _horizontalLine.height > 0 ? _horizontalLine.bottom : 0;
-    
-    return CGRectMake(Alert_Width / 2.0 - 0.5, top, 1, NormalButtonHeight);
-}
-
-- (CGRect)normalButtonFrame:(NSInteger)idx{
-    
-    CGFloat top = _horizontalLine.height > 0 ? _horizontalLine.bottom : 0;
-    
-    return CGRectMake(idx * (Alert_Width / 2.0 + 1),top, (Alert_Width - 1.0) / 2.0, NormalButtonHeight);
-}
-
-
-
-/**
- @brief 在AlertViewType = 1,3 时，buttonTableView的坐标
-
- @return buttonTableView's frame
- */
-- (CGRect)buttonsTableFrame{
-    
-    if (_buttons.count <= 0) {
-        
-        return CGRectMake(0, _horizontalLine.bottom, Alert_Width, 0);
-    }
-    
-    CGFloat top = _horizontalLine.bottom > 0 ? _horizontalLine.bottom + ButtonsTopMargin : ButtonsTopMargin;
-    CGFloat height = ButtonsCellHeight * _buttons.count;
-    
-    if (ButtonsTopMargin + height + _customScollView.bottom > Z_Alert_Height_Max) {
-        
-        height = Z_Alert_Height_Max - _customScollView.bottom - ButtonsTopMargin;
-        // -----如果下半部分高度 小于 Alert最大高度的一半(上高下矮)，tableView不可滑动
-        if (height + ButtonsTopMargin <= Z_Alert_Height_Max / 2.0) {
-            
-            _buttonsTable.scrollEnabled = NO;
-        }
-        else{
-            
-            _buttonsTable.scrollEnabled = YES;
-        }
-    }
-    
-    return CGRectMake(0, top, Alert_Width, height);
-}
-
-
-/**
- @brief 根据button的个数，对customScrollView的高度进行更新
-
- @param height customScrollView's height
- @param top    customScrollView's top
-
- @return customScrollView's height(new)
- */
-- (CGFloat)configCustomScrollHeight:(CGFloat)height top:(CGFloat)top{
-    
-    CGFloat bottomtHeight  = _buttons.count * ButtonsCellHeight + ButtonsTopMargin;;
-    
-    if (top + height + bottomtHeight > Z_Alert_Height_Max) {
-        
-        if (top + height > (Z_Alert_Height_Max / 2.0)) {
-            
-            if (bottomtHeight > (Z_Alert_Height_Max / 2.0)) {
+        if (buttons.count == 2) {
+            // -----如果只有两个按钮，为Alert标准模式
+            if (idx == 0) {
                 
-                return Z_Alert_Height_Max / 2.0;
-                //return Z_Alert_Height_Max / 2.0 - top;
+                buttonType = ZEROAlertViewButtonTypeNomalCancel;
             }
             else{
                 
-                return Z_Alert_Height_Max - bottomtHeight - top;
+                buttonType = ZEROAlertViewButtonTypeNomalOK;
+            }
+        }
+        else{
+            // -----按钮列表模式
+            if (idx == 0 && _cancelButtonTitle) {
+                // -----第一个是cancel
+                buttonType = ZEROAlertViewButtonTypeButtonsCancel;
+            }
+            else{
+                // -----非cancel
+                buttonType = ZEROAlertViewButtonTypeButtonsDefault;
             }
         }
         
-    }
-    return height;
+        ZEROAlertItem *item = [[ZEROAlertItem alloc] initWithText:obj index:idx buttonType:buttonType buttonFrame:CGRectZero];
+        
+        if (buttons.count == 2) {
+            
+            [items addObject:item];
+        }
+        else{
+            
+            [items insertObject:item atIndex:0];
+        }
+    }];
+    
+    _buttons = items;
 }
 
+- (void)setOtherButtons:(NSArray<NSDictionary *> *)otherButtons{
+    
+    NSMutableArray *allButtons = [NSMutableArray arrayWithArray:otherButtons];
+    if (_cancelButtonTitle) {
+        
+        [allButtons insertObject:@{@(0):_cancelButtonTitle} atIndex:0];
+    }
+    
+    __block NSMutableArray *items = [NSMutableArray arrayWithCapacity:0];
+    [otherButtons enumerateObjectsUsingBlock:^(NSDictionary *_Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop){
+        ZEROAlertItem *item = [[ZEROAlertItem alloc] initWithText:[[obj allValues] firstObject] index:idx buttonType:[[[obj allKeys] firstObject] integerValue] buttonFrame:CGRectZero];
+        [items addObject:item];
+    }];
+    
+    _buttons = items;
+    
+    [self configAlertViewType];
+}
+
+- (void)configAlertViewType{
+    
+    if (_buttons.count == 2) {
+        
+        if (_customView) {
+            
+            _alertViewType = ZEROAlertViewTypeCustomDefault;
+        }
+        else{
+            
+            _alertViewType = ZEROAlertViewTypeDefault;
+        }
+    }
+    else{
+        
+        if (_customView) {
+            
+            _alertViewType = ZEROAlertViewTypeCustomButtons;
+        }
+        else{
+            
+            _alertViewType = ZEROAlertViewTypeButtons;
+        }
+    }
+}
+
+#pragma mark - get method
+
+- (UIColor *)alertColor{
+    
+    if (!_alertColor) {
+        
+        _alertColor = [UIColor whiteColor];
+    }
+    return _alertColor;
+}
+
+- (UIColor *)titleTextColor{
+    
+    if (!_titleTextColor) {
+        
+        _titleTextColor = UIColorRGBA(55, 52, 71, 1);
+    }
+    return _titleTextColor;
+}
+
+- (UIColor *)messageTextColor{
+    
+    if (!_messageTextColor) {
+        
+        _messageTextColor = UIColorRGBA(55, 52, 71, 1);
+    }
+    return _messageTextColor;
+}
+
+- (UIColor *)lineColor{
+    
+    if (!_lineColor) {
+        
+        _lineColor = [UIColor colorWithWhite:0.2 alpha:0.2];
+    }
+    return _lineColor;
+}
+
+- (UIFont *)titleFont{
+    
+    if (!_titleFont) {
+        
+        _titleFont = [UIFont systemFontOfSize:19];
+    }
+    return _titleFont;
+}
+
+- (UIFont *)messageFont{
+    
+    if (!_messageFont) {
+        
+        _messageFont = [UIFont systemFontOfSize:17];
+    }
+    return _messageFont;
+}
+// Duplicate UIView
+// 完全复制一个UIView和对象的时候可以使用对象序列化方法
+- (UIView*)duplicate:(UIView*)view
+{
+    NSData * tempArchive = [NSKeyedArchiver archivedDataWithRootObject:view];
+    return [NSKeyedUnarchiver unarchiveObjectWithData:tempArchive];
+}
 @end
 

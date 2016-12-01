@@ -71,6 +71,7 @@
 		874475F41DEF522700E5FF2A /* ZEROAlertRootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 874475EB1DEF522700E5FF2A /* ZEROAlertRootView.m */; };
 		874475F51DEF522700E5FF2A /* ZEROAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 874475ED1DEF522700E5FF2A /* ZEROAlertView.m */; };
 		874475F61DEF522700E5FF2A /* ZEROSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 874475EF1DEF522700E5FF2A /* ZEROSheetView.m */; };
+		874475FF1DEFF2F100E5FF2A /* UIImage+SolidColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 874475FE1DEFF2F100E5FF2A /* UIImage+SolidColor.m */; };
 		879F597B1DDC1F94000185F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F597A1DDC1F94000185F8 /* main.m */; };
 		879F597E1DDC1F94000185F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F597D1DDC1F94000185F8 /* AppDelegate.m */; };
 		879F59811DDC1F94000185F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F59801DDC1F94000185F8 /* ViewController.m */; };
@@ -268,6 +269,8 @@
 		874475ED1DEF522700E5FF2A /* ZEROAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEROAlertView.m; sourceTree = "<group>"; };
 		874475EE1DEF522700E5FF2A /* ZEROSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEROSheetView.h; sourceTree = "<group>"; };
 		874475EF1DEF522700E5FF2A /* ZEROSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEROSheetView.m; sourceTree = "<group>"; };
+		874475FD1DEFF2F100E5FF2A /* UIImage+SolidColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SolidColor.h"; sourceTree = "<group>"; };
+		874475FE1DEFF2F100E5FF2A /* UIImage+SolidColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SolidColor.m"; sourceTree = "<group>"; };
 		879F59761DDC1F94000185F8 /* ZEROControls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZEROControls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879F597A1DDC1F94000185F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		879F597C1DDC1F94000185F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -586,6 +589,8 @@
 			children = (
 				8734CC391DE76F1700F5E976 /* UIImage+ImageEffects.h */,
 				8734CC3A1DE76F1700F5E976 /* UIImage+ImageEffects.m */,
+				874475FD1DEFF2F100E5FF2A /* UIImage+SolidColor.h */,
+				874475FE1DEFF2F100E5FF2A /* UIImage+SolidColor.m */,
 			);
 			name = "UIImage+Category";
 			sourceTree = "<group>";
@@ -1071,6 +1076,7 @@
 				879F5A1E1DDCD1C0000185F8 /* POPSpringAnimation.mm in Sources */,
 				87EBFACB1DDDF17700677DB9 /* AddSelectListCell.m in Sources */,
 				8716777A1DE0C852003772C0 /* UIButton+AFNetworking.m in Sources */,
+				874475FF1DEFF2F100E5FF2A /* UIImage+SolidColor.m in Sources */,
 				879F59C51DDCC14F000185F8 /* ZEROListModel.m in Sources */,
 				874475F51DEF522700E5FF2A /* ZEROAlertView.m in Sources */,
 				874475F61DEF522700E5FF2A /* ZEROSheetView.m in Sources */,

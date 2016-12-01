@@ -14,6 +14,15 @@ typedef NS_ENUM(NSInteger, ZEROAlertStyle)
     ZEROAlertStyleActionSheet
 };
 
+typedef NS_ENUM(NSInteger, ZEROAlertViewType) {
+    
+    ZEROAlertViewTypeDefault = 0,
+    ZEROAlertViewTypeButtons,
+    ZEROAlertViewTypeCustomDefault,
+    ZEROAlertViewTypeCustomButtons
+};
+
+
 typedef void (^ClickHandleWithIndex)(NSInteger index);
 
 @interface ZEROAlertRootView : UIView

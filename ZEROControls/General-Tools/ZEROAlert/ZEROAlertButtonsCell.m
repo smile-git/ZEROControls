@@ -8,7 +8,7 @@
 
 #import "ZEROAlertButtonsCell.h"
 #import "ZEROAlertItem.h"
-
+#import "UIImage+SolidColor.h"
 
 @implementation ZEROAlertButtonsCell
 
@@ -16,28 +16,41 @@
     
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         
-        self.buttonsLabel                    = [[UILabel alloc] init];
-        _buttonsLabel.layer.cornerRadius     = 5;
-        _buttonsLabel.layer.masksToBounds    = YES;
-        _buttonsLabel.layer.borderColor      = [UIColor whiteColor].CGColor;
-        _buttonsLabel.layer.borderWidth      = 1;
-        _buttonsLabel.textAlignment          = NSTextAlignmentCenter;
-        [self.contentView addSubview:_buttonsLabel];
+        self.selectionStyle                     = UITableViewCellSelectionStyleNone;
+        self.buttonsButton                      = [UIButton buttonWithType:UIButtonTypeCustom];
+        _buttonsButton.layer.cornerRadius       = 5;
+        _buttonsButton.layer.masksToBounds      = YES;
+        _buttonsButton.layer.borderColor        = [UIColor whiteColor].CGColor;
+        _buttonsButton.layer.borderWidth        = 1;
+        _buttonsButton.titleLabel.textAlignment = NSTextAlignmentCenter;
+        [_buttonsButton addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self.contentView addSubview:_buttonsButton];
         
-        self.selectionStyle                  = UITableViewCellSelectionStyleNone;
     }
     return self;
 }
 
 - (void)configAlertButtons:(ZEROAlertItem *)item{
     
-    _buttonsLabel.textColor         = item.textColor;
-    _buttonsLabel.backgroundColor   = item.backgroundColor;
-    _buttonsLabel.text              = item.text;
-    _buttonsLabel.frame             = item.buttonFrame;
+    [_buttonsButton setTitleColor:item.textColor forState:UIControlStateNormal];
+    [_buttonsButton setTitleColor:item.backgroundColor forState:UIControlStateHighlighted];
+    [_buttonsButton setBackgroundImage:[UIImage imageWithSize:item.buttonFrame.size color:item.backgroundColor] forState:UIControlStateNormal];
+    [_buttonsButton setBackgroundImage:[UIImage imageWithSize:item.buttonFrame.size color:item.textColor] forState:UIControlStateHighlighted];
+    [_buttonsButton setTitle:item.text forState:UIControlStateNormal];
+    _buttonsButton.frame    = item.buttonFrame;
+    _buttonsButton.tag      = buttonTag + item.index;
+    
     if (item.layerColor) {
         
-        _buttonsLabel.layer.borderColor = item.layerColor.CGColor;
+        _buttonsButton.layer.borderColor = item.layerColor.CGColor;
+    }
+}
+
+- (void)buttonClick:(UIButton *)sender{
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(buttonsButtonClick:)]) {
+        
+        [self.delegate buttonsButtonClick:sender];
     }
 }
 
