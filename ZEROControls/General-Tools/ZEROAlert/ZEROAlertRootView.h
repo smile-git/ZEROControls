@@ -22,6 +22,12 @@ typedef NS_ENUM(NSInteger, ZEROAlertViewType) {
     ZEROAlertViewTypeCustomButtons
 };
 
+typedef NS_ENUM(NSInteger, ZEROSheetViewType) {
+    
+    ZEROSheetViewTypeDefault = 0,
+    ZEROSheetViewTypeCustom
+};
+
 
 typedef void (^ClickHandleWithIndex)(NSInteger index);
 

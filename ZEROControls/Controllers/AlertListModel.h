@@ -10,4 +10,8 @@
 
 @interface AlertListModel : NSObject
 
+@property (nonatomic, copy) NSString *title;
+
+- (instancetype)initWithTitle:(NSString *)title;
+
 @end

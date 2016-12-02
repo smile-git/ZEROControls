@@ -9,12 +9,6 @@
 #import "ZEROAlertRootView.h"
 
 
-typedef NS_ENUM(NSInteger, ZEROSheetViewType) {
-    
-    ZEROSheetViewTypeDefault = 0,
-    ZEROSheetViewTypeCustom
-};
-
 @interface ZEROSheetView : ZEROAlertRootView
 
 - (instancetype)initWithTitle:(NSString *)title cancelButtonTitle:(NSString *)cancelButtonTitle click:(ClickHandleWithIndex)clickHandle otherButtonTitles:(NSString *)otherButtonTitles, ... NS_REQUIRES_NIL_TERMINATION;

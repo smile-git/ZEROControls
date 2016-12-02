@@ -100,7 +100,7 @@ static const CGFloat SectionGap         = 15;       //取消按钮和选择列�
     _actionsTable.separatorInset        = UIEdgeInsetsZero;
     [self addSubview:_actionsTable];
     
-    self.backgroundColor = [UIColor clearColor];
+    self.backgroundColor = [UIColor whiteColor];
     
 }
 

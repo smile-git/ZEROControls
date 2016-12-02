@@ -184,7 +184,7 @@
     _titleLabel.textColor           = self.titleTextColor;
     _messageLabel.font              = self.messageFont;
     _messageLabel.textColor         = self.messageTextColor;
-    _titleLabel.backgroundColor     = self.backgroundColor;
+    _titleLabel.backgroundColor     = [UIColor clearColor];
     _messageLabel.backgroundColor   = [UIColor clearColor];
     _contentScroll.backgroundColor  = self.backgroundColor;
     _horizontalLine.backgroundColor = self.lineColor;

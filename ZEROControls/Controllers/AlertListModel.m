@@ -10,4 +10,13 @@
 
 @implementation AlertListModel
 
+- (instancetype)initWithTitle:(NSString *)title{
+    
+    if (self = [super init]) {
+        
+        self.title = title;
+    }
+    return self;
+}
+
 @end
