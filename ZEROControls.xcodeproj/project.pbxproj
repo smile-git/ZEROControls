@@ -119,7 +119,6 @@
 		87EBFAE71DDEC1E600677DB9 /* UIView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 87EBFAE61DDEC1E600677DB9 /* UIView+Ext.m */; };
 		87F4CEE21DF110FD008B6586 /* AlertListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F4CEE11DF110FD008B6586 /* AlertListViewController.m */; };
 		87F4CEE51DF119AC008B6586 /* AlertListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F4CEE41DF119AC008B6586 /* AlertListModel.m */; };
-		87F4CEE81DF119BE008B6586 /* AlertListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F4CEE71DF119BE008B6586 /* AlertListCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -384,8 +383,6 @@
 		87F4CEE11DF110FD008B6586 /* AlertListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertListViewController.m; sourceTree = "<group>"; };
 		87F4CEE31DF119AC008B6586 /* AlertListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertListModel.h; sourceTree = "<group>"; };
 		87F4CEE41DF119AC008B6586 /* AlertListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertListModel.m; sourceTree = "<group>"; };
-		87F4CEE61DF119BE008B6586 /* AlertListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertListCell.h; sourceTree = "<group>"; };
-		87F4CEE71DF119BE008B6586 /* AlertListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertListCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -947,8 +944,6 @@
 				87F4CEE11DF110FD008B6586 /* AlertListViewController.m */,
 				87F4CEE31DF119AC008B6586 /* AlertListModel.h */,
 				87F4CEE41DF119AC008B6586 /* AlertListModel.m */,
-				87F4CEE61DF119BE008B6586 /* AlertListCell.h */,
-				87F4CEE71DF119BE008B6586 /* AlertListCell.m */,
 			);
 			name = AlertListViewController;
 			sourceTree = "<group>";
@@ -1141,7 +1136,6 @@
 				871677CF1DE208EC003772C0 /* UIButton+WebCache.m in Sources */,
 				871677CE1DE208EC003772C0 /* SDWebImagePrefetcher.m in Sources */,
 				871677871DE0C87D003772C0 /* WWaterFallManager.m in Sources */,
-				87F4CEE81DF119BE008B6586 /* AlertListCell.m in Sources */,
 				871677CA1DE208EC003772C0 /* SDWebImageDecoder.m in Sources */,
 				879F597E1DDC1F94000185F8 /* AppDelegate.m in Sources */,
 				879F59D21DDCC598000185F8 /* ZEROListCell.m in Sources */,
