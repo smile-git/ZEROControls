@@ -14,7 +14,7 @@
 #pragma mark - Propeties.
 
 /**
- *  CustomCell's dataAdapter.
+ *  CustomCell's dataItem.
  */
 @property (nonatomic, weak) CellDataItem         *dataItem;
 

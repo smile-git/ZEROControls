@@ -57,7 +57,7 @@
         ZEROListModel *item = array[i];
         item.index = i + 1;
         [item createAttributedName];
-        [self.items addObject:[CellDataItem cellDataAdapterWithCellReuseIdentifier:NSStringFromClass([ZEROListCell class]) data:item cellHeight:0 cellType:0]];
+        [self.items addObject:[CellDataItem cellDataItemWithCellReuseIdentifier:NSStringFromClass([ZEROListCell class]) data:item cellHeight:0 cellType:0]];
     }
 }
 

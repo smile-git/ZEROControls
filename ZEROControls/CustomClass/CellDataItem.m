@@ -11,8 +11,8 @@
 @implementation CellDataItem
 
 
-+ (CellDataItem *)cellDataAdapterWithCellReuseIdentifier:(NSString *)cellReuseIdentifiers data:(id)data
-                                                 cellHeight:(CGFloat)cellHeight cellType:(NSInteger)cellType {
++ (CellDataItem *)cellDataItemWithCellReuseIdentifier:(NSString *)cellReuseIdentifiers data:(id)data
+                                           cellHeight:(CGFloat)cellHeight cellType:(NSInteger)cellType {
     CellDataItem *adapter       = [[self class] new];
     adapter.cellReuseIdentifier = cellReuseIdentifiers;
     adapter.data                = data;

@@ -11,6 +11,11 @@
 #import "AddListView.h"
 #import "AddSelectListCell.h"
 
+static const CGFloat AddListViewRightMargin = 10.0;
+static const CGFloat AddListViewTopMargin   = 10.0;
+static const CGFloat AddListViewItemWidth   = 130.0;
+static const CGFloat AddListViewItemHeight  = 40.0;
+
 @interface AddListController ()<UIGestureRecognizerDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) AddListView *listView;
@@ -41,8 +46,8 @@
         
         _items = items;
         
-        _listView.frame  = CGRectMake(WIDTH - AddListViewItem_Width - 10, 64 + 5, AddListViewItem_Width, AddListViewItem_Height * (items.count > 6 ? 6 : items.count) + 10);
-        _tableView.frame = CGRectMake(0, 10, _listView.width, _listView.height - 10);
+        _listView.frame  = CGRectMake(WIDTH - AddListViewItemWidth - AddListViewRightMargin, 64 + 5, AddListViewItemWidth, AddListViewItemHeight * (items.count > 6 ? 6 : items.count) + AddListViewTopMargin);
+        _tableView.frame = CGRectMake(0, AddListViewTopMargin, _listView.width, _listView.height - AddListViewTopMargin);
         
         [_tableView reloadData];
     }
@@ -53,7 +58,7 @@
 
 - (void)createListView{
     
-    self.listView = [[AddListView alloc] initWithFrame:CGRectMake(WIDTH - AddListViewItem_Width - 10, 64 + 5, AddListViewItem_Width, AddListViewItem_Height * (_items.count > 6 ? 6 : _items.count) + 10)];
+    self.listView = [[AddListView alloc] initWithFrame:CGRectMake(WIDTH - AddListViewItemWidth - AddListViewRightMargin, 64 + 5, AddListViewItemWidth, AddListViewItemHeight * (_items.count > 6 ? 6 : _items.count) + AddListViewTopMargin)];
     _listView.hidden = YES;
 
     [self.view addSubview:_listView];
@@ -63,12 +68,12 @@
 
 - (void)createTableView{
     //tableView
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 10, _listView.width, _listView.height - 10) style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, AddListViewTopMargin, _listView.width, _listView.height - AddListViewTopMargin) style:UITableViewStylePlain];
     
     _tableView.delegate             = self;
     _tableView.dataSource           = self;
     _tableView.bounces              = NO;
-    _tableView.rowHeight            = AddListViewItem_Height;
+    _tableView.rowHeight            = AddListViewItemHeight;
     _tableView.backgroundColor      = [UIColor clearColor];
     _tableView.layer.cornerRadius   = 3;
     _tableView.layer.masksToBounds  = YES;

@@ -8,6 +8,7 @@
 
 #import "AddListView.h"
 
+#define AddListViewFillColor    UIColorRGBA(100, 100, 100, 1)
 
 @implementation AddListView
 
@@ -39,14 +40,14 @@
     CGFloat height     = 5;
     CGFloat layerWidth = height * sqrt(3) / 3;
     
-    UIColor*aColor = AddListViewFillColor;
+    UIColor *aColor    = AddListViewFillColor;
     CGContextSetFillColorWithColor(context, aColor.CGColor);    //填充颜色
     CGContextSetStrokeColorWithColor(context, aColor.CGColor);  //画笔线的颜色
     
     CGPoint sPoints[3];
-    sPoints[0] =CGPointMake(centerX, top);
-    sPoints[1] =CGPointMake(centerX - layerWidth, top + height);
-    sPoints[2] =CGPointMake(centerX + layerWidth, top + height);
+    sPoints[0] = CGPointMake(centerX, top);
+    sPoints[1] = CGPointMake(centerX - layerWidth, top + height);
+    sPoints[2] = CGPointMake(centerX + layerWidth, top + height);
     CGContextAddLines(context, sPoints, 3);         //添加线
     CGContextClosePath(context);                    //封起来
     CGContextDrawPath(context, kCGPathFillStroke);  //根据坐标绘制路径
@@ -54,8 +55,8 @@
     
     /*画圆角矩形*/
     CGFloat arcTop = top + height + 1;
-    float fw = self.frame.size.width;
-    float fh = self.frame.size.height;
+    float fw       = self.frame.size.width;
+    float fh       = self.frame.size.height;
     
     CGContextMoveToPoint(context, fw, fh - 10);                     // 开始坐标右边开始
     CGContextAddArcToPoint(context, fw, fh, 10, fh, 4);             // 右下角角度
