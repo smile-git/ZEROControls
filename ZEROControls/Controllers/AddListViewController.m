@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.05f];;
+    self.view.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1];
     
     [self setNavControllerRightImage:[UIImage imageNamed:@"barbuttonicon_add"]];
     [self loadItemData];

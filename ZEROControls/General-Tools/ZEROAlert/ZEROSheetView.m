@@ -161,6 +161,7 @@ static const CGFloat SectionGap         = 15;       //取消按钮和选择列�
             index -= 1;
         }
     }
+    NSLog(@"%zi", index);
     [self dismissWithCompletion:^{
         
         if (self.clickIndexHandle) {
@@ -258,7 +259,7 @@ static const CGFloat SectionGap         = 15;       //取消按钮和选择列�
         
         cell.textLabel.textColor = Z_Sheet_Title_Color;
         cell.textLabel.font      = Z_Sheet_Detail_Font;
-        cell.textLabel.text      = _otherButtonTitles[indexPath.row];
+        cell.textLabel.text      = _otherButtonTitles[_otherButtonTitles.count - 1 - indexPath.row];
     }
     
     return cell;
