@@ -10,10 +10,6 @@
 #import "NSString+LabelWidthAndHeight.h"
 #import "UIView+Ext.h"
 
-#define UIColorRGBA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
-#define WIDTH   [UIScreen mainScreen].bounds.size.width
-#define HEIGHT  [UIScreen mainScreen].bounds.size.height
-
 #define Z_Sheet_Height_Max      HEIGHT - 100                            //Sheet最大高度
 #define Z_Sheet_BackgroundColor [UIColor whiteColor]                    //sheet背景颜色
 #define Z_Sheet_Title_Font      [UIFont systemFontOfSize:19]            //标题字号

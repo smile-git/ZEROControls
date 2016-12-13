@@ -54,6 +54,7 @@
 		871677D31DE208EC003772C0 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 871677C11DE208EC003772C0 /* UIImageView+HighlightedWebCache.m */; };
 		871677D41DE208EC003772C0 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 871677C31DE208EC003772C0 /* UIImageView+WebCache.m */; };
 		871677D51DE208EC003772C0 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 871677C51DE208EC003772C0 /* UIView+WebCacheOperation.m */; };
+		8731C4DF1DF2B48D003082DE /* PhotoChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8731C4DE1DF2B48D003082DE /* PhotoChooseView.m */; };
 		87320F2D1DE3589A00B19A3C /* CircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 87320F2C1DE3589A00B19A3C /* CircleLayout.m */; };
 		87320F311DE358AD00B19A3C /* CircleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87320F2F1DE358AD00B19A3C /* CircleCell.m */; };
 		87320F321DE358AD00B19A3C /* CircleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87320F301DE358AD00B19A3C /* CircleCell.xib */; };
@@ -237,6 +238,8 @@
 		871677C31DE208EC003772C0 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		871677C41DE208EC003772C0 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		871677C51DE208EC003772C0 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		8731C4DD1DF2B48D003082DE /* PhotoChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoChooseView.h; sourceTree = "<group>"; };
+		8731C4DE1DF2B48D003082DE /* PhotoChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoChooseView.m; sourceTree = "<group>"; };
 		87320F2B1DE3589A00B19A3C /* CircleLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleLayout.h; sourceTree = "<group>"; };
 		87320F2C1DE3589A00B19A3C /* CircleLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleLayout.m; sourceTree = "<group>"; };
 		87320F2E1DE358AD00B19A3C /* CircleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleCell.h; sourceTree = "<group>"; };
@@ -924,6 +927,8 @@
 			children = (
 				87EBFAD51DDE028500677DB9 /* PhotoChooseViewController.h */,
 				87EBFAD61DDE028500677DB9 /* PhotoChooseViewController.m */,
+				8731C4DD1DF2B48D003082DE /* PhotoChooseView.h */,
+				8731C4DE1DF2B48D003082DE /* PhotoChooseView.m */,
 			);
 			name = PhotoChooseViewController;
 			sourceTree = "<group>";
@@ -1120,6 +1125,7 @@
 				879F59811DDC1F94000185F8 /* ViewController.m in Sources */,
 				879F5A0F1DDCD1C0000185F8 /* POPAnimatableProperty.mm in Sources */,
 				8716776F1DE0C852003772C0 /* AFNetworkReachabilityManager.m in Sources */,
+				8731C4DF1DF2B48D003082DE /* PhotoChooseView.m in Sources */,
 				874475F41DEF522700E5FF2A /* ZEROAlertRootView.m in Sources */,
 				874475F11DEF522700E5FF2A /* ZEROAlertFrameManager.m in Sources */,
 				871676381DE067A7003772C0 /* HWaterFallViewController.m in Sources */,
