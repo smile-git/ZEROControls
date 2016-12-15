@@ -9,6 +9,7 @@
 #import "AddListViewController.h"
 #import "AddSelectListItem.h"
 #import "AddListController.h"
+#import "SphereMenu.h"
 
 @interface AddListViewController ()
 
@@ -22,9 +23,14 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1];
-    
     [self setNavControllerRightImage:[UIImage imageNamed:@"barbuttonicon_add"]];
+    
     [self loadItemData];
+    
+    [[[SphereMenu alloc] initWithFrame:CGRectMake(WIDTH - 100, HEIGHT - 150, 70, 70) menuImage:@"home_start" sphereImages:@[@"home_start_2", @"home_start_2", @"home_start_3"]] showInView:self.view completion:^(NSInteger index) {
+        
+        NSLog(@"%zi", index);
+    }];
 }
 
 - (void)loadItemData{

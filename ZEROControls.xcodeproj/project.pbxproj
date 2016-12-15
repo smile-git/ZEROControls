@@ -118,6 +118,7 @@
 		87EBFAE01DDEA32B00677DB9 /* AddListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87EBFADF1DDEA32B00677DB9 /* AddListController.m */; };
 		87EBFAE31DDEA9AE00677DB9 /* AddListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87EBFAE21DDEA9AE00677DB9 /* AddListView.m */; };
 		87EBFAE71DDEC1E600677DB9 /* UIView+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 87EBFAE61DDEC1E600677DB9 /* UIView+Ext.m */; };
+		87F45F2C1E02C6B20028B967 /* SphereMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F45F2B1E02C6B20028B967 /* SphereMenu.m */; };
 		87F4CEE21DF110FD008B6586 /* AlertListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F4CEE11DF110FD008B6586 /* AlertListViewController.m */; };
 		87F4CEE51DF119AC008B6586 /* AlertListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F4CEE41DF119AC008B6586 /* AlertListModel.m */; };
 /* End PBXBuildFile section */
@@ -382,6 +383,8 @@
 		87EBFAE21DDEA9AE00677DB9 /* AddListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddListView.m; sourceTree = "<group>"; };
 		87EBFAE51DDEC1E600677DB9 /* UIView+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Ext.h"; sourceTree = "<group>"; };
 		87EBFAE61DDEC1E600677DB9 /* UIView+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Ext.m"; sourceTree = "<group>"; };
+		87F45F2A1E02C6B20028B967 /* SphereMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SphereMenu.h; sourceTree = "<group>"; };
+		87F45F2B1E02C6B20028B967 /* SphereMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SphereMenu.m; sourceTree = "<group>"; };
 		87F4CEE01DF110FD008B6586 /* AlertListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertListViewController.h; sourceTree = "<group>"; };
 		87F4CEE11DF110FD008B6586 /* AlertListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertListViewController.m; sourceTree = "<group>"; };
 		87F4CEE31DF119AC008B6586 /* AlertListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertListModel.h; sourceTree = "<group>"; };
@@ -783,6 +786,7 @@
 		879F59D91DDCD15C000185F8 /* General-Tools */ = {
 			isa = PBXGroup;
 			children = (
+				87F45F291E02C6A30028B967 /* SphereMenu */,
 				874475E11DEF522700E5FF2A /* ZEROAlert */,
 				871677981DE0CBC9003772C0 /* FileManager */,
 				871677451DE0C852003772C0 /* Networking */,
@@ -940,6 +944,15 @@
 				87EBFAE61DDEC1E600677DB9 /* UIView+Ext.m */,
 			);
 			name = "UIView+Category";
+			sourceTree = "<group>";
+		};
+		87F45F291E02C6A30028B967 /* SphereMenu */ = {
+			isa = PBXGroup;
+			children = (
+				87F45F2A1E02C6B20028B967 /* SphereMenu.h */,
+				87F45F2B1E02C6B20028B967 /* SphereMenu.m */,
+			);
+			path = SphereMenu;
 			sourceTree = "<group>";
 		};
 		87F4CEDF1DF110DA008B6586 /* AlertListViewController */ = {
@@ -1103,6 +1116,7 @@
 				879F59C51DDCC14F000185F8 /* ZEROListModel.m in Sources */,
 				874475F51DEF522700E5FF2A /* ZEROAlertView.m in Sources */,
 				874475F61DEF522700E5FF2A /* ZEROSheetView.m in Sources */,
+				87F45F2C1E02C6B20028B967 /* SphereMenu.m in Sources */,
 				879F5A131DDCD1C0000185F8 /* POPAnimationRuntime.mm in Sources */,
 				871677CC1DE208EC003772C0 /* SDWebImageDownloaderOperation.m in Sources */,
 				871677771DE0C852003772C0 /* AFImageDownloader.m in Sources */,
