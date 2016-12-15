@@ -8,3 +8,4 @@
 
 3.https://github.com/awdigital/AWCollectionViewDialLayout (弧形collectionView)
 
+4.https://github.com/ChenYilong/CollectionViewClassifyMenu (标签列表collectionView)
