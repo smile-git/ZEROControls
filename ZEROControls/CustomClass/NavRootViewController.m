@@ -15,12 +15,15 @@
 @implementation NavRootViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     self.view.backgroundColor                        = [UIColor whiteColor];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
     
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:UIColorRGBA(220, 220, 220, 1)}];
+    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     
     //开启系统右滑返回
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
@@ -29,8 +32,7 @@
     }
 }
 
-- (void)setNavControllerLeftImage:(UIImage *)leftImage withRightImage:(UIImage *)rightImage
-{
+- (void)setNavControllerLeftImage:(UIImage *)leftImage withRightImage:(UIImage *)rightImage {
     if (leftImage) {
         UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
         
@@ -54,8 +56,8 @@
     }
 }
 
-- (void)setNavControllerLeftImage:(UIImage *)leftImage
-{
+- (void)setNavControllerLeftImage:(UIImage *)leftImage {
+    
     UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
     
     button.frame = CGRectMake(0, 0, 25, 25);
@@ -66,8 +68,8 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
 }
 
-- (void)setNavControllerRightImage:(UIImage *)rightImage
-{
+- (void)setNavControllerRightImage:(UIImage *)rightImage {
+    
     UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
     
     button.frame = CGRectMake(0, 0, 25, 25);
@@ -79,11 +81,11 @@
 }
 
 
-- (void)leftNavBtnClick:(UIButton *)leftBtn{
+- (void)leftNavBtnClick:(UIButton *)leftBtn {
     
 }
 
-- (void)rightNavBtnClick:(UIButton *)rightBtn{
+- (void)rightNavBtnClick:(UIButton *)rightBtn {
     
 }
 

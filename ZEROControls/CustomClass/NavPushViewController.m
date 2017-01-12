@@ -20,8 +20,8 @@
     [self setNavControllerLeftImage:[UIImage imageNamed:@"nav_back_white"]];
 }
 
-- (void)leftNavBtnClick:(UIButton *)leftBtn
-{
+- (void)leftNavBtnClick:(UIButton *)leftBtn {
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 

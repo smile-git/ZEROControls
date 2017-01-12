@@ -27,7 +27,7 @@
     
     [self loadItemData];
     
-    [[[SphereMenu alloc] initWithFrame:CGRectMake(WIDTH - 100, HEIGHT - 150, 70, 70) menuImage:@"home_start" sphereImages:@[@"home_start_2", @"home_start_2", @"home_start_3"]] showInView:self.view completion:^(NSInteger index) {
+    [[[SphereMenu alloc] initWithFrame:CGRectMake(WIDTH - 100, HEIGHT - 150, 80, 80) menuImage:@"home_start" sphereImages:@[@"home_start_2", @"home_start_2", @"home_start_3"]] showInView:self.view completion:^(NSInteger index) {
         
         NSLog(@"%zi", index);
     }];

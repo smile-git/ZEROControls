@@ -111,6 +111,23 @@
 		879F5A2D1DDCD545000185F8 /* NavPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F5A2C1DDCD545000185F8 /* NavPushViewController.m */; };
 		879F5A301DDCD7BE000185F8 /* BezierTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F5A2F1DDCD7BE000185F8 /* BezierTableViewController.m */; };
 		879F5A371DDCEBFE000185F8 /* NavRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F5A361DDCEBFE000185F8 /* NavRootViewController.m */; };
+		87A12AD51E278B0E0047CA12 /* ZEROAlbumListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A12ACA1E278B0E0047CA12 /* ZEROAlbumListController.m */; };
+		87A12AD61E278B0E0047CA12 /* ZEROGifPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A12ACC1E278B0E0047CA12 /* ZEROGifPhotoPreviewController.m */; };
+		87A12AD71E278B0E0047CA12 /* ZEROImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A12ACE1E278B0E0047CA12 /* ZEROImagePickerController.m */; };
+		87A12AD81E278B0E0047CA12 /* ZEROPhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A12AD01E278B0E0047CA12 /* ZEROPhotoPickerController.m */; };
+		87A12AD91E278B0E0047CA12 /* ZEROPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A12AD21E278B0E0047CA12 /* ZEROPhotoPreviewController.m */; };
+		87A12ADA1E278B0E0047CA12 /* ZEROVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A12AD41E278B0E0047CA12 /* ZEROVideoPlayerController.m */; };
+		87A12AE01E278BC90047CA12 /* ZEROImageCropManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A12ADD1E278BC90047CA12 /* ZEROImageCropManager.m */; };
+		87A12AE11E278BC90047CA12 /* ZEROPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A12ADF1E278BC90047CA12 /* ZEROPhotoManager.m */; };
+		87A12AEC1E278C170047CA12 /* ZEROAlbumListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A12AE31E278C170047CA12 /* ZEROAlbumListCell.m */; };
+		87A12AED1E278C170047CA12 /* ZEROAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A12AE51E278C170047CA12 /* ZEROAssetCell.m */; };
+		87A12AEE1E278C170047CA12 /* ZEROImgProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A12AE71E278C170047CA12 /* ZEROImgProgressView.m */; };
+		87A12AEF1E278C170047CA12 /* ZEROPhotoPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A12AE91E278C170047CA12 /* ZEROPhotoPreviewCell.m */; };
+		87A12AF01E278C170047CA12 /* ZEROPhotoPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A12AEB1E278C170047CA12 /* ZEROPhotoPreviewView.m */; };
+		87A12AF71E278C2B0047CA12 /* NSBundle+ZEROImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A12AF21E278C2B0047CA12 /* NSBundle+ZEROImagePicker.m */; };
+		87A12AF81E278C2B0047CA12 /* UIImage+ZEROPhotoPickerGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A12AF41E278C2B0047CA12 /* UIImage+ZEROPhotoPickerGif.m */; };
+		87A12AF91E278C2B0047CA12 /* UIView+OscillatoryAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A12AF61E278C2B0047CA12 /* UIView+OscillatoryAnimation.m */; };
+		87A12AFC1E278C3A0047CA12 /* ZEROAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A12AFB1E278C3A0047CA12 /* ZEROAssetModel.m */; };
 		87EBFACB1DDDF17700677DB9 /* AddSelectListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87EBFAC51DDDF17700677DB9 /* AddSelectListCell.m */; };
 		87EBFACC1DDDF17700677DB9 /* AddSelectListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 87EBFAC71DDDF17700677DB9 /* AddSelectListItem.m */; };
 		87EBFAD11DDDF1FD00677DB9 /* AddListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87EBFAD01DDDF1FD00677DB9 /* AddListViewController.m */; };
@@ -369,6 +386,40 @@
 		879F5A2F1DDCD7BE000185F8 /* BezierTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierTableViewController.m; sourceTree = "<group>"; };
 		879F5A351DDCEBFE000185F8 /* NavRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavRootViewController.h; sourceTree = "<group>"; };
 		879F5A361DDCEBFE000185F8 /* NavRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavRootViewController.m; sourceTree = "<group>"; };
+		87A12AC91E278B0E0047CA12 /* ZEROAlbumListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEROAlbumListController.h; sourceTree = "<group>"; };
+		87A12ACA1E278B0E0047CA12 /* ZEROAlbumListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEROAlbumListController.m; sourceTree = "<group>"; };
+		87A12ACB1E278B0E0047CA12 /* ZEROGifPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEROGifPhotoPreviewController.h; sourceTree = "<group>"; };
+		87A12ACC1E278B0E0047CA12 /* ZEROGifPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEROGifPhotoPreviewController.m; sourceTree = "<group>"; };
+		87A12ACD1E278B0E0047CA12 /* ZEROImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEROImagePickerController.h; sourceTree = "<group>"; };
+		87A12ACE1E278B0E0047CA12 /* ZEROImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEROImagePickerController.m; sourceTree = "<group>"; };
+		87A12ACF1E278B0E0047CA12 /* ZEROPhotoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEROPhotoPickerController.h; sourceTree = "<group>"; };
+		87A12AD01E278B0E0047CA12 /* ZEROPhotoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEROPhotoPickerController.m; sourceTree = "<group>"; };
+		87A12AD11E278B0E0047CA12 /* ZEROPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEROPhotoPreviewController.h; sourceTree = "<group>"; };
+		87A12AD21E278B0E0047CA12 /* ZEROPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEROPhotoPreviewController.m; sourceTree = "<group>"; };
+		87A12AD31E278B0E0047CA12 /* ZEROVideoPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEROVideoPlayerController.h; sourceTree = "<group>"; };
+		87A12AD41E278B0E0047CA12 /* ZEROVideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEROVideoPlayerController.m; sourceTree = "<group>"; };
+		87A12ADC1E278BC90047CA12 /* ZEROImageCropManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEROImageCropManager.h; sourceTree = "<group>"; };
+		87A12ADD1E278BC90047CA12 /* ZEROImageCropManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEROImageCropManager.m; sourceTree = "<group>"; };
+		87A12ADE1E278BC90047CA12 /* ZEROPhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEROPhotoManager.h; sourceTree = "<group>"; };
+		87A12ADF1E278BC90047CA12 /* ZEROPhotoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEROPhotoManager.m; sourceTree = "<group>"; };
+		87A12AE21E278C170047CA12 /* ZEROAlbumListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEROAlbumListCell.h; sourceTree = "<group>"; };
+		87A12AE31E278C170047CA12 /* ZEROAlbumListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEROAlbumListCell.m; sourceTree = "<group>"; };
+		87A12AE41E278C170047CA12 /* ZEROAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEROAssetCell.h; sourceTree = "<group>"; };
+		87A12AE51E278C170047CA12 /* ZEROAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEROAssetCell.m; sourceTree = "<group>"; };
+		87A12AE61E278C170047CA12 /* ZEROImgProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEROImgProgressView.h; sourceTree = "<group>"; };
+		87A12AE71E278C170047CA12 /* ZEROImgProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEROImgProgressView.m; sourceTree = "<group>"; };
+		87A12AE81E278C170047CA12 /* ZEROPhotoPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEROPhotoPreviewCell.h; sourceTree = "<group>"; };
+		87A12AE91E278C170047CA12 /* ZEROPhotoPreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEROPhotoPreviewCell.m; sourceTree = "<group>"; };
+		87A12AEA1E278C170047CA12 /* ZEROPhotoPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEROPhotoPreviewView.h; sourceTree = "<group>"; };
+		87A12AEB1E278C170047CA12 /* ZEROPhotoPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEROPhotoPreviewView.m; sourceTree = "<group>"; };
+		87A12AF11E278C2B0047CA12 /* NSBundle+ZEROImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+ZEROImagePicker.h"; sourceTree = "<group>"; };
+		87A12AF21E278C2B0047CA12 /* NSBundle+ZEROImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+ZEROImagePicker.m"; sourceTree = "<group>"; };
+		87A12AF31E278C2B0047CA12 /* UIImage+ZEROPhotoPickerGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZEROPhotoPickerGif.h"; sourceTree = "<group>"; };
+		87A12AF41E278C2B0047CA12 /* UIImage+ZEROPhotoPickerGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZEROPhotoPickerGif.m"; sourceTree = "<group>"; };
+		87A12AF51E278C2B0047CA12 /* UIView+OscillatoryAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+OscillatoryAnimation.h"; sourceTree = "<group>"; };
+		87A12AF61E278C2B0047CA12 /* UIView+OscillatoryAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+OscillatoryAnimation.m"; sourceTree = "<group>"; };
+		87A12AFA1E278C3A0047CA12 /* ZEROAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEROAssetModel.h; sourceTree = "<group>"; };
+		87A12AFB1E278C3A0047CA12 /* ZEROAssetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEROAssetModel.m; sourceTree = "<group>"; };
 		87EBFAC41DDDF17700677DB9 /* AddSelectListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSelectListCell.h; sourceTree = "<group>"; };
 		87EBFAC51DDDF17700677DB9 /* AddSelectListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSelectListCell.m; sourceTree = "<group>"; };
 		87EBFAC61DDDF17700677DB9 /* AddSelectListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSelectListItem.h; sourceTree = "<group>"; };
@@ -786,6 +837,7 @@
 		879F59D91DDCD15C000185F8 /* General-Tools */ = {
 			isa = PBXGroup;
 			children = (
+				87A12AC41E278A930047CA12 /* PhotoPicker */,
 				87F45F291E02C6A30028B967 /* SphereMenu */,
 				874475E11DEF522700E5FF2A /* ZEROAlert */,
 				871677981DE0CBC9003772C0 /* FileManager */,
@@ -900,6 +952,87 @@
 				87320F301DE358AD00B19A3C /* CircleCell.xib */,
 			);
 			name = CircleCollectionViewController;
+			sourceTree = "<group>";
+		};
+		87A12AC41E278A930047CA12 /* PhotoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				87A12ADB1E278B870047CA12 /* Managers */,
+				87A12AC81E278AC80047CA12 /* Categorys */,
+				87A12AC71E278ABF0047CA12 /* Models */,
+				87A12AC61E278AA80047CA12 /* Views */,
+				87A12AC51E278A980047CA12 /* Controllers */,
+			);
+			path = PhotoPicker;
+			sourceTree = "<group>";
+		};
+		87A12AC51E278A980047CA12 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				87A12ACD1E278B0E0047CA12 /* ZEROImagePickerController.h */,
+				87A12ACE1E278B0E0047CA12 /* ZEROImagePickerController.m */,
+				87A12ACF1E278B0E0047CA12 /* ZEROPhotoPickerController.h */,
+				87A12AD01E278B0E0047CA12 /* ZEROPhotoPickerController.m */,
+				87A12AC91E278B0E0047CA12 /* ZEROAlbumListController.h */,
+				87A12ACA1E278B0E0047CA12 /* ZEROAlbumListController.m */,
+				87A12AD11E278B0E0047CA12 /* ZEROPhotoPreviewController.h */,
+				87A12AD21E278B0E0047CA12 /* ZEROPhotoPreviewController.m */,
+				87A12ACB1E278B0E0047CA12 /* ZEROGifPhotoPreviewController.h */,
+				87A12ACC1E278B0E0047CA12 /* ZEROGifPhotoPreviewController.m */,
+				87A12AD31E278B0E0047CA12 /* ZEROVideoPlayerController.h */,
+				87A12AD41E278B0E0047CA12 /* ZEROVideoPlayerController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		87A12AC61E278AA80047CA12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				87A12AE21E278C170047CA12 /* ZEROAlbumListCell.h */,
+				87A12AE31E278C170047CA12 /* ZEROAlbumListCell.m */,
+				87A12AE41E278C170047CA12 /* ZEROAssetCell.h */,
+				87A12AE51E278C170047CA12 /* ZEROAssetCell.m */,
+				87A12AE61E278C170047CA12 /* ZEROImgProgressView.h */,
+				87A12AE71E278C170047CA12 /* ZEROImgProgressView.m */,
+				87A12AE81E278C170047CA12 /* ZEROPhotoPreviewCell.h */,
+				87A12AE91E278C170047CA12 /* ZEROPhotoPreviewCell.m */,
+				87A12AEA1E278C170047CA12 /* ZEROPhotoPreviewView.h */,
+				87A12AEB1E278C170047CA12 /* ZEROPhotoPreviewView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		87A12AC71E278ABF0047CA12 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				87A12AFA1E278C3A0047CA12 /* ZEROAssetModel.h */,
+				87A12AFB1E278C3A0047CA12 /* ZEROAssetModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		87A12AC81E278AC80047CA12 /* Categorys */ = {
+			isa = PBXGroup;
+			children = (
+				87A12AF11E278C2B0047CA12 /* NSBundle+ZEROImagePicker.h */,
+				87A12AF21E278C2B0047CA12 /* NSBundle+ZEROImagePicker.m */,
+				87A12AF31E278C2B0047CA12 /* UIImage+ZEROPhotoPickerGif.h */,
+				87A12AF41E278C2B0047CA12 /* UIImage+ZEROPhotoPickerGif.m */,
+				87A12AF51E278C2B0047CA12 /* UIView+OscillatoryAnimation.h */,
+				87A12AF61E278C2B0047CA12 /* UIView+OscillatoryAnimation.m */,
+			);
+			name = Categorys;
+			sourceTree = "<group>";
+		};
+		87A12ADB1E278B870047CA12 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				87A12ADC1E278BC90047CA12 /* ZEROImageCropManager.h */,
+				87A12ADD1E278BC90047CA12 /* ZEROImageCropManager.m */,
+				87A12ADE1E278BC90047CA12 /* ZEROPhotoManager.h */,
+				87A12ADF1E278BC90047CA12 /* ZEROPhotoManager.m */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 		87EBFAB51DDDEE5300677DB9 /* AddListView */ = {
@@ -1102,6 +1235,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87A12AF71E278C2B0047CA12 /* NSBundle+ZEROImagePicker.m in Sources */,
+				87A12AF81E278C2B0047CA12 /* UIImage+ZEROPhotoPickerGif.m in Sources */,
+				87A12AF01E278C170047CA12 /* ZEROPhotoPreviewView.m in Sources */,
 				871677D51DE208EC003772C0 /* UIView+WebCacheOperation.m in Sources */,
 				871677C81DE208EC003772C0 /* SDImageCache.m in Sources */,
 				87EBFAD11DDDF1FD00677DB9 /* AddListViewController.m in Sources */,
@@ -1119,6 +1255,7 @@
 				87F45F2C1E02C6B20028B967 /* SphereMenu.m in Sources */,
 				879F5A131DDCD1C0000185F8 /* POPAnimationRuntime.mm in Sources */,
 				871677CC1DE208EC003772C0 /* SDWebImageDownloaderOperation.m in Sources */,
+				87A12AED1E278C170047CA12 /* ZEROAssetCell.m in Sources */,
 				871677771DE0C852003772C0 /* AFImageDownloader.m in Sources */,
 				87320F2D1DE3589A00B19A3C /* CircleLayout.m in Sources */,
 				879F59CE1DDCC340000185F8 /* CellDataItem.m in Sources */,
@@ -1127,6 +1264,7 @@
 				871677A11DE1EE95003772C0 /* HWaterFallManager.m in Sources */,
 				879F5A301DDCD7BE000185F8 /* BezierTableViewController.m in Sources */,
 				8734CC3F1DE76F3900F5E976 /* NSString+LabelWidthAndHeight.m in Sources */,
+				87A12AD51E278B0E0047CA12 /* ZEROAlbumListController.m in Sources */,
 				871677921DE0C8A5003772C0 /* PictureData.m in Sources */,
 				8716763B1DE067B5003772C0 /* WWaterFallViewController.m in Sources */,
 				879F5A121DDCD1C0000185F8 /* POPAnimationExtras.mm in Sources */,
@@ -1142,6 +1280,7 @@
 				8731C4DF1DF2B48D003082DE /* PhotoChooseView.m in Sources */,
 				874475F41DEF522700E5FF2A /* ZEROAlertRootView.m in Sources */,
 				874475F11DEF522700E5FF2A /* ZEROAlertFrameManager.m in Sources */,
+				87A12AD71E278B0E0047CA12 /* ZEROImagePickerController.m in Sources */,
 				871676381DE067A7003772C0 /* HWaterFallViewController.m in Sources */,
 				8734CC4B1DE76F8B00F5E976 /* SiftTagSectionHeaderView.m in Sources */,
 				871677741DE0C852003772C0 /* ApiPostData.m in Sources */,
@@ -1154,15 +1293,19 @@
 				879F5A1D1DDCD1C0000185F8 /* POPPropertyAnimation.mm in Sources */,
 				879F59CA1DDCC2FB000185F8 /* CustomCell.m in Sources */,
 				871677CF1DE208EC003772C0 /* UIButton+WebCache.m in Sources */,
+				87A12AEF1E278C170047CA12 /* ZEROPhotoPreviewCell.m in Sources */,
 				871677CE1DE208EC003772C0 /* SDWebImagePrefetcher.m in Sources */,
 				871677871DE0C87D003772C0 /* WWaterFallManager.m in Sources */,
 				871677CA1DE208EC003772C0 /* SDWebImageDecoder.m in Sources */,
 				879F597E1DDC1F94000185F8 /* AppDelegate.m in Sources */,
 				879F59D21DDCC598000185F8 /* ZEROListCell.m in Sources */,
+				87A12AE01E278BC90047CA12 /* ZEROImageCropManager.m in Sources */,
 				8734CC371DE76D9800F5E976 /* SiftTagViewController.m in Sources */,
 				87EBFACC1DDDF17700677DB9 /* AddSelectListItem.m in Sources */,
 				871677731DE0C852003772C0 /* AFURLSessionManager.m in Sources */,
+				87A12AFC1E278C3A0047CA12 /* ZEROAssetModel.m in Sources */,
 				8716779B1DE0CBD4003772C0 /* FileManager.m in Sources */,
+				87A12AEE1E278C170047CA12 /* ZEROImgProgressView.m in Sources */,
 				871677911DE0C8A5003772C0 /* CmtsModel.m in Sources */,
 				8716777E1DE0C852003772C0 /* UIWebView+AFNetworking.m in Sources */,
 				871677721DE0C852003772C0 /* AFURLResponseSerialization.m in Sources */,
@@ -1175,14 +1318,17 @@
 				871677D01DE208EC003772C0 /* UIImage+GIF.m in Sources */,
 				879F59C21DDCC120000185F8 /* ZEROListViewController.m in Sources */,
 				871677CB1DE208EC003772C0 /* SDWebImageDownloader.m in Sources */,
+				87A12AF91E278C2B0047CA12 /* UIView+OscillatoryAnimation.m in Sources */,
 				879F5A111DDCD1C0000185F8 /* POPAnimationEvent.mm in Sources */,
 				871677D21DE208EC003772C0 /* UIImage+WebP.m in Sources */,
+				87A12AD81E278B0E0047CA12 /* ZEROPhotoPickerController.m in Sources */,
 				879F5A271DDCD440000185F8 /* ZEROBezierCell.m in Sources */,
 				8734CC4E1DE7F50C00F5E976 /* SiftTagFlowLayout.m in Sources */,
 				8716779E1DE1EE83003772C0 /* HWaterFallCell.m in Sources */,
 				871677CD1DE208EC003772C0 /* SDWebImageManager.m in Sources */,
 				879F5A141DDCD1C0000185F8 /* POPAnimationTracer.mm in Sources */,
 				879F5A291DDCD440000185F8 /* ZEROBezierTableView.m in Sources */,
+				87A12AD61E278B0E0047CA12 /* ZEROGifPhotoPreviewController.m in Sources */,
 				8734CC481DE76F8B00F5E976 /* SiftTagCell.m in Sources */,
 				8734CC4A1DE76F8B00F5E976 /* SiftTagManager.m in Sources */,
 				879F5A1B1DDCD1C0000185F8 /* POPLayerExtras.mm in Sources */,
@@ -1190,7 +1336,9 @@
 				879F5A101DDCD1C0000185F8 /* POPAnimation.mm in Sources */,
 				871677D11DE208EC003772C0 /* UIImage+MultiFormat.m in Sources */,
 				871677C71DE208EC003772C0 /* NSData+ImageContentType.m in Sources */,
+				87A12AE11E278BC90047CA12 /* ZEROPhotoManager.m in Sources */,
 				879F5A1A1DDCD1C0000185F8 /* POPGeometry.mm in Sources */,
+				87A12AEC1E278C170047CA12 /* ZEROAlbumListCell.m in Sources */,
 				8716777C1DE0C852003772C0 /* UIProgressView+AFNetworking.m in Sources */,
 				871677D41DE208EC003772C0 /* UIImageView+WebCache.m in Sources */,
 				879F5A2D1DDCD545000185F8 /* NavPushViewController.m in Sources */,
@@ -1201,11 +1349,13 @@
 				874475F21DEF522700E5FF2A /* ZEROAlertItem.m in Sources */,
 				87EBFAE71DDEC1E600677DB9 /* UIView+Ext.m in Sources */,
 				879F597B1DDC1F94000185F8 /* main.m in Sources */,
+				87A12AD91E278B0E0047CA12 /* ZEROPhotoPreviewController.m in Sources */,
 				879F5A161DDCD1C0000185F8 /* POPBasicAnimation.mm in Sources */,
 				871677781DE0C852003772C0 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				8734CC3B1DE76F1700F5E976 /* UIImage+ImageEffects.m in Sources */,
 				871677701DE0C852003772C0 /* AFSecurityPolicy.m in Sources */,
 				8716777B1DE0C852003772C0 /* UIImageView+AFNetworking.m in Sources */,
+				87A12ADA1E278B0E0047CA12 /* ZEROVideoPlayerController.m in Sources */,
 				879F5A181DDCD1C0000185F8 /* POPCustomAnimation.mm in Sources */,
 				87F4CEE21DF110FD008B6586 /* AlertListViewController.m in Sources */,
 				87F4CEE51DF119AC008B6586 /* AlertListModel.m in Sources */,

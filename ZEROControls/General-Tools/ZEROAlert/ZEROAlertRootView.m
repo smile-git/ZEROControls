@@ -9,6 +9,30 @@
 #import "ZEROAlertRootView.h"
 #import "ZEROAlertManager.h"
 
+@interface ZEROAlertShowViewController : UIViewController{
+    
+    UIStatusBarStyle _originalStatusBarStyle;
+}
+
+@end
+
+@implementation ZEROAlertShowViewController
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    _originalStatusBarStyle = [UIApplication sharedApplication].statusBarStyle;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    
+    [UIApplication sharedApplication].statusBarStyle = _originalStatusBarStyle;
+}
+
+@end
+
 @interface ZEROAlertRootView()
 
 @end
@@ -95,8 +119,9 @@
 #pragma mark sheet show
 - (void)showSheetHandle{
     
-    UIViewController *rootVC            = [[UIViewController alloc] init];
+    ZEROAlertShowViewController *rootVC = [[ZEROAlertShowViewController alloc] init];
     rootVC.view.backgroundColor         = [UIColor clearColor];
+
     [ZEROAlertManager sharedManager].currentWindow.rootViewController   = rootVC;
     
     UIButton *coverButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -106,7 +131,6 @@
     [rootVC.view addSubview:self];
     
     [[ZEROAlertManager sharedManager].currentWindow makeKeyAndVisible];
-    
     
     self.alertReady  = NO;
     

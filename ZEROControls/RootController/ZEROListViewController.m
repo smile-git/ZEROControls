@@ -33,14 +33,14 @@
     [self configureTableView];
 }
 
-- (void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated {
     
     [super viewDidAppear:animated];
     //防止在此页面左侧右滑之后，不能跳页的问题
     self.navigationController.interactivePopGestureRecognizer.enabled = NO;
 }
 
-- (void)configureDataSource{
+- (void)configureDataSource {
     
     NSArray *array = @[[ZEROListModel initWithName:@"弧形列表(tableView)" controller:@"BezierTableViewController"],
                        [ZEROListModel initWithName:@"弧形列表(collectionView)" controller:@"CircleCollectionViewController"],

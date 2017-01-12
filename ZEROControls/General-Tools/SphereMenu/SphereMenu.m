@@ -86,7 +86,7 @@ static const NSInteger kShpereButtonTag = 100;
     [_sphereImages enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
         UIButton *sphereButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        sphereButton.frame     = CGRectMake(0, 0, self.frame.size.width - 3, self.frame.size.width - 3);
+        sphereButton.frame     = CGRectMake(0, 0, self.frame.size.width - 10, self.frame.size.width - 10);
         sphereButton.center    = self.center;
         sphereButton.tag       = idx + kShpereButtonTag;
         
@@ -172,13 +172,10 @@ static const NSInteger kShpereButtonTag = 100;
 
     // ----- 再旋转回去
     [UIView animateWithDuration:kSphereDamping animations:^{
-        _menuButton.transform = CGAffineTransformMakeRotation(1.5);
-    }completion:^(BOOL finished) {
-        _menuButton.transform = CGAffineTransformMakeRotation(0.0);
+        _menuButton.transform = CGAffineTransformRotate(_menuButton.transform, M_PI * 0.75);
     }];
     
     [_shrinkSnaps enumerateObjectsUsingBlock:^(UISnapBehavior * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        
         [self.dynamic addBehavior:obj];
     }];
 
@@ -194,11 +191,10 @@ static const NSInteger kShpereButtonTag = 100;
     _bgView.hidden = NO;
     // ----- 旋转
     [UIView animateWithDuration:kSphereDamping animations:^{
-        _menuButton.transform = CGAffineTransformMakeRotation(0.75);
+        _menuButton.transform = CGAffineTransformRotate(_menuButton.transform, M_PI * 0.75);
     }];
     
     [_expandSnaps enumerateObjectsUsingBlock:^(UISnapBehavior * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        
         [self.dynamic addBehavior:obj];
     }];
     
