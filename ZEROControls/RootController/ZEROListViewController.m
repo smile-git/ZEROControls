@@ -49,7 +49,8 @@
                        [ZEROListModel initWithName:@"纵向瀑布流" controller:@"HWaterFallViewController"],
                        [ZEROListModel initWithName:@"横向瀑布流" controller:@"WWaterFallViewController"],
                        [ZEROListModel initWithName:@"标签筛选" controller:@"SiftTagViewController"],
-                       [ZEROListModel initWithName:@"自定义Alert" controller:@"AlertListViewController"]];
+                       [ZEROListModel initWithName:@"自定义Alert" controller:@"AlertListViewController"],
+                       [ZEROListModel initWithName:@"相册照片选取" controller:@"PhotoPickerViewController"]];
 
     self.items = [NSMutableArray array];
     
@@ -66,7 +67,7 @@
 
 - (void)configureTableView {
     
-    self.tableView                = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     self.tableView.delegate       = self;
     self.tableView.dataSource     = self;
     self.tableView.rowHeight      = 50.f;
@@ -94,10 +95,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CellDataItem *item  = _items[indexPath.row];
-    ZEROListCell *cell  = [tableView dequeueReusableCellWithIdentifier:item.cellReuseIdentifier];
-    cell.dataItem       = item;
-    cell.indexPath      = indexPath;
+    CellDataItem *item = _items[indexPath.row];
+    ZEROListCell *cell = [tableView dequeueReusableCellWithIdentifier:item.cellReuseIdentifier];
+    cell.dataItem      = item;
+    cell.indexPath     = indexPath;
     
     [cell loadContent];
     
@@ -106,9 +107,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    ZEROListModel *model            = _items[indexPath.row].data;
-    UIViewController *controller    = [[NSClassFromString(model.controller) class] new];
-    controller.title                = model.name;
+    ZEROListModel *model         = _items[indexPath.row].data;
+    UIViewController *controller = [[NSClassFromString(model.controller) class] new];
+    controller.title             = model.name;
     
     [self.navigationController pushViewController:controller animated:YES];
 }

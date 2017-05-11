@@ -8,7 +8,6 @@
 
 #import "ZEROSheetView.h"
 #import "NSString+LabelWidthAndHeight.h"
-#import "UIView+Ext.h"
 
 #define Z_Sheet_Height_Max      HEIGHT - 100                            //Sheet最大高度
 #define Z_Sheet_BackgroundColor [UIColor whiteColor]                    //sheet背景颜色

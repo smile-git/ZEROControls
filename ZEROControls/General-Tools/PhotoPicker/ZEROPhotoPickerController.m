@@ -15,7 +15,6 @@
 #import "ZEROAssetModel.h"
 #import "ZEROAssetCell.h"
 #import "NSBundle+ZEROImagePicker.h"
-#import "UIView+Ext.h"
 #import "UIView+OscillatoryAnimation.h"
 
 #pragma clang diagnostic push
@@ -61,28 +60,8 @@ static CGSize AssetGridThumbnailSize;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:zImagePickerVC.cancelBtnTitleStr style:UIBarButtonItemStylePlain target:zImagePickerVC action:@selector(cancelButtonClick)];
     _showTakePhotoBtn = zImagePickerVC.allowTakePicture && [[ZEROPhotoManager shareManager] isCameraRollAlbum:_albumModel.name];
     
-//    if (!imagePickerVC.sortAscendingByModificationDate && _isFirstAppear && iOS8Later) {
-//        [[ZEROPhotoManager shareManager] getCameraRollAlbumVideo:imagePickerVC.allowPickingVideo allowPickingImage:imagePickerVC.allowPickingImage completion:^(ZEROAlbumModel *model) {
-//            
-//            _albumModel  = model;
-//            _assetModels = [NSMutableArray arrayWithArray:model.models];
-//            [self initSubviews];
-//        }];
-//    } else {
-//        if (_showTakePhotoBtn || _isFirstAppear || !iOS8Later) {
-//            [[ZEROPhotoManager shareManager] getAssetsFromFetchResult:_albumModel.result allowPickingVideo:imagePickerVC.allowPickingVideo allowPickingImage:imagePickerVC.allowPickingImage completion:^(NSArray<ZEROAssetModel *> *models) {
-//                
-//                _assetModels = [NSMutableArray arrayWithArray:models];
-//                [self initSubviews];
-//            }];
-//        } else {
-//            
-//            _assetModels = [NSMutableArray arrayWithArray:_albumModel.models];
-//            [self initSubviews];
-//        }
-//    }
-    
     if (_isFirstAppear) {
+        
         [[ZEROPhotoManager shareManager] getCameraRollAlbumVideo:zImagePickerVC.allowPickingVideo allowPickingImage:zImagePickerVC.allowPickingImage completion:^(ZEROAlbumModel *model) {
             
             _albumModel  = model;
@@ -343,7 +322,7 @@ static CGSize AssetGridThumbnailSize;
     NSMutableArray *assets  = [NSMutableArray array];
     NSMutableArray *infoArr = [NSMutableArray array];
     
-    if (zImagePickerVC.selectedAssets.count <= 0) {
+    if (zImagePickerVC.selectedModels.count <= 0) {
         
         [self didGetAllPhotos:photos assets:assets infoArr:infoArr];
         return;
@@ -361,8 +340,9 @@ static CGSize AssetGridThumbnailSize;
     [zImagePickerVC.selectedModels enumerateObjectsUsingBlock:^(ZEROAssetModel * _Nonnull assetModel, NSUInteger idx, BOOL * _Nonnull stop) {
         [[ZEROPhotoManager shareManager] getPhotoWithAsset:assetModel.asset completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
             if (isDegraded) {
+                return;
                 *stop = YES;
-                return ;
+                return;
             }
             if (photo) {
                 photo = [self scaleImage:photo toSize:CGSizeMake(zImagePickerVC.photoWidth, (zImagePickerVC.photoWidth * photo.size.height / photo.size.width))];
@@ -476,6 +456,7 @@ static CGSize AssetGridThumbnailSize;
         cell.selectPhotoButton.frame = cell.bounds;
     }
     
+    __weak typeof(cell) weakCell = cell;
     __weak typeof(self) weakSelf = self;
     __weak typeof(_numberImageView.layer) weakLayou = _numberImageView.layer;
     cell.didSelectPhotoBlock = ^(BOOL isSelected) {
@@ -485,11 +466,13 @@ static CGSize AssetGridThumbnailSize;
             
             if (zImagePickerVC.selectedModels.count < zImagePickerVC.maxImagesCount) {
                 [zImagePickerVC.selectedModels addObject:assetModel];
+                [zImagePickerVC.selectedAssets addObject:assetModel.asset];
                 [weakSelf refreshBottomToolBarStatus];
             } else {
                 
                 NSString *title = [NSString stringWithFormat:[NSBundle zero_loaclizedStringForKey:@"Select a maximum of %zd photos"], zImagePickerVC.maxImagesCount];
                 [zImagePickerVC showAlertWithTitle:title];
+                weakCell.selectPhotoButton.selected = NO;
             }
         } else {
             // ----- 2. cancel select / 取消选择
@@ -497,6 +480,7 @@ static CGSize AssetGridThumbnailSize;
             [selectedModels enumerateObjectsUsingBlock:^(ZEROAssetModel *_Nonnull model_item, NSUInteger idx, BOOL * _Nonnull stop) {
                 if ([[[ZEROPhotoManager shareManager] getAssetIdentifier:assetModel.asset] isEqualToString:[[ZEROPhotoManager shareManager] getAssetIdentifier:model_item.asset]]) {
                     [zImagePickerVC.selectedModels removeObject:model_item];
+                    [zImagePickerVC.selectedAssets removeObject:model_item.asset];
                     *stop = YES;
                 }
             }];

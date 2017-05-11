@@ -59,7 +59,7 @@
 // ----- Default is 600px 图片预览中图片像素宽
 @property (nonatomic, assign) CGFloat photoPreviewMaxWidth;
 
-// ----- Default is 15  读取照片超时时间，当读取照片超时未成功时，自动 dismiss HUD < 5 <-> 60 >
+// ----- Default is 15  读取照片超时时间，当读取照片超时未成功时，自动 dismiss HUD < 5s --- 60s >
 @property (nonatomic, assign) NSInteger hudTimeout;
 
 // ----- Default is YES 如果设置为NO，原图按钮将隐藏，用户不能选择发送原图

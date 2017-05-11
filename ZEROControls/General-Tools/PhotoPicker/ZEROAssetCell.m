@@ -10,7 +10,6 @@
 #import "ZEROPhotoManager.h"
 #import "ZEROAssetModel.h"
 #import "ZEROImgProgressView.h"
-#import "UIView+Ext.h"
 #import "NSBundle+ZEROImagePicker.h"
 #import "UIView+OscillatoryAnimation.h"
 

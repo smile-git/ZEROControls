@@ -12,7 +12,6 @@
 #import "ZEROImagePickerController.h"
 #import "ZEROAssetModel.h"
 #import "ZEROPhotoManager.h"
-#import "UIView+Ext.h"
 #import "NSBundle+ZEROImagePicker.h"
 
 @interface ZEROVideoPlayerController () {

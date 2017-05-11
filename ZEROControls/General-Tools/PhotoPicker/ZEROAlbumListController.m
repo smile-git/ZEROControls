@@ -12,10 +12,10 @@
 #import "ZEROPhotoPickerController.h"
 #import "ZEROAssetModel.h"
 #import "ZEROPhotoManager.h"
-#import "UIView+Ext.h"
 #import "ZEROAlbumListCell.h"
 
 @interface ZEROAlbumListController ()<UITableViewDelegate, UITableViewDataSource> {
+    
     UITableView *_tableView;
 }
 @property (nonatomic, strong) NSMutableArray *albumArray;

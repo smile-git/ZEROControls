@@ -7,7 +7,6 @@
 //
 
 #import "ZEROPhotoPreviewView.h"
-#import "UIView+Ext.h"
 #import "ZEROImgProgressView.h"
 #import "ZEROAssetModel.h"
 #import "ZEROPhotoManager.h"

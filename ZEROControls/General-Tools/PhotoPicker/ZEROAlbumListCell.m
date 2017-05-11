@@ -10,7 +10,6 @@
 #import "NSBundle+ZEROImagePicker.h"
 #import "ZEROAssetModel.h"
 #import "ZEROPhotoManager.h"
-#import "UIView+Ext.h"
 
 @interface ZEROAlbumListCell()
 

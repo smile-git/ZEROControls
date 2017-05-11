@@ -9,7 +9,6 @@
 #import "ZEROPhotoPreviewController.h"
 #import "ZEROPhotoPreviewCell.h"
 #import "ZEROAssetModel.h"
-#import "UIView+Ext.h"
 #import "UIView+OscillatoryAnimation.h"
 #import "NSBundle+ZEROImagePicker.h"
 #import "ZEROImagePickerController.h"

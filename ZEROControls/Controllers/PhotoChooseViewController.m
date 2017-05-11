@@ -19,12 +19,12 @@
     
     [super viewDidLoad];
     
-    [self createPhotoChooseView];
+    [self configerPhotoChooseView];
 }
 
 #pragma mark - create method
 
-- (void)createPhotoChooseView{
+- (void)configerPhotoChooseView{
     
     PhotoChooseView *photoChoose = [[PhotoChooseView alloc] initWithFrame:CGRectMake(0, 64, WIDTH, WIDTH)];
    

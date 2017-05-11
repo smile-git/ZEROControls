@@ -9,7 +9,6 @@
 #import "ZEROPhotoPreviewCell.h"
 #import "ZEROAssetModel.h"
 #import "ZEROPhotoManager.h"
-#import "UIView+Ext.h"
 
 @implementation ZEROPhotoPreviewCell
 

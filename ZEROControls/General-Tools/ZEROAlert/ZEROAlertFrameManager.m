@@ -7,7 +7,6 @@
 //
 
 #import "ZEROAlertFrameManager.h"
-#import "UIView+Ext.h"
 #import "NSString+LabelWidthAndHeight.h"
 
 static const CGFloat AlertDefaultWidth      = 270.0;    //alert默认宽度

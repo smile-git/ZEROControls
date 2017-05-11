@@ -503,15 +503,6 @@ static CGFloat ZEROScreenScale;
         NSUInteger bufferSize = [assetRep getBytes:imageBuffer fromOffset:0.0 length:assetRep.size error:nil];
         NSData *imageData = [NSData dataWithBytesNoCopy:imageBuffer length:bufferSize freeWhenDone:YES];
         if (completion) completion(imageData, nil, NO);
-//        dispatch_async(dispatch_get_global_queue(0, 0), ^{
-//            
-//            CGImageRef originalImageRef = [assetRep fullScreenImage];
-//            UIImage *originalImage = [UIImage imageWithCGImage:originalImageRef scale:1.0 orientation:UIImageOrientationUp];
-//            NSData *data = UIImageJPEGRepresentation(originalImage, 0.9);
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//                if (completion) completion(data, nil, NO);
-//            });
-//        });
     }
 }
 
@@ -978,7 +969,7 @@ static CGFloat ZEROScreenScale;
             translateToCenter = CGAffineTransformMakeTranslation(videoTrack.naturalSize.width, videoTrack.naturalSize.height);
             mixedTransform = CGAffineTransformRotate(translateToCenter, M_PI);
             videoComPosition.renderSize = CGSizeMake(videoTrack.naturalSize.width, videoTrack.naturalSize.height);
-        } else if (degrees == 270) {
+        } else {
             // ----- 顺时针旋转270°
             translateToCenter = CGAffineTransformMakeTranslation(0.0, videoTrack.naturalSize.width);
             mixedTransform = CGAffineTransformRotate(translateToCenter, M_PI_2 * 3.0);

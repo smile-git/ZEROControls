@@ -13,7 +13,6 @@
 #import "NSBundle+ZEROImagePicker.h"
 #import "ZEROPhotoManager.h"
 #import "ZEROAssetModel.h"
-#import "UIView+Ext.h"
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
@@ -269,10 +268,12 @@
 
 - (void)setAllowCrop:(BOOL)allowCrop {
     
-    _allowCrop = _maxImagesCount > 1 ? NO : allowCrop;
+    _allowCrop = allowCrop;
 
     if (allowCrop) {
         
+        _maxImagesCount = 1;
+        _showSelectBtn  = NO;
         self.allowPickingOriginalPhoto = NO;
         self.allowPickingGif = NO;
     }

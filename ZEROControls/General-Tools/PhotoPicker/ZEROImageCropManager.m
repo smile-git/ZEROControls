@@ -8,7 +8,6 @@
 
 #import "ZEROImageCropManager.h"
 #import "ZEROPhotoManager.h"
-#import "UIView+Ext.h"
 
 @implementation ZEROImageCropManager
 

@@ -67,7 +67,7 @@ static NSString *picturesSource = @"http://www.duitang.com/album/1733789/masn/p/
 
 }
 
-- (void)loadWaterFallData{
+- (void)loadWaterFallData {
     
     // 获取数据
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -93,7 +93,9 @@ static NSString *picturesSource = @"http://www.duitang.com/album/1733789/masn/p/
                                                                   error:nil];
         
         dispatch_async(dispatch_get_main_queue(), ^{
+            
             self.picturesData = [[ResponseData alloc] initWithDictionary:dataDic];
+            
             if (self.picturesData.success.integerValue == 1) {
                 
                 for (int i = 0; i < self.picturesData.data.blogs.count; i++) {
