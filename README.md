@@ -16,3 +16,5 @@
 6.https://github.com/banchichen/TZImagePickerController (支持多选、选原图和视频的图片选择器, 同时有预览、裁剪功能)
 
 7.https://github.com/awdigital/AWCollectionViewSlidingDoors (滑动门collectionview)
+
+8.https://github.com/itouch2/PhotoTweaks (图片裁剪)
