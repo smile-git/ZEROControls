@@ -10,6 +10,7 @@
 #import "PhotoPickerCell.h"
 #import "ZEROImagePickerController.h"
 
+static const NSInteger maxPhotoNum = 4;
 @interface PhotoPickerViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>{
     
     UICollectionView *_collectionView;
@@ -57,8 +58,8 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    if (_photoArray.count >= 9) {
-        return 9;
+    if (_photoArray.count >= maxPhotoNum) {
+        return maxPhotoNum;
     } else {
         return _photoArray.count + 1;
     }
@@ -81,7 +82,7 @@
     
     if (indexPath.item == _photoArray.count) {
         
-        ZEROImagePickerController *pickerVC = [[ZEROImagePickerController alloc] initWithMaxImagesCount:9 columnNumber:4 delegate:nil isPushPhoto:YES];
+        ZEROImagePickerController *pickerVC = [[ZEROImagePickerController alloc] initWithMaxImagesCount:maxPhotoNum columnNumber:4 delegate:nil isPushPhoto:YES];
         pickerVC.selectedAssets = self.assetArray;
         
         [pickerVC setDidFinishPickingPhotosWithInfosHandle:^(NSArray <UIImage *>*photos, NSArray *assets, BOOL isSelectOriginalPhoto, NSArray <NSDictionary *>*infos) {

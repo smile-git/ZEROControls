@@ -50,7 +50,8 @@
                        [ZEROListModel initWithName:@"横向瀑布流" controller:@"WWaterFallViewController"],
                        [ZEROListModel initWithName:@"标签筛选" controller:@"SiftTagViewController"],
                        [ZEROListModel initWithName:@"自定义Alert" controller:@"AlertListViewController"],
-                       [ZEROListModel initWithName:@"相册照片选取" controller:@"PhotoPickerViewController"]];
+                       [ZEROListModel initWithName:@"相册照片选取" controller:@"PhotoPickerViewController"],
+                       [ZEROListModel initWithName:@"滑动门列表" controller:@"SlidingDoorViewController"]];
 
     self.items = [NSMutableArray array];
     

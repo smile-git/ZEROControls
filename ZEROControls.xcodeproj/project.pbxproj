@@ -73,6 +73,26 @@
 		874475F51DEF522700E5FF2A /* ZEROAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 874475ED1DEF522700E5FF2A /* ZEROAlertView.m */; };
 		874475F61DEF522700E5FF2A /* ZEROSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 874475EF1DEF522700E5FF2A /* ZEROSheetView.m */; };
 		874475FF1DEFF2F100E5FF2A /* UIImage+SolidColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 874475FE1DEFF2F100E5FF2A /* UIImage+SolidColor.m */; };
+		874BB7CB1F029032002C343F /* SlidingDoor1Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 874BB7C51F029032002C343F /* SlidingDoor1Cell.xib */; };
+		874BB7CC1F029032002C343F /* SlidingDoor2Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 874BB7C61F029032002C343F /* SlidingDoor2Cell.xib */; };
+		874BB7CD1F029032002C343F /* SlidingDoorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 874BB7C81F029032002C343F /* SlidingDoorCell.m */; };
+		874BB7CE1F029032002C343F /* SlidingDoorLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 874BB7CA1F029032002C343F /* SlidingDoorLayout.m */; };
+		874BB7D21F02907D002C343F /* SlidingDoorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 874BB7D11F02907D002C343F /* SlidingDoorViewController.m */; };
+		874BB8031F029148002C343F /* gallery.json in Resources */ = {isa = PBXBuildFile; fileRef = 874BB7F41F029148002C343F /* gallery.json */; };
+		874BB8041F029148002C343F /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 874BB7F51F029148002C343F /* menu.png */; };
+		874BB8051F029148002C343F /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 874BB7F61F029148002C343F /* menu@2x.png */; };
+		874BB8061F029148002C343F /* photo-1249182325215-d517de72c42d.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 874BB7F71F029148002C343F /* photo-1249182325215-d517de72c42d.jpg */; };
+		874BB8071F029148002C343F /* photo-1331975562098-bac8ded504c7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 874BB7F81F029148002C343F /* photo-1331975562098-bac8ded504c7.jpg */; };
+		874BB8081F029148002C343F /* photo-1431887773042-803ed52bed26.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 874BB7F91F029148002C343F /* photo-1431887773042-803ed52bed26.jpg */; };
+		874BB8091F029148002C343F /* photo-1438190318100-06790c8b2e5a.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 874BB7FA1F029148002C343F /* photo-1438190318100-06790c8b2e5a.jpg */; };
+		874BB80A1F029148002C343F /* photo-1443890923422-7819ed4101c0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 874BB7FB1F029148002C343F /* photo-1443890923422-7819ed4101c0.jpg */; };
+		874BB80B1F029148002C343F /* photo-1445285303476-2f3b16d67b7a.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 874BB7FC1F029148002C343F /* photo-1445285303476-2f3b16d67b7a.jpg */; };
+		874BB80C1F029148002C343F /* photo-1446752875215-b2761acb3c5d.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 874BB7FD1F029148002C343F /* photo-1446752875215-b2761acb3c5d.jpg */; };
+		874BB80D1F029148002C343F /* photo-1446771326090-d910bfaf00f6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 874BB7FE1F029148002C343F /* photo-1446771326090-d910bfaf00f6.jpg */; };
+		874BB80E1F029148002C343F /* photo-1446797376004-9352dfc9f789.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 874BB7FF1F029148002C343F /* photo-1446797376004-9352dfc9f789.jpg */; };
+		874BB80F1F029148002C343F /* photo-1447877015176-3099cb49cd6a.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 874BB8001F029148002C343F /* photo-1447877015176-3099cb49cd6a.jpg */; };
+		874BB8101F029148002C343F /* photo-1448318440207-ef1893eb8ac0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 874BB8011F029148002C343F /* photo-1448318440207-ef1893eb8ac0.jpg */; };
+		874BB8111F029148002C343F /* photo-1449157291145-7efd050a4d0e.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 874BB8021F029148002C343F /* photo-1449157291145-7efd050a4d0e.jpg */; };
 		879F597B1DDC1F94000185F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F597A1DDC1F94000185F8 /* main.m */; };
 		879F597E1DDC1F94000185F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F597D1DDC1F94000185F8 /* AppDelegate.m */; };
 		879F59811DDC1F94000185F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F59801DDC1F94000185F8 /* ViewController.m */; };
@@ -297,6 +317,29 @@
 		874475EF1DEF522700E5FF2A /* ZEROSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEROSheetView.m; sourceTree = "<group>"; };
 		874475FD1DEFF2F100E5FF2A /* UIImage+SolidColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SolidColor.h"; sourceTree = "<group>"; };
 		874475FE1DEFF2F100E5FF2A /* UIImage+SolidColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SolidColor.m"; sourceTree = "<group>"; };
+		874BB7C51F029032002C343F /* SlidingDoor1Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlidingDoor1Cell.xib; sourceTree = "<group>"; };
+		874BB7C61F029032002C343F /* SlidingDoor2Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlidingDoor2Cell.xib; sourceTree = "<group>"; };
+		874BB7C71F029032002C343F /* SlidingDoorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlidingDoorCell.h; sourceTree = "<group>"; };
+		874BB7C81F029032002C343F /* SlidingDoorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlidingDoorCell.m; sourceTree = "<group>"; };
+		874BB7C91F029032002C343F /* SlidingDoorLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlidingDoorLayout.h; sourceTree = "<group>"; };
+		874BB7CA1F029032002C343F /* SlidingDoorLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlidingDoorLayout.m; sourceTree = "<group>"; };
+		874BB7D01F02907D002C343F /* SlidingDoorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlidingDoorViewController.h; sourceTree = "<group>"; };
+		874BB7D11F02907D002C343F /* SlidingDoorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlidingDoorViewController.m; sourceTree = "<group>"; };
+		874BB7F41F029148002C343F /* gallery.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gallery.json; sourceTree = "<group>"; };
+		874BB7F51F029148002C343F /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		874BB7F61F029148002C343F /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
+		874BB7F71F029148002C343F /* photo-1249182325215-d517de72c42d.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-1249182325215-d517de72c42d.jpg"; sourceTree = "<group>"; };
+		874BB7F81F029148002C343F /* photo-1331975562098-bac8ded504c7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-1331975562098-bac8ded504c7.jpg"; sourceTree = "<group>"; };
+		874BB7F91F029148002C343F /* photo-1431887773042-803ed52bed26.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-1431887773042-803ed52bed26.jpg"; sourceTree = "<group>"; };
+		874BB7FA1F029148002C343F /* photo-1438190318100-06790c8b2e5a.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-1438190318100-06790c8b2e5a.jpg"; sourceTree = "<group>"; };
+		874BB7FB1F029148002C343F /* photo-1443890923422-7819ed4101c0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-1443890923422-7819ed4101c0.jpg"; sourceTree = "<group>"; };
+		874BB7FC1F029148002C343F /* photo-1445285303476-2f3b16d67b7a.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-1445285303476-2f3b16d67b7a.jpg"; sourceTree = "<group>"; };
+		874BB7FD1F029148002C343F /* photo-1446752875215-b2761acb3c5d.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-1446752875215-b2761acb3c5d.jpg"; sourceTree = "<group>"; };
+		874BB7FE1F029148002C343F /* photo-1446771326090-d910bfaf00f6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-1446771326090-d910bfaf00f6.jpg"; sourceTree = "<group>"; };
+		874BB7FF1F029148002C343F /* photo-1446797376004-9352dfc9f789.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-1446797376004-9352dfc9f789.jpg"; sourceTree = "<group>"; };
+		874BB8001F029148002C343F /* photo-1447877015176-3099cb49cd6a.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-1447877015176-3099cb49cd6a.jpg"; sourceTree = "<group>"; };
+		874BB8011F029148002C343F /* photo-1448318440207-ef1893eb8ac0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-1448318440207-ef1893eb8ac0.jpg"; sourceTree = "<group>"; };
+		874BB8021F029148002C343F /* photo-1449157291145-7efd050a4d0e.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-1449157291145-7efd050a4d0e.jpg"; sourceTree = "<group>"; };
 		879F59761DDC1F94000185F8 /* ZEROControls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZEROControls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879F597A1DDC1F94000185F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		879F597C1DDC1F94000185F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -696,6 +739,58 @@
 			path = ZEROAlert;
 			sourceTree = "<group>";
 		};
+		874BB7C41F029032002C343F /* ZeroSlidingDoors */ = {
+			isa = PBXGroup;
+			children = (
+				874BB7C51F029032002C343F /* SlidingDoor1Cell.xib */,
+				874BB7C61F029032002C343F /* SlidingDoor2Cell.xib */,
+				874BB7C71F029032002C343F /* SlidingDoorCell.h */,
+				874BB7C81F029032002C343F /* SlidingDoorCell.m */,
+				874BB7C91F029032002C343F /* SlidingDoorLayout.h */,
+				874BB7CA1F029032002C343F /* SlidingDoorLayout.m */,
+			);
+			path = ZeroSlidingDoors;
+			sourceTree = "<group>";
+		};
+		874BB7CF1F029050002C343F /* SlidingDoorViewController */ = {
+			isa = PBXGroup;
+			children = (
+				874BB7D01F02907D002C343F /* SlidingDoorViewController.h */,
+				874BB7D11F02907D002C343F /* SlidingDoorViewController.m */,
+			);
+			name = SlidingDoorViewController;
+			sourceTree = "<group>";
+		};
+		874BB7F21F02913D002C343F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				874BB7F31F029148002C343F /* assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		874BB7F31F029148002C343F /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				874BB7F41F029148002C343F /* gallery.json */,
+				874BB7F51F029148002C343F /* menu.png */,
+				874BB7F61F029148002C343F /* menu@2x.png */,
+				874BB7F71F029148002C343F /* photo-1249182325215-d517de72c42d.jpg */,
+				874BB7F81F029148002C343F /* photo-1331975562098-bac8ded504c7.jpg */,
+				874BB7F91F029148002C343F /* photo-1431887773042-803ed52bed26.jpg */,
+				874BB7FA1F029148002C343F /* photo-1438190318100-06790c8b2e5a.jpg */,
+				874BB7FB1F029148002C343F /* photo-1443890923422-7819ed4101c0.jpg */,
+				874BB7FC1F029148002C343F /* photo-1445285303476-2f3b16d67b7a.jpg */,
+				874BB7FD1F029148002C343F /* photo-1446752875215-b2761acb3c5d.jpg */,
+				874BB7FE1F029148002C343F /* photo-1446771326090-d910bfaf00f6.jpg */,
+				874BB7FF1F029148002C343F /* photo-1446797376004-9352dfc9f789.jpg */,
+				874BB8001F029148002C343F /* photo-1447877015176-3099cb49cd6a.jpg */,
+				874BB8011F029148002C343F /* photo-1448318440207-ef1893eb8ac0.jpg */,
+				874BB8021F029148002C343F /* photo-1449157291145-7efd050a4d0e.jpg */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
 		879F596D1DDC1F94000185F8 = {
 			isa = PBXGroup;
 			children = (
@@ -726,6 +821,7 @@
 				879F59BC1DDCB6AB000185F8 /* Controllers */,
 				879F59D31DDCCC64000185F8 /* UI-Component */,
 				879F59D91DDCD15C000185F8 /* General-Tools */,
+				874BB7F21F02913D002C343F /* Resources */,
 				879F59791DDC1F94000185F8 /* Supporting Files */,
 			);
 			path = ZEROControls;
@@ -791,6 +887,7 @@
 				8734CC341DE76D6700F5E976 /* SiftTagViewController */,
 				87F4CEDF1DF110DA008B6586 /* AlertListViewController */,
 				87A12AFD1E279E080047CA12 /* PhotoPickerViewController */,
+				874BB7CF1F029050002C343F /* SlidingDoorViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -846,6 +943,7 @@
 		879F59D91DDCD15C000185F8 /* General-Tools */ = {
 			isa = PBXGroup;
 			children = (
+				874BB7C41F029032002C343F /* ZeroSlidingDoors */,
 				87A12AC41E278A930047CA12 /* PhotoPicker */,
 				87F45F291E02C6A30028B967 /* SphereMenu */,
 				874475E11DEF522700E5FF2A /* ZEROAlert */,
@@ -1227,12 +1325,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				874BB8101F029148002C343F /* photo-1448318440207-ef1893eb8ac0.jpg in Resources */,
+				874BB80B1F029148002C343F /* photo-1445285303476-2f3b16d67b7a.jpg in Resources */,
+				874BB8051F029148002C343F /* menu@2x.png in Resources */,
+				874BB8031F029148002C343F /* gallery.json in Resources */,
 				879F5A281DDCD440000185F8 /* ZEROBezierCell.xib in Resources */,
 				879F59891DDC1F94000185F8 /* LaunchScreen.storyboard in Resources */,
+				874BB80C1F029148002C343F /* photo-1446752875215-b2761acb3c5d.jpg in Resources */,
 				87320F321DE358AD00B19A3C /* CircleCell.xib in Resources */,
+				874BB80D1F029148002C343F /* photo-1446771326090-d910bfaf00f6.jpg in Resources */,
+				874BB80A1F029148002C343F /* photo-1443890923422-7819ed4101c0.jpg in Resources */,
 				87B564531E27F6820089ABE8 /* ZEROImagePicker.bundle in Resources */,
+				874BB8091F029148002C343F /* photo-1438190318100-06790c8b2e5a.jpg in Resources */,
+				874BB7CB1F029032002C343F /* SlidingDoor1Cell.xib in Resources */,
+				874BB80F1F029148002C343F /* photo-1447877015176-3099cb49cd6a.jpg in Resources */,
+				874BB80E1F029148002C343F /* photo-1446797376004-9352dfc9f789.jpg in Resources */,
+				874BB8041F029148002C343F /* menu.png in Resources */,
+				874BB8081F029148002C343F /* photo-1431887773042-803ed52bed26.jpg in Resources */,
+				874BB8061F029148002C343F /* photo-1249182325215-d517de72c42d.jpg in Resources */,
+				874BB7CC1F029032002C343F /* SlidingDoor2Cell.xib in Resources */,
 				879F59861DDC1F94000185F8 /* Assets.xcassets in Resources */,
+				874BB8071F029148002C343F /* photo-1331975562098-bac8ded504c7.jpg in Resources */,
 				879F59841DDC1F94000185F8 /* Main.storyboard in Resources */,
+				874BB8111F029148002C343F /* photo-1449157291145-7efd050a4d0e.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1267,6 +1382,7 @@
 				879F5A1F1DDCD1C0000185F8 /* POPVector.mm in Sources */,
 				871677851DE0C87D003772C0 /* WWaterFallCell.m in Sources */,
 				879F5A151DDCD1C0000185F8 /* POPAnimator.mm in Sources */,
+				874BB7CE1F029032002C343F /* SlidingDoorLayout.m in Sources */,
 				879F5A1E1DDCD1C0000185F8 /* POPSpringAnimation.mm in Sources */,
 				87EBFACB1DDDF17700677DB9 /* AddSelectListCell.m in Sources */,
 				8716777A1DE0C852003772C0 /* UIButton+AFNetworking.m in Sources */,
@@ -1289,6 +1405,7 @@
 				87A12AD51E278B0E0047CA12 /* ZEROAlbumListController.m in Sources */,
 				871677921DE0C8A5003772C0 /* PictureData.m in Sources */,
 				8716763B1DE067B5003772C0 /* WWaterFallViewController.m in Sources */,
+				874BB7CD1F029032002C343F /* SlidingDoorCell.m in Sources */,
 				879F5A121DDCD1C0000185F8 /* POPAnimationExtras.mm in Sources */,
 				874475F01DEF522700E5FF2A /* ZEROAlertButtonsCell.m in Sources */,
 				879F5A191DDCD1C0000185F8 /* POPDecayAnimation.mm in Sources */,
@@ -1306,6 +1423,7 @@
 				871676381DE067A7003772C0 /* HWaterFallViewController.m in Sources */,
 				8734CC4B1DE76F8B00F5E976 /* SiftTagSectionHeaderView.m in Sources */,
 				871677741DE0C852003772C0 /* ApiPostData.m in Sources */,
+				874BB7D21F02907D002C343F /* SlidingDoorViewController.m in Sources */,
 				87EBFAD71DDE028500677DB9 /* PhotoChooseViewController.m in Sources */,
 				879F5A1C1DDCD1C0000185F8 /* POPMath.mm in Sources */,
 				8716777D1DE0C852003772C0 /* UIRefreshControl+AFNetworking.m in Sources */,
