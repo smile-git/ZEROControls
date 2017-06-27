@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) NSArray *resourceItems;
 @property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, copy) NSString *cellIdentifier;
 @end
 
 @implementation SlidingDoorViewController
@@ -21,6 +22,7 @@
     [super viewDidLoad];
     
     self.automaticallyAdjustsScrollViewInsets = NO;
+    self.cellIdentifier = @"SlidingDoor1Cell";
 
     [self loadResourceData];
     
@@ -77,7 +79,7 @@
     
     NSDictionary *itemDict = [self.resourceItems objectAtIndex:indexPath.item];
     
-    SlidingDoorCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"SlidingDoor1Cell" forIndexPath:indexPath];
+    SlidingDoorCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:_cellIdentifier forIndexPath:indexPath];
     
     cell.titleLabel.text = [[itemDict valueForKey:@"title"] uppercaseString];
     cell.imageView.image = [UIImage imageNamed:[itemDict valueForKey:@"image"]];
@@ -101,11 +103,23 @@
     
     NSInteger typeIndex = sender.selectedSegmentIndex;
     
+    if (typeIndex == 0) {
+        
+        _cellIdentifier = @"SlidingDoor1Cell";
+    } else {
+        
+        _cellIdentifier = @"SlidingDoor2Cell";
+    }
+    
     SlidingDoorLayout *layout = (SlidingDoorLayout *)_collectionView.collectionViewLayout;
     layout.type = typeIndex;
     
-//    [_collectionView.collectionViewLayout invalidateLayout];
-    [_collectionView reloadData];
+
+    [UIView animateWithDuration:0 animations:^{
+        [_collectionView performBatchUpdates:^{
+            [_collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
+        } completion:nil];
+    }];
     
     [self performSelector:@selector(quickFix) withObject:nil afterDelay:0.01];
 

@@ -75,7 +75,7 @@ static const CGFloat minRatio = 1.5;
         CGFloat currentIndex = self.collectionView.contentOffset.y / self.cellHeight;
         CGFloat ratio = cell.bounds.size.width / cell.bounds.size.height;
         CGFloat maxDiff = maxRatio - minRatio;
-        CGFloat diff = maxDiff - ratio;
+        CGFloat diff = maxRatio - ratio;
         
         CGFloat alpha = diff / maxDiff;
         
