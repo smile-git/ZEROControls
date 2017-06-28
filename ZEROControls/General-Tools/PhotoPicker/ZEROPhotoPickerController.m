@@ -473,6 +473,7 @@ static CGSize AssetGridThumbnailSize;
                 NSString *title = [NSString stringWithFormat:[NSBundle zero_loaclizedStringForKey:@"Select a maximum of %zd photos"], zImagePickerVC.maxImagesCount];
                 [zImagePickerVC showAlertWithTitle:title];
                 weakCell.selectPhotoButton.selected = NO;
+                assetModel.isSelected = NO;
             }
         } else {
             // ----- 2. cancel select / 取消选择
