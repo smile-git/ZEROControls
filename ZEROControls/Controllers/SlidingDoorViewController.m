@@ -22,13 +22,13 @@
     [super viewDidLoad];
     
     self.automaticallyAdjustsScrollViewInsets = NO;
-    self.cellIdentifier = @"SlidingDoor1Cell";
+    self.cellIdentifier = @"SlidingDoor2Cell";
 
     [self loadResourceData];
     
     [self configSubviews];
     
-    [self buildSettings];
+    //[self buildSettings];
 }
 
 - (void)loadResourceData {
@@ -82,6 +82,7 @@
     SlidingDoorCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:_cellIdentifier forIndexPath:indexPath];
     
     cell.titleLabel.text = [[itemDict valueForKey:@"title"] uppercaseString];
+    cell.subtitleLabel.text = [itemDict valueForKey:@"subtitle"];
     cell.imageView.image = [UIImage imageNamed:[itemDict valueForKey:@"image"]];
     cell.imageView.contentMode = UIViewContentModeScaleAspectFill;
     
@@ -114,7 +115,7 @@
     SlidingDoorLayout *layout = (SlidingDoorLayout *)_collectionView.collectionViewLayout;
     layout.type = typeIndex;
     
-
+    // ----- 刷新collectionview
     [UIView animateWithDuration:0 animations:^{
         [_collectionView performBatchUpdates:^{
             [_collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];

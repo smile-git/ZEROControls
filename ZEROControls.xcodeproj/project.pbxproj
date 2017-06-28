@@ -73,7 +73,6 @@
 		874475F51DEF522700E5FF2A /* ZEROAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 874475ED1DEF522700E5FF2A /* ZEROAlertView.m */; };
 		874475F61DEF522700E5FF2A /* ZEROSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 874475EF1DEF522700E5FF2A /* ZEROSheetView.m */; };
 		874475FF1DEFF2F100E5FF2A /* UIImage+SolidColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 874475FE1DEFF2F100E5FF2A /* UIImage+SolidColor.m */; };
-		874BB7CB1F029032002C343F /* SlidingDoor1Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 874BB7C51F029032002C343F /* SlidingDoor1Cell.xib */; };
 		874BB7CC1F029032002C343F /* SlidingDoor2Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 874BB7C61F029032002C343F /* SlidingDoor2Cell.xib */; };
 		874BB7CD1F029032002C343F /* SlidingDoorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 874BB7C81F029032002C343F /* SlidingDoorCell.m */; };
 		874BB7CE1F029032002C343F /* SlidingDoorLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 874BB7CA1F029032002C343F /* SlidingDoorLayout.m */; };
@@ -93,6 +92,7 @@
 		874BB80F1F029148002C343F /* photo-1447877015176-3099cb49cd6a.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 874BB8001F029148002C343F /* photo-1447877015176-3099cb49cd6a.jpg */; };
 		874BB8101F029148002C343F /* photo-1448318440207-ef1893eb8ac0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 874BB8011F029148002C343F /* photo-1448318440207-ef1893eb8ac0.jpg */; };
 		874BB8111F029148002C343F /* photo-1449157291145-7efd050a4d0e.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 874BB8021F029148002C343F /* photo-1449157291145-7efd050a4d0e.jpg */; };
+		87879E481F0363C7007EF6ED /* SlidingDoor1Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87879E471F0363C7007EF6ED /* SlidingDoor1Cell.xib */; };
 		879F597B1DDC1F94000185F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F597A1DDC1F94000185F8 /* main.m */; };
 		879F597E1DDC1F94000185F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F597D1DDC1F94000185F8 /* AppDelegate.m */; };
 		879F59811DDC1F94000185F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F59801DDC1F94000185F8 /* ViewController.m */; };
@@ -317,7 +317,6 @@
 		874475EF1DEF522700E5FF2A /* ZEROSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEROSheetView.m; sourceTree = "<group>"; };
 		874475FD1DEFF2F100E5FF2A /* UIImage+SolidColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SolidColor.h"; sourceTree = "<group>"; };
 		874475FE1DEFF2F100E5FF2A /* UIImage+SolidColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SolidColor.m"; sourceTree = "<group>"; };
-		874BB7C51F029032002C343F /* SlidingDoor1Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlidingDoor1Cell.xib; sourceTree = "<group>"; };
 		874BB7C61F029032002C343F /* SlidingDoor2Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlidingDoor2Cell.xib; sourceTree = "<group>"; };
 		874BB7C71F029032002C343F /* SlidingDoorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlidingDoorCell.h; sourceTree = "<group>"; };
 		874BB7C81F029032002C343F /* SlidingDoorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlidingDoorCell.m; sourceTree = "<group>"; };
@@ -340,6 +339,7 @@
 		874BB8001F029148002C343F /* photo-1447877015176-3099cb49cd6a.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-1447877015176-3099cb49cd6a.jpg"; sourceTree = "<group>"; };
 		874BB8011F029148002C343F /* photo-1448318440207-ef1893eb8ac0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-1448318440207-ef1893eb8ac0.jpg"; sourceTree = "<group>"; };
 		874BB8021F029148002C343F /* photo-1449157291145-7efd050a4d0e.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-1449157291145-7efd050a4d0e.jpg"; sourceTree = "<group>"; };
+		87879E471F0363C7007EF6ED /* SlidingDoor1Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlidingDoor1Cell.xib; sourceTree = "<group>"; };
 		879F59761DDC1F94000185F8 /* ZEROControls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZEROControls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879F597A1DDC1F94000185F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		879F597C1DDC1F94000185F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -742,7 +742,7 @@
 		874BB7C41F029032002C343F /* ZeroSlidingDoors */ = {
 			isa = PBXGroup;
 			children = (
-				874BB7C51F029032002C343F /* SlidingDoor1Cell.xib */,
+				87879E471F0363C7007EF6ED /* SlidingDoor1Cell.xib */,
 				874BB7C61F029032002C343F /* SlidingDoor2Cell.xib */,
 				874BB7C71F029032002C343F /* SlidingDoorCell.h */,
 				874BB7C81F029032002C343F /* SlidingDoorCell.m */,
@@ -1337,7 +1337,7 @@
 				874BB80A1F029148002C343F /* photo-1443890923422-7819ed4101c0.jpg in Resources */,
 				87B564531E27F6820089ABE8 /* ZEROImagePicker.bundle in Resources */,
 				874BB8091F029148002C343F /* photo-1438190318100-06790c8b2e5a.jpg in Resources */,
-				874BB7CB1F029032002C343F /* SlidingDoor1Cell.xib in Resources */,
+				87879E481F0363C7007EF6ED /* SlidingDoor1Cell.xib in Resources */,
 				874BB80F1F029148002C343F /* photo-1447877015176-3099cb49cd6a.jpg in Resources */,
 				874BB80E1F029148002C343F /* photo-1446797376004-9352dfc9f789.jpg in Resources */,
 				874BB8041F029148002C343F /* menu.png in Resources */,

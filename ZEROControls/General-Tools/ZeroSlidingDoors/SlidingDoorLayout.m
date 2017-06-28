@@ -28,7 +28,7 @@ static const CGFloat minRatio = 1.5;
     self = [super init];
     if (self) {
         
-        self.type = SlidingDoorTypeOne;
+        self.type = SlidingDoorTypeTwo;
     }
     return self;
 }
@@ -37,9 +37,9 @@ static const CGFloat minRatio = 1.5;
     
     [super prepareLayout];
     
-    self.itemCount = [self.collectionView numberOfItemsInSection:0];
-    self.minHeight = self.collectionView.bounds.size.width / maxRatio;
-    self.maxHeight = self.collectionView.bounds.size.width / minRatio;
+    self.itemCount  = [self.collectionView numberOfItemsInSection:0];
+    self.minHeight  = self.collectionView.bounds.size.width / maxRatio;
+    self.maxHeight  = self.collectionView.bounds.size.width / minRatio;
     self.cellHeight = self.maxHeight * 0.5 + self.minHeight * 0.5;
 }
 
