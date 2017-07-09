@@ -38,6 +38,13 @@
     [picker pushViewController:photoTweaksVC animated:YES];
 }
 
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+    [picker dismissViewControllerAnimated:NO completion:^{
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+}
+
 
 - (void)photoTweaksControllerDidCancel:(PhotoTweaksViewController *)controller {
     
