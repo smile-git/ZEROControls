@@ -322,6 +322,33 @@
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+- (CGFloat)middleX {
+    
+    return CGRectGetWidth(self.bounds) / 2.f;
+}
+
+- (CGFloat)middleY {
+    
+    return CGRectGetHeight(self.bounds) / 2.f;
+}
+
+- (CGPoint)middlePoint {
+    
+    return CGPointMake(CGRectGetWidth(self.bounds) / 2.f, CGRectGetHeight(self.bounds) / 2.f);
+}
+
++ (CGFloat)additionaliPhoneXBottomSafeHeight {
+    
+    return 24.f;
+}
+
++ (CGFloat)additionaliPhoneXTopSafeHeight {
+    
+    return 20.f;
+}
+
 - (CGPoint)offsetFromView:(UIView*)otherView {
     
     CGFloat x = 0, y = 0;

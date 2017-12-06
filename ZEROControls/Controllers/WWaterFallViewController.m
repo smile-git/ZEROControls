@@ -9,19 +9,16 @@
 #import "WWaterFallViewController.h"
 #import "WWaterFallCell.h"
 #import "WWaterFallLayout.h"
-#import "ResponseData.h"
-#import "WaterfallPictureModel.h"
 #import "FileManager.h"
+#import "DuiTangPicModel.h"
 
-static NSString *picturesSource = @"http://www.duitang.com/album/1733789/masn/p/0/50/";
 
 @interface WWaterFallViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, WWaterFallLayoutDelegate>
 
 @property (nonatomic, strong) UICollectionView  *collectionView;
 @property (nonatomic)         CGFloat            rowHeight;
 @property (nonatomic, strong) NSMutableArray    *datas;
-@property (nonatomic, strong) ResponseData      *picturesData;
-@property (nonatomic, strong) NSMutableArray    <WaterfallPictureModel *> *dataSource;
+@property (nonatomic, strong) NSMutableArray    <DuiTangPicModel *> *dataSource;
 
 
 @end
@@ -54,56 +51,35 @@ static NSString *picturesSource = @"http://www.duitang.com/album/1733789/masn/p/
     self.collectionView.dataSource                     = self;
     self.collectionView.backgroundColor                = [UIColor clearColor];
     self.collectionView.showsHorizontalScrollIndicator = NO;
-    self.collectionView.alpha                          = 0;
+    self.collectionView.alpha                          = 1;
     [self.collectionView registerClass:[WWaterFallCell class] forCellWithReuseIdentifier:@"WWaterFallCell"];
     [self.view addSubview:self.collectionView];
     
-    // 获取数据
-    dispatch_async(dispatch_get_main_queue(), ^{
+    // Adjust iOS 11.0
+    if (@available(iOS 11.0, *)){
         
-        NSString *string       = @"waterFall";
-        NSString *realFilePath = [FileManager theRealFilePath:[NSString stringWithFormat:@"~/Documents/%@", string]];
-        NSData   *data         = nil;
-        
-        if (![FileManager fileExistWithRealFilePath:realFilePath]) {
-            
-            data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:picturesSource]];
-            [data writeToFile:realFilePath atomically:YES];
-        
-        }else{
-            
-            data = [NSData dataWithContentsOfFile:realFilePath];
-        }
-         if (data == nil) {
-            return;
-        }
-        NSDictionary *dataDic = [NSJSONSerialization JSONObjectWithData:data
-                                                                options:NSJSONReadingMutableLeaves | NSJSONReadingAllowFragments
-                                                                  error:nil];
-        
-        [self reloadData:dataDic];
-    });
+        self.collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        self.collectionView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);//导航栏如果使用系统原生半透明的，top设置为64
+        self.collectionView.scrollIndicatorInsets = self.collectionView.contentInset;
+    }
+    
+    [self reloadData];
+
 }
 
-- (void)reloadData:(NSDictionary *)jsonDic{
+- (void)reloadData{
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.picturesData = [[ResponseData alloc] initWithDictionary:jsonDic];
-        if (self.picturesData.success.integerValue == 1) {
-            
-            for (int i = 0; i < self.picturesData.data.blogs.count; i++) {
-                
-                [_dataSource addObject:self.picturesData.data.blogs[i]];
-            }
-            
-            [_collectionView reloadData];
-            [UIView animateWithDuration:0.5f animations:^{
-                
-                _collectionView.alpha = 1.f;
-            }];
-        }
+    // 获取数据
+    self.dataSource = [NSMutableArray array];
+    NSData *duitangPicsData = [NSData dataWithContentsOfFile:[FileManager bundleFileWithName:@"duitang.json"]];
+    NSArray *duitangPics = [NSJSONSerialization JSONObjectWithData:duitangPicsData
+                                                           options:NSJSONReadingMutableLeaves | NSJSONReadingAllowFragments
+                                                             error:nil];
+    
+    [duitangPics enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
-    });
+        [self.dataSource addObject:[[DuiTangPicModel alloc] initWithDictionary:obj]];
+    }];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -113,7 +89,7 @@ static NSString *picturesSource = @"http://www.duitang.com/album/1733789/masn/p/
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    WaterfallPictureModel *pictureModel = _dataSource[indexPath.row];
+    DuiTangPicModel *pictureModel = _dataSource[indexPath.row];
     
     WWaterFallCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"WWaterFallCell" forIndexPath:indexPath];
     cell.indexPath      = indexPath;
@@ -126,8 +102,8 @@ static NSString *picturesSource = @"http://www.duitang.com/album/1733789/masn/p/
 
 - (CGFloat)itemWidthWithIndexPath:(NSIndexPath *)indexPath {
     
-    WaterfallPictureModel *pictureModel = _dataSource[indexPath.row];
-    return  [self resetFromSize:CGSizeMake(pictureModel.iwd.floatValue, pictureModel.iht.floatValue) withFixedHeight:_rowHeight].width;
+    DuiTangPicModel *pictureModel = _dataSource[indexPath.row];
+    return  [self resetFromSize:CGSizeMake(pictureModel.width.floatValue, pictureModel.height.floatValue) withFixedHeight:_rowHeight].width;
 }
 
 - (CGSize)resetFromSize:(CGSize)size withFixedHeight:(CGFloat)height {

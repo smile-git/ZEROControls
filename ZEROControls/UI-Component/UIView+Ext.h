@@ -104,6 +104,19 @@
  */
 @property (nonatomic) CGSize size;
 
+/** * @brief Relative coordinate - 相对坐标 */
+
+@property (nonatomic, readonly) CGFloat middleX;
+@property (nonatomic, readonly) CGFloat middleY;
+@property (nonatomic, readonly) CGPoint middlePoint;
+
+
+/** * @brief iPhoneX */
+
+@property (class, nonatomic, readonly) CGFloat additionaliPhoneXBottomSafeHeight;
+@property (class, nonatomic, readonly) CGFloat additionaliPhoneXTopSafeHeight;
+
+
 - (void)removeAllSubviews;
 
 

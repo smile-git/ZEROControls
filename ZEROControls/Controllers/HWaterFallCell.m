@@ -7,7 +7,7 @@
 //
 
 #import "HWaterFallCell.h"
-#import "WaterfallPictureModel.h"
+#import "DuiTangPicModel.h"
 #import "UIImageView+WebCache.h"
 
 @interface HWaterFallCell()
@@ -57,14 +57,14 @@
 
 - (void)loadContent {
     
-    WaterfallPictureModel *model = self.data;
-    self.imageView.bounds        = self.frame;
-    self.imageView.center        = [self middlePoint];
-    self.imageView.alpha         = 0.f;
+    DuiTangPicModel *model = self.data;
+    self.imageView.bounds  = self.frame;
+    self.imageView.center  = [self middlePoint];
+    self.imageView.alpha   = 0.f;
     
     __weak HWaterFallCell *wself  = self;
     
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:model.isrc]
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:model.img]
                              completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                                  
                                  wself.imageView.image = image;

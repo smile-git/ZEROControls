@@ -52,7 +52,8 @@
                        [ZEROListModel initWithName:@"自定义Alert" controller:@"AlertListViewController"],
                        [ZEROListModel initWithName:@"相册照片选取" controller:@"PhotoPickerViewController"],
                        [ZEROListModel initWithName:@"滑动门列表" controller:@"SlidingDoorViewController"],
-                       [ZEROListModel initWithName:@"照片裁剪" controller:@"ShowTweakViewController"]];
+                       [ZEROListModel initWithName:@"照片裁剪" controller:@"ShowTweakViewController"],
+                       [ZEROListModel initWithName:@"多级分组" controller:@"TreeStructureViewController"]];
 
     self.items = [NSMutableArray array];
     
@@ -77,6 +78,14 @@
     [self.tableView registerClass:[ZEROListCell class] forCellReuseIdentifier:NSStringFromClass([ZEROListCell class])];
     [self.view addSubview:_tableView];
     
+
+    if (@available(iOS 11.0, *)){
+        
+        _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        _tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);//导航栏如果使用系统原生半透明的，top设置为64
+        _tableView.scrollIndicatorInsets = _tableView.contentInset;
+    }
+    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (0.25f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         // Load data.
         NSMutableArray *indexPaths = [NSMutableArray array];
@@ -89,6 +98,8 @@
         [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
     });
 }
+
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     

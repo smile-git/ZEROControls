@@ -30,6 +30,13 @@ static NSString *cellId = @"cellId";
     tableView.delegate   = self;
     tableView.dataSource = self;
     
+    if (@available(iOS 11.0, *)){
+        
+        tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);//导航栏如果使用系统原生半透明的，top设置为64
+        tableView.scrollIndicatorInsets = tableView.contentInset;
+    }
+    
     [self.view addSubview:tableView];
     
 }

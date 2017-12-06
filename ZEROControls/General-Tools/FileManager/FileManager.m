@@ -44,4 +44,10 @@
     
     return rootPath;
 }
+
++ (NSString *)bundleFileWithName:(NSString *)name {
+    
+    return [[NSBundle mainBundle] pathForResource:name ofType:nil];
+}
+
 @end

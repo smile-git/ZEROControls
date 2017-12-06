@@ -35,15 +35,27 @@
     
     CircleLayout *layout = [[CircleLayout alloc] initWithRadius:radius angularSpacing:angularSpacing cellSize:CGSizeMake(cell_width, cell_height) xOffset:xOffset];
     
-    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 64, WIDTH, HEIGHT - 64) collectionViewLayout:layout];
+    _collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:layout];
     _collectionView.backgroundColor = [UIColor clearColor];
     _collectionView.delegate        = self;
     _collectionView.dataSource      = self;
     
     [_collectionView registerNib:[UINib nibWithNibName:@"CircleCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"CircleCell"];
     
+    [self configeriOS11];
+    
     [self.view addSubview:_collectionView];
     
+}
+
+- (void)configeriOS11 {
+    
+    if (@available(iOS 11.0, *)){
+        
+        _collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        _collectionView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);//导航栏如果使用系统原生半透明的，top设置为64
+        _collectionView.scrollIndicatorInsets = _collectionView.contentInset;
+    }
 }
 
 #pragma mark - collectionview delegate & datasource

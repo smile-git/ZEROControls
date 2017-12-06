@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8704A7211F8E075A0070863A /* DuiTangPicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8704A7201F8E075A0070863A /* DuiTangPicModel.m */; };
+		8704A7221F8E0F010070863A /* duitang.json in Resources */ = {isa = PBXBuildFile; fileRef = 8704A71E1F8DFEFF0070863A /* duitang.json */; };
 		871676381DE067A7003772C0 /* HWaterFallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 871676371DE067A7003772C0 /* HWaterFallViewController.m */; };
 		8716763B1DE067B5003772C0 /* WWaterFallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8716763A1DE067B5003772C0 /* WWaterFallViewController.m */; };
 		8716776E1DE0C852003772C0 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 871677481DE0C852003772C0 /* AFHTTPSessionManager.m */; };
@@ -54,7 +56,11 @@
 		871677D31DE208EC003772C0 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 871677C11DE208EC003772C0 /* UIImageView+HighlightedWebCache.m */; };
 		871677D41DE208EC003772C0 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 871677C31DE208EC003772C0 /* UIImageView+WebCache.m */; };
 		871677D51DE208EC003772C0 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 871677C51DE208EC003772C0 /* UIView+WebCacheOperation.m */; };
+		87169D881FD7AC0C00D89B92 /* IconEdgeInsetsLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87169D871FD7AC0C00D89B92 /* IconEdgeInsetsLabel.m */; };
 		8731C4DF1DF2B48D003082DE /* PhotoChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8731C4DE1DF2B48D003082DE /* PhotoChooseView.m */; };
+		8731EAB61F54220E002DE607 /* TreeStructureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8731EAB51F54220E002DE607 /* TreeStructureViewController.m */; };
+		8731EABC1F542234002DE607 /* TreeStructureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8731EABB1F542234002DE607 /* TreeStructureModel.m */; };
+		8731EABF1F5423AC002DE607 /* TreeStructureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8731EABE1F5423AC002DE607 /* TreeStructureCell.m */; };
 		87320F2D1DE3589A00B19A3C /* CircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 87320F2C1DE3589A00B19A3C /* CircleLayout.m */; };
 		87320F311DE358AD00B19A3C /* CircleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87320F2F1DE358AD00B19A3C /* CircleCell.m */; };
 		87320F321DE358AD00B19A3C /* CircleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87320F301DE358AD00B19A3C /* CircleCell.xib */; };
@@ -185,6 +191,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8704A71E1F8DFEFF0070863A /* duitang.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = duitang.json; sourceTree = "<group>"; };
+		8704A71F1F8E075A0070863A /* DuiTangPicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuiTangPicModel.h; sourceTree = "<group>"; };
+		8704A7201F8E075A0070863A /* DuiTangPicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuiTangPicModel.m; sourceTree = "<group>"; };
 		871676361DE067A7003772C0 /* HWaterFallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWaterFallViewController.h; sourceTree = "<group>"; };
 		871676371DE067A7003772C0 /* HWaterFallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWaterFallViewController.m; sourceTree = "<group>"; };
 		871676391DE067B5003772C0 /* WWaterFallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWaterFallViewController.h; sourceTree = "<group>"; };
@@ -283,8 +292,16 @@
 		871677C31DE208EC003772C0 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		871677C41DE208EC003772C0 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		871677C51DE208EC003772C0 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		87169D861FD7AC0C00D89B92 /* IconEdgeInsetsLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IconEdgeInsetsLabel.h; sourceTree = "<group>"; };
+		87169D871FD7AC0C00D89B92 /* IconEdgeInsetsLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IconEdgeInsetsLabel.m; sourceTree = "<group>"; };
 		8731C4DD1DF2B48D003082DE /* PhotoChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoChooseView.h; sourceTree = "<group>"; };
 		8731C4DE1DF2B48D003082DE /* PhotoChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoChooseView.m; sourceTree = "<group>"; };
+		8731EAB41F54220E002DE607 /* TreeStructureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeStructureViewController.h; sourceTree = "<group>"; };
+		8731EAB51F54220E002DE607 /* TreeStructureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeStructureViewController.m; sourceTree = "<group>"; };
+		8731EABA1F542234002DE607 /* TreeStructureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeStructureModel.h; sourceTree = "<group>"; };
+		8731EABB1F542234002DE607 /* TreeStructureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeStructureModel.m; sourceTree = "<group>"; };
+		8731EABD1F5423AC002DE607 /* TreeStructureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeStructureCell.h; sourceTree = "<group>"; };
+		8731EABE1F5423AC002DE607 /* TreeStructureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeStructureCell.m; sourceTree = "<group>"; };
 		87320F2B1DE3589A00B19A3C /* CircleLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleLayout.h; sourceTree = "<group>"; };
 		87320F2C1DE3589A00B19A3C /* CircleLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleLayout.m; sourceTree = "<group>"; };
 		87320F2E1DE358AD00B19A3C /* CircleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleCell.h; sourceTree = "<group>"; };
@@ -680,6 +697,8 @@
 				8716778E1DE0C8A5003772C0 /* ResponseData.m */,
 				8716778F1DE0C8A5003772C0 /* WaterfallPictureModel.h */,
 				871677901DE0C8A5003772C0 /* WaterfallPictureModel.m */,
+				8704A71F1F8E075A0070863A /* DuiTangPicModel.h */,
+				8704A7201F8E075A0070863A /* DuiTangPicModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -691,6 +710,28 @@
 				8716779A1DE0CBD4003772C0 /* FileManager.m */,
 			);
 			path = FileManager;
+			sourceTree = "<group>";
+		};
+		87169D851FD7ABF500D89B92 /* IconEdgeInsetsLabel */ = {
+			isa = PBXGroup;
+			children = (
+				87169D861FD7AC0C00D89B92 /* IconEdgeInsetsLabel.h */,
+				87169D871FD7AC0C00D89B92 /* IconEdgeInsetsLabel.m */,
+			);
+			path = IconEdgeInsetsLabel;
+			sourceTree = "<group>";
+		};
+		8731EAB31F5421B7002DE607 /* TreeStructureViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8731EAB41F54220E002DE607 /* TreeStructureViewController.h */,
+				8731EAB51F54220E002DE607 /* TreeStructureViewController.m */,
+				8731EABD1F5423AC002DE607 /* TreeStructureCell.h */,
+				8731EABE1F5423AC002DE607 /* TreeStructureCell.m */,
+				8731EABA1F542234002DE607 /* TreeStructureModel.h */,
+				8731EABB1F542234002DE607 /* TreeStructureModel.m */,
+			);
+			name = TreeStructureViewController;
 			sourceTree = "<group>";
 		};
 		8734CC341DE76D6700F5E976 /* SiftTagViewController */ = {
@@ -776,6 +817,7 @@
 		874BB7F21F02913D002C343F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8704A71E1F8DFEFF0070863A /* duitang.json */,
 				874BB7F31F029148002C343F /* assets */,
 			);
 			path = Resources;
@@ -901,6 +943,7 @@
 				87A12AFD1E279E080047CA12 /* PhotoPickerViewController */,
 				874BB7CF1F029050002C343F /* SlidingDoorViewController */,
 				87EE44A81F03C2B700264ED3 /* PhotoTweaksViewController */,
+				8731EAB31F5421B7002DE607 /* TreeStructureViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -956,6 +999,7 @@
 		879F59D91DDCD15C000185F8 /* General-Tools */ = {
 			isa = PBXGroup;
 			children = (
+				87169D851FD7ABF500D89B92 /* IconEdgeInsetsLabel */,
 				87FAB9AD1F0B960F00B65B0A /* PhotoTweaks */,
 				874BB7C41F029032002C343F /* ZeroSlidingDoors */,
 				87A12AC41E278A930047CA12 /* PhotoPicker */,
@@ -1361,6 +1405,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8704A7221F8E0F010070863A /* duitang.json in Resources */,
 				874BB8101F029148002C343F /* photo-1448318440207-ef1893eb8ac0.jpg in Resources */,
 				874BB80B1F029148002C343F /* photo-1445285303476-2f3b16d67b7a.jpg in Resources */,
 				874BB8051F029148002C343F /* menu@2x.png in Resources */,
@@ -1422,6 +1467,7 @@
 				879F5A1E1DDCD1C0000185F8 /* POPSpringAnimation.mm in Sources */,
 				87EBFACB1DDDF17700677DB9 /* AddSelectListCell.m in Sources */,
 				8716777A1DE0C852003772C0 /* UIButton+AFNetworking.m in Sources */,
+				87169D881FD7AC0C00D89B92 /* IconEdgeInsetsLabel.m in Sources */,
 				874475FF1DEFF2F100E5FF2A /* UIImage+SolidColor.m in Sources */,
 				879F59C51DDCC14F000185F8 /* ZEROListModel.m in Sources */,
 				874475F51DEF522700E5FF2A /* ZEROAlertView.m in Sources */,
@@ -1440,6 +1486,7 @@
 				8734CC3F1DE76F3900F5E976 /* NSString+LabelWidthAndHeight.m in Sources */,
 				87FAB9B61F0B960F00B65B0A /* UIColor+Tweak.m in Sources */,
 				87A12AD51E278B0E0047CA12 /* ZEROAlbumListController.m in Sources */,
+				8731EABC1F542234002DE607 /* TreeStructureModel.m in Sources */,
 				871677921DE0C8A5003772C0 /* PictureData.m in Sources */,
 				8716763B1DE067B5003772C0 /* WWaterFallViewController.m in Sources */,
 				874BB7CD1F029032002C343F /* SlidingDoorCell.m in Sources */,
@@ -1454,6 +1501,7 @@
 				879F59811DDC1F94000185F8 /* ViewController.m in Sources */,
 				879F5A0F1DDCD1C0000185F8 /* POPAnimatableProperty.mm in Sources */,
 				8716776F1DE0C852003772C0 /* AFNetworkReachabilityManager.m in Sources */,
+				8731EABF1F5423AC002DE607 /* TreeStructureCell.m in Sources */,
 				8731C4DF1DF2B48D003082DE /* PhotoChooseView.m in Sources */,
 				874475F41DEF522700E5FF2A /* ZEROAlertRootView.m in Sources */,
 				874475F11DEF522700E5FF2A /* ZEROAlertFrameManager.m in Sources */,
@@ -1479,6 +1527,7 @@
 				879F59D21DDCC598000185F8 /* ZEROListCell.m in Sources */,
 				87A12AE01E278BC90047CA12 /* ZEROImageCropManager.m in Sources */,
 				8734CC371DE76D9800F5E976 /* SiftTagViewController.m in Sources */,
+				8704A7211F8E075A0070863A /* DuiTangPicModel.m in Sources */,
 				87EBFACC1DDDF17700677DB9 /* AddSelectListItem.m in Sources */,
 				871677731DE0C852003772C0 /* AFURLSessionManager.m in Sources */,
 				87A12AFC1E278C3A0047CA12 /* ZEROAssetModel.m in Sources */,
@@ -1520,6 +1569,7 @@
 				87A12AE11E278BC90047CA12 /* ZEROPhotoManager.m in Sources */,
 				879F5A1A1DDCD1C0000185F8 /* POPGeometry.mm in Sources */,
 				87A12AEC1E278C170047CA12 /* ZEROAlbumListCell.m in Sources */,
+				8731EAB61F54220E002DE607 /* TreeStructureViewController.m in Sources */,
 				8716777C1DE0C852003772C0 /* UIProgressView+AFNetworking.m in Sources */,
 				871677D41DE208EC003772C0 /* UIImageView+WebCache.m in Sources */,
 				879F5A2D1DDCD545000185F8 /* NavPushViewController.m in Sources */,

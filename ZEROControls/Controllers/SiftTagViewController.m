@@ -78,6 +78,7 @@
     [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"SectionFooterView"];
 
     [self.view addSubview:_collectionView];
+    
 }
 
 - (void)createBlurBg{

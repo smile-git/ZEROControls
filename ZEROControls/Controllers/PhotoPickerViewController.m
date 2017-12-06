@@ -51,6 +51,17 @@ static const NSInteger maxPhotoNum = 4;
     [_collectionView registerClass:[PhotoPickerCell class] forCellWithReuseIdentifier:@"PhotoPickerCell"];
     [self.view addSubview:_collectionView];
 
+    [self configeriOS11];
+}
+
+- (void)configeriOS11 {
+    
+    if (@available(iOS 11.0, *)){
+        
+        _collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        _collectionView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);//导航栏如果使用系统原生半透明的，top设置为64
+        _collectionView.scrollIndicatorInsets = _collectionView.contentInset;
+    }
 }
 
 #pragma mark - ---- Delegate Method ----

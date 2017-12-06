@@ -23,6 +23,10 @@
  */
 @property (nonatomic, weak) NSIndexPath          *indexPath;
 
+/**
+ *  CustomCell's data.
+ */
+@property (nonatomic, weak) id data;
 
 #pragma mark - Method you should overwrite.
 
@@ -49,5 +53,12 @@
  *  @return Cell's height.
  */
 + (CGFloat)cellHeightWithData:(id)data;
+
+#pragma mark - Useful method.
+
+/**
+ *  Selected event, you should use this method in 'tableView:didSelectRowAtIndexPath:' to make it effective.
+ */
+- (void)selectedEvent;
 
 @end

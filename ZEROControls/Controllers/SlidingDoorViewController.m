@@ -31,6 +31,8 @@
     //[self buildSettings];
 }
 
+
+
 - (void)loadResourceData {
     
     NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"gallery" ofType:@"json"];
@@ -55,6 +57,10 @@
     
     [self performSelector:@selector(quickFix) withObject:nil afterDelay:0.01];
     
+    if (@available(iOS 11.0, *)){
+        // ----- 适配iOS 11
+        _collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }
 }
 
 - (void)buildSettings {

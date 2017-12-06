@@ -38,6 +38,11 @@
 
 }
 
+- (void)selectedEvent {
+    
+    
+}
+
 + (CGFloat)cellHeightWithData:(id)data{
     
     return 0.f;
