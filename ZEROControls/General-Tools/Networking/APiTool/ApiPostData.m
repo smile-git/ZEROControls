@@ -1,9 +1,9 @@
 //
 //  ApiPostData.m
-//  WWaterFall
+//  ZEROControls
 //
-//  Created by ZWX on 2016/11/20.
-//  Copyright © 2016年 ZWX. All rights reserved.
+//  Created by ZWX on 2017/12/6.
+//  Copyright © 2017年 ZWX. All rights reserved.
 //
 
 #import "ApiPostData.h"
@@ -21,5 +21,4 @@
     }
     return self;
 }
-
 @end

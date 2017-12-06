@@ -22,6 +22,14 @@ static NSString *cellId = @"cellId";
     [super viewDidLoad];
     
     [self createTableView];
+    
+    [self loadData];
+}
+
+- (void)loadData {
+    
+    // ----- https://www.duitang.com/album/?id=81996648
+
 }
 
 - (void)createTableView
@@ -29,6 +37,8 @@ static NSString *cellId = @"cellId";
     ZEROBezierTableView *tableView = [[ZEROBezierTableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
     tableView.delegate   = self;
     tableView.dataSource = self;
+    tableView.rowHeight  = 66.f;
+    tableView.sectionFooterHeight = 20.f;
     
     if (@available(iOS 11.0, *)){
         
@@ -42,16 +52,6 @@ static NSString *cellId = @"cellId";
 }
 
 #pragma mark - tableview delegate & datasource
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    return 20;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 66;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {

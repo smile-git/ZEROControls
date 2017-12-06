@@ -1,9 +1,9 @@
 //
 //  ApiPostData.h
-//  WWaterFall
+//  ZEROControls
 //
-//  Created by ZWX on 2016/11/20.
-//  Copyright © 2016年 ZWX. All rights reserved.
+//  Created by ZWX on 2017/12/6.
+//  Copyright © 2017年 ZWX. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -31,4 +31,5 @@
 @property(nonatomic,copy)   NSString * mimeType;
 
 - (instancetype)initWithData:(NSData *)data name:(NSString *)name fileName:(NSString *)fileName mimeType:(NSString *)mimeType;
+
 @end
