@@ -12,6 +12,7 @@
 @interface CircleCollectionViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (nonatomic, strong)UICollectionView *collectionView;
+@property (nonatomic, strong) NSMutableArray *dataSource;
 
 @end
 
@@ -21,17 +22,26 @@
     [super viewDidLoad];
     
     self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    [self loadUserListData];
     [self createCollectionView];
 }
 
+- (void)loadUserListData {
+    
+    NSArray *userListPics = [[NSMutableArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HeadIcon" ofType:@"plist"]];
+    self.dataSource = [NSMutableArray arrayWithArray:userListPics];
+}
+
 #pragma mark - create method
+
 - (void)createCollectionView{
     
-    CGFloat radius          = 350.0 / 667.0 * HEIGHT;
+    CGFloat radius          = 380.0 / 667.0 * HEIGHT;
     CGFloat angularSpacing  = 12.0 / 667.0 * HEIGHT;
     CGFloat xOffset         = 155.0 / 375.0 * WIDTH;
     CGFloat cell_width      = 220.0 / 375.0 * WIDTH;
-    CGFloat cell_height     = 60.0 / 667.0 * HEIGHT;
+    CGFloat cell_height     = 75.0 / 667.0 * HEIGHT;
     
     CircleLayout *layout = [[CircleLayout alloc] initWithRadius:radius angularSpacing:angularSpacing cellSize:CGSizeMake(cell_width, cell_height) xOffset:xOffset];
     
@@ -65,12 +75,16 @@
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 20;
+    return self.dataSource.count;
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CircleCell" forIndexPath:indexPath];
+    CircleCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CircleCell" forIndexPath:indexPath];
+    
+    cell.dataDic = [self.dataSource objectAtIndex:indexPath.row];
+    cell.cellHeight = 75.f;
+    [cell loadContent];
     
     return cell;
 }

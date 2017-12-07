@@ -34,7 +34,7 @@
                                     <constraint firstAttribute="width" constant="120" id="4DZ-Gx-dVb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.18039215689999999" green="0.19215686269999999" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.60392156860000001" green="0.63137254899999995" blue="0.6705882353" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昵称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYn-Mt-wEn">

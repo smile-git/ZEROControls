@@ -9,7 +9,6 @@
 #import "BezierTableViewController.h"
 #import "ZEROBezierTableView.h"
 #import "ZEROBezierCell.h"
-#import "FileManager.h"
 
 static NSString *cellId = @"cellId";
 
@@ -33,8 +32,6 @@ static NSString *cellId = @"cellId";
     
     NSArray *userListPics = [[NSMutableArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HeadIcon" ofType:@"plist"]];
     self.dataSource = [NSMutableArray arrayWithArray:userListPics];
-    
-    
 }
 
 - (void)createTableView
