@@ -9,11 +9,14 @@
 #import "BezierTableViewController.h"
 #import "ZEROBezierTableView.h"
 #import "ZEROBezierCell.h"
+#import "FileManager.h"
 
 static NSString *cellId = @"cellId";
 
 @interface BezierTableViewController ()<UITableViewDelegate, UITableViewDataSource>
 
+@property (nonatomic, strong) NSMutableArray *dataSource;
+//0是文字，1是语音 2是图片
 @end
 
 @implementation BezierTableViewController
@@ -21,15 +24,17 @@ static NSString *cellId = @"cellId";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self loadUserListData];
+
     [self createTableView];
-    
-    [self loadData];
 }
 
-- (void)loadData {
+- (void)loadUserListData {
     
-    // ----- https://www.duitang.com/album/?id=81996648
-
+    NSArray *userListPics = [[NSMutableArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HeadIcon" ofType:@"plist"]];
+    self.dataSource = [NSMutableArray arrayWithArray:userListPics];
+    
+    
 }
 
 - (void)createTableView
@@ -37,7 +42,7 @@ static NSString *cellId = @"cellId";
     ZEROBezierTableView *tableView = [[ZEROBezierTableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
     tableView.delegate   = self;
     tableView.dataSource = self;
-    tableView.rowHeight  = 66.f;
+    tableView.rowHeight  = 75.f;
     tableView.sectionFooterHeight = 20.f;
     
     if (@available(iOS 11.0, *)){
@@ -55,7 +60,7 @@ static NSString *cellId = @"cellId";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 30;
+    return self.dataSource.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -67,6 +72,10 @@ static NSString *cellId = @"cellId";
         nibsRegistered = YES;
     }
     ZEROBezierCell *cell = (ZEROBezierCell *)[tableView dequeueReusableCellWithIdentifier:cellId];
+    
+    cell.dataDic = [self.dataSource objectAtIndex:indexPath.row];
+    cell.cellHeight = 75.f;
+    [cell loadContent];
     
     return cell;
 }

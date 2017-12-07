@@ -10,6 +10,13 @@
 
 @interface ZEROBezierCell : UITableViewCell
 
+@property (nonatomic, assign) CGFloat cellHeight;
+@property (nonatomic, strong) NSDictionary *dataDic;
+
+@property (weak, nonatomic) IBOutlet UIImageView *headIcon;
+@property (weak, nonatomic) IBOutlet UILabel *nickLabel;
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+
+- (void)loadContent;
 
 @end

@@ -168,6 +168,7 @@
 		87F54F101FD8102D009FFA5D /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F54EDA1FD80E51009FFA5D /* AFURLRequestSerialization.m */; };
 		87F54F121FD8102D009FFA5D /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F54EDC1FD80E51009FFA5D /* AFURLResponseSerialization.m */; };
 		87F54F141FD8102D009FFA5D /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F54EDE1FD80E51009FFA5D /* AFURLSessionManager.m */; };
+		87F54F181FD8DADB009FFA5D /* HeadIcon.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87F54F171FD8DADB009FFA5D /* HeadIcon.plist */; };
 		87FAB9B41F0B960F00B65B0A /* PhotoTweaksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FAB9AF1F0B960F00B65B0A /* PhotoTweaksViewController.m */; };
 		87FAB9B51F0B960F00B65B0A /* PhotoTweakView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FAB9B11F0B960F00B65B0A /* PhotoTweakView.m */; };
 		87FAB9B61F0B960F00B65B0A /* UIColor+Tweak.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FAB9B31F0B960F00B65B0A /* UIColor+Tweak.m */; };
@@ -514,6 +515,7 @@
 		87F54EF11FD80E64009FFA5D /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		87F54EF21FD80E64009FFA5D /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		87F54EF31FD80E64009FFA5D /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		87F54F171FD8DADB009FFA5D /* HeadIcon.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = HeadIcon.plist; sourceTree = "<group>"; };
 		87FAB9AE1F0B960F00B65B0A /* PhotoTweaksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTweaksViewController.h; sourceTree = "<group>"; };
 		87FAB9AF1F0B960F00B65B0A /* PhotoTweaksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoTweaksViewController.m; sourceTree = "<group>"; };
 		87FAB9B01F0B960F00B65B0A /* PhotoTweakView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTweakView.h; sourceTree = "<group>"; };
@@ -1036,6 +1038,7 @@
 		879F5A211DDCD3F0000185F8 /* BezierTableViewController */ = {
 			isa = PBXGroup;
 			children = (
+				87F54F171FD8DADB009FFA5D /* HeadIcon.plist */,
 				879F5A2E1DDCD7BE000185F8 /* BezierTableViewController.h */,
 				879F5A2F1DDCD7BE000185F8 /* BezierTableViewController.m */,
 				879F5A251DDCD440000185F8 /* ZEROBezierTableView.h */,
@@ -1427,6 +1430,7 @@
 				874BB7CC1F029032002C343F /* SlidingDoor2Cell.xib in Resources */,
 				879F59861DDC1F94000185F8 /* Assets.xcassets in Resources */,
 				874BB8071F029148002C343F /* photo-1331975562098-bac8ded504c7.jpg in Resources */,
+				87F54F181FD8DADB009FFA5D /* HeadIcon.plist in Resources */,
 				879F59841DDC1F94000185F8 /* Main.storyboard in Resources */,
 				874BB8111F029148002C343F /* photo-1449157291145-7efd050a4d0e.jpg in Resources */,
 			);
