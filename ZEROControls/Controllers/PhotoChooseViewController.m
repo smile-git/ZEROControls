@@ -28,10 +28,10 @@
     
     PhotoChooseView *photoChoose = [[PhotoChooseView alloc] initWithFrame:CGRectMake(0, 64, WIDTH, WIDTH)];
    
-    [photoChoose setPhotos:@[@"http://img3.duitang.com/uploads/item/201307/29/20130729153409_YCfU2.thumb.224_0.jpeg",
-                             @"placeholder",
-                             @"http://cdn.duitang.com/uploads/item/201212/29/20121229214354_NrWcc.thumb.224_0.jpeg",
-                             @"http://img3.duitang.com/uploads/item/201301/01/20130101121241_LmTTf.thumb.224_0.jpeg"]];
+    [photoChoose setPhotos:@[@"https://b-ssl.duitang.com/uploads/item/201612/24/20161224173209_HxFGX.thumb.700_0.jpeg",
+                             @"http://img.dongqiudi.com/uploads/avatar/2015/07/25/QM387nh7As_thumb_1437790672318.jpg",
+                             @"https://b-ssl.duitang.com/uploads/item/201510/13/20151013205037_H3BnY.jpeg",
+                             @"https://b-ssl.duitang.com/uploads/item/201605/29/20160529091027_N4M2s.jpeg"]];
     [self.view addSubview:photoChoose];
 }
 @end
