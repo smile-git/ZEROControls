@@ -83,7 +83,6 @@
     CircleCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CircleCell" forIndexPath:indexPath];
     
     cell.dataDic = [self.dataSource objectAtIndex:indexPath.row];
-    cell.cellHeight = 75.f;
     [cell loadContent];
     
     return cell;

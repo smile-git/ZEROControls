@@ -40,11 +40,11 @@ static ApiTool * apiTool;
     manager.requestSerializer.timeoutInterval = 20;
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];//申明请求到的数据是json类型
 
-    //设置cookie
-    NSString *value = [[NSUserDefaults standardUserDefaults] objectForKey:KLocalCookName];
-    [manager.requestSerializer setValue: value forHTTPHeaderField:@"Cookie"];
-    //token验证
-    [manager.requestSerializer setValue:[[NSUserDefaults standardUserDefaults] objectForKey:KToken] forHTTPHeaderField:@"token"];
+//    //设置cookie
+//    NSString *value = [[NSUserDefaults standardUserDefaults] objectForKey:KLocalCookName];
+//    [manager.requestSerializer setValue: value forHTTPHeaderField:@"Cookie"];
+//    //token验证
+//    [manager.requestSerializer setValue:[[NSUserDefaults standardUserDefaults] objectForKey:KToken] forHTTPHeaderField:@"token"];
 
     [manager GET:url parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
 

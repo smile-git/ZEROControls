@@ -10,7 +10,6 @@
 
 @interface CircleCell : UICollectionViewCell
 
-@property (nonatomic, assign) CGFloat cellHeight;
 @property (nonatomic, strong) NSDictionary *dataDic;
 
 @property (weak, nonatomic) IBOutlet UILabel *nickLabel;

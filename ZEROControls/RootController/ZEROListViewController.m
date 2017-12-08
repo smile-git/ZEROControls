@@ -50,10 +50,11 @@
                        [ZEROListModel initWithName:@"横向瀑布流" controller:@"WWaterFallViewController"],
                        [ZEROListModel initWithName:@"标签筛选" controller:@"SiftTagViewController"],
                        [ZEROListModel initWithName:@"自定义Alert" controller:@"AlertListViewController"],
-                       [ZEROListModel initWithName:@"相册照片选取" controller:@"PhotoPickerViewController"],
+                       [ZEROListModel initWithName:@"相册照片选取(copy)" controller:@"PhotoPickerViewController"],
                        [ZEROListModel initWithName:@"滑动门列表" controller:@"SlidingDoorViewController"],
-                       [ZEROListModel initWithName:@"照片裁剪" controller:@"ShowTweakViewController"],
-                       [ZEROListModel initWithName:@"多级分组" controller:@"TreeStructureViewController"]];
+                       [ZEROListModel initWithName:@"照片裁剪(copy)" controller:@"ShowTweakViewController"],
+                       [ZEROListModel initWithName:@"多级分组(copy)" controller:@"TreeStructureViewController"],
+                       [ZEROListModel initWithName:@"Cell图片视差动画(copy)" controller:@"OffsetCellViewController"]];
 
     self.items = [NSMutableArray array];
     

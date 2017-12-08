@@ -22,7 +22,7 @@
 
 - (void)loadContent {
     
-    self.headIcon.layer.cornerRadius = (self.cellHeight - 20) / 2.f;
+    self.headIcon.layer.cornerRadius = 12.5f;
     __weak CircleCell *wself  = self;
     
     [self.headIcon sd_setImageWithURL:[NSURL URLWithString:[self.dataDic objectForKey:@"img"]] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
