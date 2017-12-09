@@ -32,7 +32,7 @@
     // 初始化布局文件
     CGFloat gap                = 1;
     NSInteger rowCount         = 3;
-    _rowHeight                 = (self.view.height - 64 - (rowCount + 1) * gap) / (CGFloat)rowCount;
+    _rowHeight                 = (HEIGHT - NavHeight - (rowCount + 1) * gap) / (CGFloat)rowCount;
     WWaterFallLayout *layout   = [WWaterFallLayout new];
     layout.wManager.edgeInsets = UIEdgeInsetsMake(gap, gap, gap, gap);
     layout.wManager.gap        = gap;
@@ -45,7 +45,7 @@
     }
     layout.wManager.itemHeights = rowHeights;
     
-    self.collectionView                                = [[UICollectionView alloc] initWithFrame:self.view.frame
+    self.collectionView                                = [[UICollectionView alloc] initWithFrame:CGRectMake(0, NavHeight, WIDTH, HEIGHT - NavHeight)
                                                                             collectionViewLayout:layout];
     self.collectionView.delegate                       = self;
     self.collectionView.dataSource                     = self;
@@ -55,16 +55,15 @@
     [self.collectionView registerClass:[WWaterFallCell class] forCellWithReuseIdentifier:@"WWaterFallCell"];
     [self.view addSubview:self.collectionView];
     
-    // Adjust iOS 11.0
-    if (@available(iOS 11.0, *)){
-        
-        self.collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-        self.collectionView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);//导航栏如果使用系统原生半透明的，top设置为64
-        self.collectionView.scrollIndicatorInsets = self.collectionView.contentInset;
-    }
-    
     [self reloadData];
 
+    if (@available(iOS 11.0, *)){
+        
+        if (iPhoneX) {
+            
+            _collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }
+    }
 }
 
 - (void)reloadData{

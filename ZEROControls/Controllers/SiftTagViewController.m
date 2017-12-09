@@ -68,7 +68,7 @@
     //单选、多选
     _layout.siftManager.singleChoose = YES;
 
-    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 64, WIDTH, HEIGHT - 64) collectionViewLayout:_layout];
+    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, NavHeight, WIDTH, HEIGHT - NavHeight) collectionViewLayout:_layout];
     _collectionView.delegate        = self;
     _collectionView.dataSource      = self;
     _collectionView.backgroundColor = [UIColor clearColor];

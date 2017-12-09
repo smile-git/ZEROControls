@@ -31,13 +31,14 @@ static NSString *TreeStructureCellId = @"TreeStructureCell";
 
 - (void)configerSubViews {
     
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, NavHeight, WIDTH, HEIGHT - NavHeight) style:UITableViewStylePlain];
     
     self.tableView.dataSource     = self;
     self.tableView.delegate       = self;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.rowHeight      = 50.f;
     [self.view addSubview:self.tableView];
+    
 }
 
 - (void)loadData {

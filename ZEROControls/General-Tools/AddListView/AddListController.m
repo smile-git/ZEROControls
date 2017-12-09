@@ -46,7 +46,7 @@ static const CGFloat AddListViewItemHeight  = 40.0;
         
         _items = items;
         
-        _listView.frame  = CGRectMake(WIDTH - AddListViewItemWidth - AddListViewRightMargin, 64 + 5, AddListViewItemWidth, AddListViewItemHeight * (items.count > 6 ? 6 : items.count) + AddListViewTopMargin);
+        _listView.frame  = CGRectMake(WIDTH - AddListViewItemWidth - AddListViewRightMargin, NavHeight + 5, AddListViewItemWidth, AddListViewItemHeight * (items.count > 6 ? 6 : items.count) + AddListViewTopMargin);
         _tableView.frame = CGRectMake(0, AddListViewTopMargin, _listView.width, _listView.height - AddListViewTopMargin);
         
         [_tableView reloadData];
@@ -58,7 +58,7 @@ static const CGFloat AddListViewItemHeight  = 40.0;
 
 - (void)createListView{
     
-    self.listView = [[AddListView alloc] initWithFrame:CGRectMake(WIDTH - AddListViewItemWidth - AddListViewRightMargin, 64 + 5, AddListViewItemWidth, AddListViewItemHeight * (_items.count > 6 ? 6 : _items.count) + AddListViewTopMargin)];
+    self.listView = [[AddListView alloc] initWithFrame:CGRectMake(WIDTH - AddListViewItemWidth - AddListViewRightMargin, NavHeight + 5, AddListViewItemWidth, AddListViewItemHeight * (_items.count > 6 ? 6 : _items.count) + AddListViewTopMargin)];
     _listView.hidden = YES;
 
     [self.view addSubview:_listView];

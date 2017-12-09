@@ -55,8 +55,9 @@ static NSString *picturesSource = @"http://www.duitang.com/album/1733789/masn/p/
     }
     layout.hManager.columnWidths = columnWidths;
     
-    self.collectionView                                = [[UICollectionView alloc] initWithFrame:self.view.frame
-                                                                            collectionViewLayout:layout];
+    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, NavHeight, WIDTH, HEIGHT - NavHeight)
+                                             collectionViewLayout:layout];
+    
     self.collectionView.delegate                       = self;
     self.collectionView.dataSource                     = self;
     self.collectionView.backgroundColor                = [UIColor clearColor];
@@ -68,14 +69,6 @@ static NSString *picturesSource = @"http://www.duitang.com/album/1733789/masn/p/
 }
 
 - (void)loadWaterFallData {
-    
-    // Adjust iOS 11.0
-    if (@available(iOS 11.0, *)){
-        
-        self.collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-        self.collectionView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);//导航栏如果使用系统原生半透明的，top设置为64
-        self.collectionView.scrollIndicatorInsets = self.collectionView.contentInset;
-    }
     
     // 获取数据
     self.dataSource = [NSMutableArray array];

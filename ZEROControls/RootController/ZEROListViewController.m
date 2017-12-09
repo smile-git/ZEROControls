@@ -64,6 +64,7 @@
         item.index = i + 1;
         [item createAttributedName];
         [self.items addObject:[CellDataItem cellDataItemWithCellReuseIdentifier:NSStringFromClass([ZEROListCell class]) data:item cellHeight:0 cellType:0]];
+        
     }
 }
 
@@ -71,21 +72,13 @@
 
 - (void)configureTableView {
     
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, NavHeight, WIDTH, HEIGHT - NavHeight) style:UITableViewStylePlain];
     self.tableView.delegate       = self;
     self.tableView.dataSource     = self;
     self.tableView.rowHeight      = 50.f;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerClass:[ZEROListCell class] forCellReuseIdentifier:NSStringFromClass([ZEROListCell class])];
     [self.view addSubview:_tableView];
-    
-
-    if (@available(iOS 11.0, *)){
-        
-        _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-        _tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);//导航栏如果使用系统原生半透明的，top设置为64
-        _tableView.scrollIndicatorInsets = _tableView.contentInset;
-    }
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (0.25f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         // Load data.

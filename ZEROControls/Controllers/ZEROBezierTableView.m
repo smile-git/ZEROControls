@@ -56,10 +56,10 @@
     CGFloat itemHeight = height / 3.0;
     
     if (CGPointEqualToPoint(_points.p1, CGPointZero) && CGPointEqualToPoint(_points.p2, CGPointZero) && CGPointEqualToPoint(_points.p3, CGPointZero) && CGPointEqualToPoint(_points.p4, CGPointZero)) {
-        _points.p1 = CGPointMake( - 64, 0);
+        _points.p1 = CGPointMake( - NavHeight, 0);
         _points.p2 = CGPointMake(itemHeight, itemHeight);
         _points.p3 = CGPointMake(itemHeight, itemHeight * 2);
-        _points.p4 = CGPointMake( - 64, height);
+        _points.p4 = CGPointMake( - NavHeight, height);
     }
 }
 

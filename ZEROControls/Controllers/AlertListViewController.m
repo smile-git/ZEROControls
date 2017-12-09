@@ -57,20 +57,13 @@
 
 - (void)createTableView{
     
-    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, NavHeight, WIDTH, HEIGHT - NavHeight) style:UITableViewStyleGrouped];
     tableView.delegate            = self;
     tableView.dataSource          = self;
     tableView.sectionHeaderHeight = 30.0;
     tableView.rowHeight           = 50.f;
     tableView.backgroundColor     = [[UIColor grayColor] colorWithAlphaComponent:0.05f];
     tableView.separatorStyle      = UITableViewCellSeparatorStyleSingleLine;
-    
-    if (@available(iOS 11.0, *)){
-        
-        tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-        tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);//导航栏如果使用系统原生半透明的，top设置为64
-        tableView.scrollIndicatorInsets = tableView.contentInset;
-    }
     
     [self.view addSubview:tableView];
     

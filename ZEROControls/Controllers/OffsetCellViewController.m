@@ -56,7 +56,7 @@ static NSString *offsetCellHeaderViewID = @"OffsetCellHeaderView";
 
 - (void)createTableView {
     
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, NavHeight, WIDTH, HEIGHT - NavHeight) style:UITableViewStylePlain];
     
     self.tableView.delegate            = self;
     self.tableView.dataSource          = self;
@@ -70,12 +70,6 @@ static NSString *offsetCellHeaderViewID = @"OffsetCellHeaderView";
     
     [self.view addSubview:self.tableView];
     
-    if (@available(iOS 11.0, *)){
-        
-        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-        self.tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);//导航栏如果使用系统原生半透明的，top设置为64
-        self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
-    }
 }
 
 

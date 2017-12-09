@@ -44,7 +44,7 @@
     
     SlidingDoorLayout *layout = [[SlidingDoorLayout alloc] init];
     
-    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 64, WIDTH, HEIGHT - 64) collectionViewLayout:layout];
+    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, NavHeight, WIDTH, HEIGHT - NavHeight) collectionViewLayout:layout];
     
     _collectionView.backgroundColor = [UIColor clearColor];
     _collectionView.delegate        = self;

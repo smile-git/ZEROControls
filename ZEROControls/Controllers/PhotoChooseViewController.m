@@ -26,7 +26,7 @@
 
 - (void)configerPhotoChooseView{
     
-    PhotoChooseView *photoChoose = [[PhotoChooseView alloc] initWithFrame:CGRectMake(0, 64, WIDTH, WIDTH)];
+    PhotoChooseView *photoChoose = [[PhotoChooseView alloc] initWithFrame:CGRectMake(0, NavHeight, WIDTH, WIDTH)];
    
     [photoChoose setPhotos:@[@"https://b-ssl.duitang.com/uploads/item/201612/24/20161224173209_HxFGX.thumb.700_0.jpeg",
                              @"http://img.dongqiudi.com/uploads/avatar/2015/07/25/QM387nh7As_thumb_1437790672318.jpg",

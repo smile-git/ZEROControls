@@ -36,18 +36,11 @@ static NSString *cellId = @"cellId";
 
 - (void)createTableView
 {
-    ZEROBezierTableView *tableView = [[ZEROBezierTableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
+    ZEROBezierTableView *tableView = [[ZEROBezierTableView alloc] initWithFrame:CGRectMake(0, NavHeight, WIDTH, HEIGHT - NavHeight) style:UITableViewStyleGrouped];
     tableView.delegate   = self;
     tableView.dataSource = self;
     tableView.rowHeight  = 75.f;
     tableView.sectionFooterHeight = 20.f;
-    
-    if (@available(iOS 11.0, *)){
-        
-        tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-        tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);//导航栏如果使用系统原生半透明的，top设置为64
-        tableView.scrollIndicatorInsets = tableView.contentInset;
-    }
     
     [self.view addSubview:tableView];
     
