@@ -77,9 +77,11 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    UILabel *customView      = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 200)];
-    customView.textAlignment = NSTextAlignmentCenter;
+    UILabel *customView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 200)];
+    customView.textAlignment   = NSTextAlignmentCenter;
     customView.backgroundColor = [UIColor whiteColor];
+    customView.textAlignment   = NSTextAlignmentCenter;
+    customView.numberOfLines   = 0;
     if (indexPath.section == 0) {
         
         if (indexPath.row == 0) {
@@ -92,12 +94,12 @@
         }
         else if (indexPath.row == 2){
             
-            customView.text = @"ZEROAlertViewTypeCustomDefault";
+            customView.text = @"ZEROAlertViewTypeCustomDefault \n \n 自定义的提示控件";
             [[[ZEROAlertView alloc] initWithCustomView:customView clickHandle:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil] show];
         }
         else{
             
-            customView.text = @"ZEROAlertViewTypeCustomButtons";
+            customView.text = @"ZEROAlertViewTypeCustomButtons \n \n 自定义的提示控件";
             [[[ZEROAlertView alloc] initWithCustomView:customView clickHandle:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@"Z", @"E", @"R", @"O", nil] show];
         }
     }else{
@@ -107,7 +109,7 @@
             [[[ZEROSheetView alloc] initWithTitle:@"ZEROSheetViewTypeDefault" cancelButtonTitle:@"Cancel" click:nil otherButtonTitles:@"Z", @"E", @"R", @"O", nil] show];
         }
         else{
-            customView.text = @"ZEROSheetViewTypeCustom";
+            customView.text = @"ZEROSheetViewTypeCustom \n \n 自定义的提示控件";
             [[[ZEROSheetView alloc] initWithCustomView:customView cancelButtonTitle:@"Cancel" click:nil] show];
         }
     }
