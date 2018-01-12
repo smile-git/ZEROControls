@@ -17,6 +17,7 @@
     adapter.cellReuseIdentifier = cellReuseIdentifiers;
     adapter.data                = data;
     adapter.cellHeight          = cellHeight;
+    adapter.cellType            = cellType;
     
     return adapter;
 }

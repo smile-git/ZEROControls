@@ -31,6 +31,10 @@
  */
 @property (nonatomic)         CGFloat       cellWidth;
 
+/**
+ *  Cell's type (The same cell, but maybe have different types).
+ */
+@property (nonatomic)         NSInteger     cellType;
 
 + (CellDataItem *)cellDataItemWithCellReuseIdentifier:(NSString *)cellReuseIdentifiers data:(id)data
                                            cellHeight:(CGFloat)cellHeight cellType:(NSInteger)cellType;
