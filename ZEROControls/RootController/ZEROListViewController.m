@@ -9,14 +9,14 @@
 #import "ZEROListViewController.h"
 #import "ZEROListCell.h"
 #import "ZEROListModel.h"
-#import "CellDataItem.h"
+#import "CellDataAdapter.h"
 
 @interface ZEROListViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView    *tableView;
 @property (nonatomic)         BOOL            tableViewLoadData;
 
-@property (nonatomic, strong) NSMutableArray  <CellDataItem *> *items;
+@property (nonatomic, strong) NSMutableArray  <CellDataAdapter *> *items;
 
 @end
 
@@ -63,7 +63,7 @@
         ZEROListModel *item = array[i];
         item.index = i + 1;
         [item createAttributedName];
-        [self.items addObject:[CellDataItem cellDataItemWithCellReuseIdentifier:NSStringFromClass([ZEROListCell class]) data:item cellHeight:0 cellType:0]];
+        [self.items addObject:[CellDataAdapter cellDataItemWithCellReuseIdentifier:NSStringFromClass([ZEROListCell class]) data:item cellHeight:0 cellType:0]];
         
     }
 }
@@ -102,7 +102,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CellDataItem *item = _items[indexPath.row];
+    CellDataAdapter *item = _items[indexPath.row];
     ZEROListCell *cell = [tableView dequeueReusableCellWithIdentifier:item.cellReuseIdentifier];
     cell.dataItem      = item;
     cell.indexPath     = indexPath;

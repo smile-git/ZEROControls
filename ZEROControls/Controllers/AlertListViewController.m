@@ -10,7 +10,7 @@
 #import "AlertListModel.h"
 #import "ZEROAlertView.h"
 #import "ZEROSheetView.h"
-#import "CellDataItem.h"
+#import "CellDataAdapter.h"
 
 @interface AlertListViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -42,13 +42,13 @@
     NSMutableArray *aletArrays = [NSMutableArray array];
     [alerts enumerateObjectsUsingBlock:^(AlertListModel *_Nonnull item, NSUInteger idx, BOOL * _Nonnull stop) {
         
-        [aletArrays addObject:[CellDataItem cellDataItemWithCellReuseIdentifier:NSStringFromClass([UITableViewCell class]) data:item cellHeight:0 cellType:0]];
+        [aletArrays addObject:[CellDataAdapter cellDataItemWithCellReuseIdentifier:NSStringFromClass([UITableViewCell class]) data:item cellHeight:0 cellType:0]];
     }];
 
     NSMutableArray *sheetArrays = [NSMutableArray array];
     [sheets enumerateObjectsUsingBlock:^(AlertListModel *_Nonnull item, NSUInteger idx, BOOL * _Nonnull stop) {
         
-        [sheetArrays addObject:[CellDataItem cellDataItemWithCellReuseIdentifier:NSStringFromClass([UITableViewCell class]) data:item cellHeight:0 cellType:0]];
+        [sheetArrays addObject:[CellDataAdapter cellDataItemWithCellReuseIdentifier:NSStringFromClass([UITableViewCell class]) data:item cellHeight:0 cellType:0]];
     }];
     
     [_dataArray addObject:aletArrays];
@@ -134,7 +134,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableViewCell"];
     }
     
-    CellDataItem *item = _dataArray[indexPath.section][indexPath.row];
+    CellDataAdapter *item = _dataArray[indexPath.section][indexPath.row];
     AlertListModel *model = item.data;
     
     cell.textLabel.text = model.title;

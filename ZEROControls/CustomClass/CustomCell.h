@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CellDataItem.h"
+#import "CellDataAdapter.h"
 
 @interface CustomCell : UITableViewCell
 
@@ -16,7 +16,7 @@
 /**
  *  CustomCell's dataItem.
  */
-@property (nonatomic, weak) CellDataItem         *dataItem;
+@property (nonatomic, weak) CellDataAdapter         *dataItem;
 
 /**
  *  CustomCell's indexPath.

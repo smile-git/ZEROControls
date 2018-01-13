@@ -96,7 +96,7 @@
 		879F59C21DDCC120000185F8 /* ZEROListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F59C11DDCC120000185F8 /* ZEROListViewController.m */; };
 		879F59C51DDCC14F000185F8 /* ZEROListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F59C41DDCC14F000185F8 /* ZEROListModel.m */; };
 		879F59CA1DDCC2FB000185F8 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F59C91DDCC2FB000185F8 /* CustomCell.m */; };
-		879F59CE1DDCC340000185F8 /* CellDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F59CD1DDCC340000185F8 /* CellDataItem.m */; };
+		879F59CE1DDCC340000185F8 /* CellDataAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F59CD1DDCC340000185F8 /* CellDataAdapter.m */; };
 		879F59D21DDCC598000185F8 /* ZEROListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F59D11DDCC598000185F8 /* ZEROListCell.m */; };
 		879F59D71DDCCC9F000185F8 /* UIFont+Fonts.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F59D61DDCCC9F000185F8 /* UIFont+Fonts.m */; };
 		879F5A0F1DDCD1C0000185F8 /* POPAnimatableProperty.mm in Sources */ = {isa = PBXBuildFile; fileRef = 879F59DE1DDCD1C0000185F8 /* POPAnimatableProperty.mm */; };
@@ -360,8 +360,8 @@
 		879F59C41DDCC14F000185F8 /* ZEROListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEROListModel.m; sourceTree = "<group>"; };
 		879F59C81DDCC2FB000185F8 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		879F59C91DDCC2FB000185F8 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
-		879F59CC1DDCC340000185F8 /* CellDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellDataItem.h; sourceTree = "<group>"; };
-		879F59CD1DDCC340000185F8 /* CellDataItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellDataItem.m; sourceTree = "<group>"; };
+		879F59CC1DDCC340000185F8 /* CellDataAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellDataAdapter.h; sourceTree = "<group>"; };
+		879F59CD1DDCC340000185F8 /* CellDataAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellDataAdapter.m; sourceTree = "<group>"; };
 		879F59CF1DDCC43F000185F8 /* ZEROControls.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZEROControls.pch; sourceTree = "<group>"; };
 		879F59D01DDCC598000185F8 /* ZEROListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEROListCell.h; sourceTree = "<group>"; };
 		879F59D11DDCC598000185F8 /* ZEROListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEROListCell.m; sourceTree = "<group>"; };
@@ -956,8 +956,8 @@
 		879F59CB1DDCC310000185F8 /* CellDataAdapter */ = {
 			isa = PBXGroup;
 			children = (
-				879F59CC1DDCC340000185F8 /* CellDataItem.h */,
-				879F59CD1DDCC340000185F8 /* CellDataItem.m */,
+				879F59CC1DDCC340000185F8 /* CellDataAdapter.h */,
+				879F59CD1DDCC340000185F8 /* CellDataAdapter.m */,
 			);
 			name = CellDataAdapter;
 			sourceTree = "<group>";
@@ -1555,7 +1555,7 @@
 				871677CC1DE208EC003772C0 /* SDWebImageDownloaderOperation.m in Sources */,
 				87A12AED1E278C170047CA12 /* ZEROAssetCell.m in Sources */,
 				87320F2D1DE3589A00B19A3C /* CircleLayout.m in Sources */,
-				879F59CE1DDCC340000185F8 /* CellDataItem.m in Sources */,
+				879F59CE1DDCC340000185F8 /* CellDataAdapter.m in Sources */,
 				87320F311DE358AD00B19A3C /* CircleCell.m in Sources */,
 				871677A11DE1EE95003772C0 /* HWaterFallManager.m in Sources */,
 				879F5A301DDCD7BE000185F8 /* BezierTableViewController.m in Sources */,

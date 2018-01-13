@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CellDataItem : NSObject
+@interface CellDataAdapter : NSObject
 
 
 /**
@@ -36,6 +36,6 @@
  */
 @property (nonatomic)         NSInteger     cellType;
 
-+ (CellDataItem *)cellDataItemWithCellReuseIdentifier:(NSString *)cellReuseIdentifiers data:(id)data
++ (CellDataAdapter *)cellDataItemWithCellReuseIdentifier:(NSString *)cellReuseIdentifiers data:(id)data
                                            cellHeight:(CGFloat)cellHeight cellType:(NSInteger)cellType;
 @end

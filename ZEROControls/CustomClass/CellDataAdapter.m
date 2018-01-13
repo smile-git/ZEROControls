@@ -6,14 +6,14 @@
 //  Copyright © 2016年 ZWX. All rights reserved.
 //
 
-#import "CellDataItem.h"
+#import "CellDataAdapter.h"
 
-@implementation CellDataItem
+@implementation CellDataAdapter
 
 
-+ (CellDataItem *)cellDataItemWithCellReuseIdentifier:(NSString *)cellReuseIdentifiers data:(id)data
++ (CellDataAdapter *)cellDataItemWithCellReuseIdentifier:(NSString *)cellReuseIdentifiers data:(id)data
                                            cellHeight:(CGFloat)cellHeight cellType:(NSInteger)cellType {
-    CellDataItem *adapter       = [[self class] new];
+    CellDataAdapter *adapter       = [[self class] new];
     adapter.cellReuseIdentifier = cellReuseIdentifiers;
     adapter.data                = data;
     adapter.cellHeight          = cellHeight;
