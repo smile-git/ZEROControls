@@ -580,7 +580,7 @@
 		87F801C120185CEE00AD1299 /* RightSideLinkageHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightSideLinkageHeaderView.h; sourceTree = "<group>"; };
 		87F801C220185CEE00AD1299 /* LeftSideLinkageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSideLinkageCell.m; sourceTree = "<group>"; };
 		87F801C320185CEE00AD1299 /* RightSideLinkageHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightSideLinkageHeaderView.m; sourceTree = "<group>"; };
-		87F801CE20185D5F00AD1299 /* ShopDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShopDataModel.h; path = ../../../../TwoLevelLinkage/TwoLevelLinkage/TwoLevelLinkage/Models/ShopDataModel.h; sourceTree = "<group>"; };
+		87F801D020185F3800AD1299 /* ShopDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopDataModel.h; sourceTree = "<group>"; };
 		87FAB9AE1F0B960F00B65B0A /* PhotoTweaksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTweaksViewController.h; sourceTree = "<group>"; };
 		87FAB9AF1F0B960F00B65B0A /* PhotoTweaksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoTweaksViewController.m; sourceTree = "<group>"; };
 		87FAB9B01F0B960F00B65B0A /* PhotoTweakView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTweakView.h; sourceTree = "<group>"; };
@@ -1440,7 +1440,7 @@
 			isa = PBXGroup;
 			children = (
 				87F801BB20185CEE00AD1299 /* liwushuo.json */,
-				87F801CE20185D5F00AD1299 /* ShopDataModel.h */,
+				87F801D020185F3800AD1299 /* ShopDataModel.h */,
 				87F801B620185CEE00AD1299 /* ShopDataModel.m */,
 				87F801B820185CEE00AD1299 /* CategoryModel.h */,
 				87F801BD20185CEE00AD1299 /* CategoryModel.m */,
