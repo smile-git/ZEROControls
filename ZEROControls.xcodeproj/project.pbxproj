@@ -176,6 +176,21 @@
 		87F54F261FD9760B009FFA5D /* OffsetCellHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F54F251FD9760B009FFA5D /* OffsetCellHeaderView.m */; };
 		87F54F2A1FD97689009FFA5D /* OffsetCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F54F291FD97689009FFA5D /* OffsetCellModel.m */; };
 		87F54F2D1FD97F13009FFA5D /* DailyListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F54F2C1FD97F13009FFA5D /* DailyListModel.m */; };
+		87F8019F20185AE100AD1299 /* CustomHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F8019D20185AE000AD1299 /* CustomHeaderFooterView.m */; };
+		87F801A220185AF100AD1299 /* CellHeaderFooterDataAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F801A120185AF100AD1299 /* CellHeaderFooterDataAdapter.m */; };
+		87F801AC20185C5000AD1299 /* RightLevelLinkageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F801A820185C5000AD1299 /* RightLevelLinkageModel.m */; };
+		87F801AD20185C5000AD1299 /* TwoLevelLinkageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F801A920185C5000AD1299 /* TwoLevelLinkageView.m */; };
+		87F801AE20185C5000AD1299 /* TwoLevelLinkageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F801AA20185C5000AD1299 /* TwoLevelLinkageCell.m */; };
+		87F801AF20185C5000AD1299 /* LeftLevelLinkageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F801AB20185C5000AD1299 /* LeftLevelLinkageModel.m */; };
+		87F801C420185CEE00AD1299 /* RightSideLinkageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F801B120185CED00AD1299 /* RightSideLinkageCell.m */; };
+		87F801C520185CEE00AD1299 /* TwoLevelLinkageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F801B220185CED00AD1299 /* TwoLevelLinkageViewController.m */; };
+		87F801C620185CEE00AD1299 /* ShopDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F801B620185CEE00AD1299 /* ShopDataModel.m */; };
+		87F801C820185CEE00AD1299 /* ItemManagerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F801B920185CEE00AD1299 /* ItemManagerModel.m */; };
+		87F801C920185CEE00AD1299 /* liwushuo.json in Resources */ = {isa = PBXBuildFile; fileRef = 87F801BB20185CEE00AD1299 /* liwushuo.json */; };
+		87F801CA20185CEE00AD1299 /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F801BD20185CEE00AD1299 /* CategoryModel.m */; };
+		87F801CB20185CEE00AD1299 /* SubCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F801BF20185CEE00AD1299 /* SubCategoryModel.m */; };
+		87F801CC20185CEE00AD1299 /* LeftSideLinkageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F801C220185CEE00AD1299 /* LeftSideLinkageCell.m */; };
+		87F801CD20185CEE00AD1299 /* RightSideLinkageHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F801C320185CEE00AD1299 /* RightSideLinkageHeaderView.m */; };
 		87FAB9B41F0B960F00B65B0A /* PhotoTweaksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FAB9AF1F0B960F00B65B0A /* PhotoTweaksViewController.m */; };
 		87FAB9B51F0B960F00B65B0A /* PhotoTweakView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FAB9B11F0B960F00B65B0A /* PhotoTweakView.m */; };
 		87FAB9B61F0B960F00B65B0A /* UIColor+Tweak.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FAB9B31F0B960F00B65B0A /* UIColor+Tweak.m */; };
@@ -537,6 +552,35 @@
 		87F54F291FD97689009FFA5D /* OffsetCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OffsetCellModel.m; sourceTree = "<group>"; };
 		87F54F2B1FD97F13009FFA5D /* DailyListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyListModel.h; sourceTree = "<group>"; };
 		87F54F2C1FD97F13009FFA5D /* DailyListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyListModel.m; sourceTree = "<group>"; };
+		87F8019D20185AE000AD1299 /* CustomHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomHeaderFooterView.m; sourceTree = "<group>"; };
+		87F8019E20185AE100AD1299 /* CustomHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHeaderFooterView.h; sourceTree = "<group>"; };
+		87F801A020185AF100AD1299 /* CellHeaderFooterDataAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellHeaderFooterDataAdapter.h; sourceTree = "<group>"; };
+		87F801A120185AF100AD1299 /* CellHeaderFooterDataAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellHeaderFooterDataAdapter.m; sourceTree = "<group>"; };
+		87F801A420185C5000AD1299 /* RightLevelLinkageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightLevelLinkageModel.h; sourceTree = "<group>"; };
+		87F801A520185C5000AD1299 /* TwoLevelLinkageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoLevelLinkageView.h; sourceTree = "<group>"; };
+		87F801A620185C5000AD1299 /* LeftLevelLinkageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftLevelLinkageModel.h; sourceTree = "<group>"; };
+		87F801A720185C5000AD1299 /* TwoLevelLinkageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoLevelLinkageCell.h; sourceTree = "<group>"; };
+		87F801A820185C5000AD1299 /* RightLevelLinkageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightLevelLinkageModel.m; sourceTree = "<group>"; };
+		87F801A920185C5000AD1299 /* TwoLevelLinkageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoLevelLinkageView.m; sourceTree = "<group>"; };
+		87F801AA20185C5000AD1299 /* TwoLevelLinkageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoLevelLinkageCell.m; sourceTree = "<group>"; };
+		87F801AB20185C5000AD1299 /* LeftLevelLinkageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftLevelLinkageModel.m; sourceTree = "<group>"; };
+		87F801B120185CED00AD1299 /* RightSideLinkageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightSideLinkageCell.m; sourceTree = "<group>"; };
+		87F801B220185CED00AD1299 /* TwoLevelLinkageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoLevelLinkageViewController.m; sourceTree = "<group>"; };
+		87F801B320185CED00AD1299 /* TwoLevelLinkageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoLevelLinkageViewController.h; sourceTree = "<group>"; };
+		87F801B420185CEE00AD1299 /* RightSideLinkageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightSideLinkageCell.h; sourceTree = "<group>"; };
+		87F801B620185CEE00AD1299 /* ShopDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopDataModel.m; sourceTree = "<group>"; };
+		87F801B820185CEE00AD1299 /* CategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryModel.h; sourceTree = "<group>"; };
+		87F801B920185CEE00AD1299 /* ItemManagerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemManagerModel.m; sourceTree = "<group>"; };
+		87F801BA20185CEE00AD1299 /* SubCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubCategoryModel.h; sourceTree = "<group>"; };
+		87F801BB20185CEE00AD1299 /* liwushuo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = liwushuo.json; sourceTree = "<group>"; };
+		87F801BD20185CEE00AD1299 /* CategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryModel.m; sourceTree = "<group>"; };
+		87F801BE20185CEE00AD1299 /* ItemManagerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemManagerModel.h; sourceTree = "<group>"; };
+		87F801BF20185CEE00AD1299 /* SubCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubCategoryModel.m; sourceTree = "<group>"; };
+		87F801C020185CEE00AD1299 /* LeftSideLinkageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSideLinkageCell.h; sourceTree = "<group>"; };
+		87F801C120185CEE00AD1299 /* RightSideLinkageHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightSideLinkageHeaderView.h; sourceTree = "<group>"; };
+		87F801C220185CEE00AD1299 /* LeftSideLinkageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSideLinkageCell.m; sourceTree = "<group>"; };
+		87F801C320185CEE00AD1299 /* RightSideLinkageHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightSideLinkageHeaderView.m; sourceTree = "<group>"; };
+		87F801CE20185D5F00AD1299 /* ShopDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShopDataModel.h; path = ../../../../TwoLevelLinkage/TwoLevelLinkage/TwoLevelLinkage/Models/ShopDataModel.h; sourceTree = "<group>"; };
 		87FAB9AE1F0B960F00B65B0A /* PhotoTweaksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTweaksViewController.h; sourceTree = "<group>"; };
 		87FAB9AF1F0B960F00B65B0A /* PhotoTweaksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoTweaksViewController.m; sourceTree = "<group>"; };
 		87FAB9B01F0B960F00B65B0A /* PhotoTweakView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTweakView.h; sourceTree = "<group>"; };
@@ -930,6 +974,7 @@
 				87EE44A81F03C2B700264ED3 /* PhotoTweaksViewController */,
 				8731EAB31F5421B7002DE607 /* TreeStructureViewController */,
 				87F54F1D1FD97087009FFA5D /* OffsetCellViewController */,
+				87F801B020185CCB00AD1299 /* TwoLevelLinkageViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -937,6 +982,7 @@
 		879F59C61DDCC2DB000185F8 /* CustomClass */ = {
 			isa = PBXGroup;
 			children = (
+				87F8019C20185AA900AD1299 /* CustomHeaderFooterView */,
 				879F5A2A1DDCD532000185F8 /* CustomControllers */,
 				879F59CB1DDCC310000185F8 /* CellDataAdapter */,
 				879F59C71DDCC2E4000185F8 /* CustomCell */,
@@ -958,6 +1004,8 @@
 			children = (
 				879F59CC1DDCC340000185F8 /* CellDataAdapter.h */,
 				879F59CD1DDCC340000185F8 /* CellDataAdapter.m */,
+				87F801A020185AF100AD1299 /* CellHeaderFooterDataAdapter.h */,
+				87F801A120185AF100AD1299 /* CellHeaderFooterDataAdapter.m */,
 			);
 			name = CellDataAdapter;
 			sourceTree = "<group>";
@@ -985,6 +1033,7 @@
 		879F59D91DDCD15C000185F8 /* General-Tools */ = {
 			isa = PBXGroup;
 			children = (
+				87F801A320185C5000AD1299 /* TwoLevelLinkageView */,
 				87097B721FDA47B3005B6684 /* LineBackgroundView */,
 				87169D851FD7ABF500D89B92 /* IconEdgeInsetsLabel */,
 				87FAB9AD1F0B960F00B65B0A /* PhotoTweaks */,
@@ -1347,6 +1396,62 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		87F8019C20185AA900AD1299 /* CustomHeaderFooterView */ = {
+			isa = PBXGroup;
+			children = (
+				87F8019E20185AE100AD1299 /* CustomHeaderFooterView.h */,
+				87F8019D20185AE000AD1299 /* CustomHeaderFooterView.m */,
+			);
+			name = CustomHeaderFooterView;
+			sourceTree = "<group>";
+		};
+		87F801A320185C5000AD1299 /* TwoLevelLinkageView */ = {
+			isa = PBXGroup;
+			children = (
+				87F801A420185C5000AD1299 /* RightLevelLinkageModel.h */,
+				87F801A520185C5000AD1299 /* TwoLevelLinkageView.h */,
+				87F801A620185C5000AD1299 /* LeftLevelLinkageModel.h */,
+				87F801A720185C5000AD1299 /* TwoLevelLinkageCell.h */,
+				87F801A820185C5000AD1299 /* RightLevelLinkageModel.m */,
+				87F801A920185C5000AD1299 /* TwoLevelLinkageView.m */,
+				87F801AA20185C5000AD1299 /* TwoLevelLinkageCell.m */,
+				87F801AB20185C5000AD1299 /* LeftLevelLinkageModel.m */,
+			);
+			path = TwoLevelLinkageView;
+			sourceTree = "<group>";
+		};
+		87F801B020185CCB00AD1299 /* TwoLevelLinkageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				87F801B320185CED00AD1299 /* TwoLevelLinkageViewController.h */,
+				87F801B220185CED00AD1299 /* TwoLevelLinkageViewController.m */,
+				87F801C020185CEE00AD1299 /* LeftSideLinkageCell.h */,
+				87F801C220185CEE00AD1299 /* LeftSideLinkageCell.m */,
+				87F801B420185CEE00AD1299 /* RightSideLinkageCell.h */,
+				87F801B120185CED00AD1299 /* RightSideLinkageCell.m */,
+				87F801C120185CEE00AD1299 /* RightSideLinkageHeaderView.h */,
+				87F801C320185CEE00AD1299 /* RightSideLinkageHeaderView.m */,
+				87F801B520185CEE00AD1299 /* Models */,
+			);
+			name = TwoLevelLinkageViewController;
+			sourceTree = "<group>";
+		};
+		87F801B520185CEE00AD1299 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				87F801BB20185CEE00AD1299 /* liwushuo.json */,
+				87F801CE20185D5F00AD1299 /* ShopDataModel.h */,
+				87F801B620185CEE00AD1299 /* ShopDataModel.m */,
+				87F801B820185CEE00AD1299 /* CategoryModel.h */,
+				87F801BD20185CEE00AD1299 /* CategoryModel.m */,
+				87F801BE20185CEE00AD1299 /* ItemManagerModel.h */,
+				87F801B920185CEE00AD1299 /* ItemManagerModel.m */,
+				87F801BA20185CEE00AD1299 /* SubCategoryModel.h */,
+				87F801BF20185CEE00AD1299 /* SubCategoryModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		87FAB9AD1F0B960F00B65B0A /* PhotoTweaks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1470,6 +1575,7 @@
 				8704A7221F8E0F010070863A /* duitang.json in Resources */,
 				874BB8101F029148002C343F /* photo-1448318440207-ef1893eb8ac0.jpg in Resources */,
 				874BB80B1F029148002C343F /* photo-1445285303476-2f3b16d67b7a.jpg in Resources */,
+				87F801C920185CEE00AD1299 /* liwushuo.json in Resources */,
 				874BB8051F029148002C343F /* menu@2x.png in Resources */,
 				874BB8031F029148002C343F /* gallery.json in Resources */,
 				879F5A281DDCD440000185F8 /* ZEROBezierCell.xib in Resources */,
@@ -1531,20 +1637,26 @@
 				87F54F141FD8102D009FFA5D /* AFURLSessionManager.m in Sources */,
 				87A12AF71E278C2B0047CA12 /* NSBundle+ZEROImagePicker.m in Sources */,
 				87A12AF81E278C2B0047CA12 /* UIImage+ZEROPhotoPickerGif.m in Sources */,
+				87F801C420185CEE00AD1299 /* RightSideLinkageCell.m in Sources */,
+				87F801CA20185CEE00AD1299 /* CategoryModel.m in Sources */,
 				87A12AF01E278C170047CA12 /* ZEROPhotoPreviewView.m in Sources */,
 				871677D51DE208EC003772C0 /* UIView+WebCacheOperation.m in Sources */,
 				871677C81DE208EC003772C0 /* SDImageCache.m in Sources */,
+				87F801C520185CEE00AD1299 /* TwoLevelLinkageViewController.m in Sources */,
 				87EBFAD11DDDF1FD00677DB9 /* AddListViewController.m in Sources */,
 				871677C61DE208EC003772C0 /* MKAnnotationView+WebCache.m in Sources */,
 				87F54F2A1FD97689009FFA5D /* OffsetCellModel.m in Sources */,
 				879F5A1F1DDCD1C0000185F8 /* POPVector.mm in Sources */,
+				87F801CD20185CEE00AD1299 /* RightSideLinkageHeaderView.m in Sources */,
 				87097B711FDA40EA005B6684 /* OffsetImageCell.m in Sources */,
+				87F801CC20185CEE00AD1299 /* LeftSideLinkageCell.m in Sources */,
 				871677851DE0C87D003772C0 /* WWaterFallCell.m in Sources */,
 				879F5A151DDCD1C0000185F8 /* POPAnimator.mm in Sources */,
 				87F04ECA1FD8042A006F46AA /* ApiPostData.m in Sources */,
 				874BB7CE1F029032002C343F /* SlidingDoorLayout.m in Sources */,
 				879F5A1E1DDCD1C0000185F8 /* POPSpringAnimation.mm in Sources */,
 				87EBFACB1DDDF17700677DB9 /* AddSelectListCell.m in Sources */,
+				87F801AE20185C5000AD1299 /* TwoLevelLinkageCell.m in Sources */,
 				87169D881FD7AC0C00D89B92 /* IconEdgeInsetsLabel.m in Sources */,
 				874475FF1DEFF2F100E5FF2A /* UIImage+SolidColor.m in Sources */,
 				879F59C51DDCC14F000185F8 /* ZEROListModel.m in Sources */,
@@ -1576,6 +1688,7 @@
 				874475F31DEF522700E5FF2A /* ZEROAlertManager.m in Sources */,
 				879F5A171DDCD1C0000185F8 /* POPCGUtils.mm in Sources */,
 				87FAB9B51F0B960F00B65B0A /* PhotoTweakView.m in Sources */,
+				87F801C620185CEE00AD1299 /* ShopDataModel.m in Sources */,
 				879F59D71DDCCC9F000185F8 /* UIFont+Fonts.m in Sources */,
 				879F59811DDC1F94000185F8 /* ViewController.m in Sources */,
 				879F5A0F1DDCD1C0000185F8 /* POPAnimatableProperty.mm in Sources */,
@@ -1585,6 +1698,7 @@
 				874475F11DEF522700E5FF2A /* ZEROAlertFrameManager.m in Sources */,
 				87A12AD71E278B0E0047CA12 /* ZEROImagePickerController.m in Sources */,
 				871676381DE067A7003772C0 /* HWaterFallViewController.m in Sources */,
+				87F801CB20185CEE00AD1299 /* SubCategoryModel.m in Sources */,
 				8734CC4B1DE76F8B00F5E976 /* SiftTagSectionHeaderView.m in Sources */,
 				874BB7D21F02907D002C343F /* SlidingDoorViewController.m in Sources */,
 				87EBFAD71DDE028500677DB9 /* PhotoChooseViewController.m in Sources */,
@@ -1619,6 +1733,7 @@
 				871677D01DE208EC003772C0 /* UIImage+GIF.m in Sources */,
 				87A12B001E279E470047CA12 /* PhotoPickerViewController.m in Sources */,
 				879F59C21DDCC120000185F8 /* ZEROListViewController.m in Sources */,
+				87F801A220185AF100AD1299 /* CellHeaderFooterDataAdapter.m in Sources */,
 				871677CB1DE208EC003772C0 /* SDWebImageDownloader.m in Sources */,
 				87A12AF91E278C2B0047CA12 /* UIView+OscillatoryAnimation.m in Sources */,
 				879F5A111DDCD1C0000185F8 /* POPAnimationEvent.mm in Sources */,
@@ -1628,11 +1743,14 @@
 				8734CC4E1DE7F50C00F5E976 /* SiftTagFlowLayout.m in Sources */,
 				8716779E1DE1EE83003772C0 /* HWaterFallCell.m in Sources */,
 				871677CD1DE208EC003772C0 /* SDWebImageManager.m in Sources */,
+				87F801AD20185C5000AD1299 /* TwoLevelLinkageView.m in Sources */,
 				879F5A141DDCD1C0000185F8 /* POPAnimationTracer.mm in Sources */,
 				879F5A291DDCD440000185F8 /* ZEROBezierTableView.m in Sources */,
 				87EE44B41F03C70D00264ED3 /* ShowTweakViewController.m in Sources */,
+				87F8019F20185AE100AD1299 /* CustomHeaderFooterView.m in Sources */,
 				87A12AD61E278B0E0047CA12 /* ZEROGifPhotoPreviewController.m in Sources */,
 				87097B751FDA47C3005B6684 /* LineBackgroundView.m in Sources */,
+				87F801AF20185C5000AD1299 /* LeftLevelLinkageModel.m in Sources */,
 				8734CC481DE76F8B00F5E976 /* SiftTagCell.m in Sources */,
 				8734CC4A1DE76F8B00F5E976 /* SiftTagManager.m in Sources */,
 				879F5A1B1DDCD1C0000185F8 /* POPLayerExtras.mm in Sources */,
@@ -1647,6 +1765,8 @@
 				871677D41DE208EC003772C0 /* UIImageView+WebCache.m in Sources */,
 				879F5A2D1DDCD545000185F8 /* NavPushViewController.m in Sources */,
 				871677C91DE208EC003772C0 /* SDWebImageCompat.m in Sources */,
+				87F801C820185CEE00AD1299 /* ItemManagerModel.m in Sources */,
+				87F801AC20185C5000AD1299 /* RightLevelLinkageModel.m in Sources */,
 				871677861DE0C87D003772C0 /* WWaterFallLayout.m in Sources */,
 				871677931DE0C8A5003772C0 /* ResponseData.m in Sources */,
 				874475F21DEF522700E5FF2A /* ZEROAlertItem.m in Sources */,

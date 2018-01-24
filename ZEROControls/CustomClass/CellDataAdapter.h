@@ -36,6 +36,19 @@
  */
 @property (nonatomic)         NSInteger     cellType;
 
-+ (CellDataAdapter *)cellDataItemWithCellReuseIdentifier:(NSString *)cellReuseIdentifiers data:(id)data
-                                           cellHeight:(CGFloat)cellHeight cellType:(NSInteger)cellType;
+
+/**
+ convenient
+ 
+ @param cellReuseIdentifiers    Cell's reused identifier.
+ @param data                    Data, can be nil.
+ @param cellHeight              Cell's height, only used for UITableView's cell.
+ @param cellType                Cell's type (The same cell, but maybe have different types).
+ 
+ @return CellDataAdapter
+ */
++ (CellDataAdapter *)cellDataItemWithCellReuseIdentifier:(NSString *)cellReuseIdentifiers
+                                                    data:(id)data
+                                              cellHeight:(CGFloat)cellHeight
+                                                cellType:(NSInteger)cellType;
 @end

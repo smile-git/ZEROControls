@@ -54,7 +54,8 @@
                        [ZEROListModel initWithName:@"滑动门列表" controller:@"SlidingDoorViewController"],
                        [ZEROListModel initWithName:@"照片裁剪(copy)" controller:@"ShowTweakViewController"],
                        [ZEROListModel initWithName:@"多级分组(copy)" controller:@"TreeStructureViewController"],
-                       [ZEROListModel initWithName:@"Cell图片视差动画(copy)" controller:@"OffsetCellViewController"]];
+                       [ZEROListModel initWithName:@"Cell图片视差动画(copy)" controller:@"OffsetCellViewController"],
+                       [ZEROListModel initWithName:@"级联菜单" controller:@"TwoLevelLinkageViewController"]];
 
     self.items = [NSMutableArray array];
     
@@ -102,9 +103,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CellDataAdapter *item = _items[indexPath.row];
-    ZEROListCell *cell = [tableView dequeueReusableCellWithIdentifier:item.cellReuseIdentifier];
-    cell.dataItem      = item;
+    CellDataAdapter *adapter = _items[indexPath.row];
+    ZEROListCell *cell = [tableView dequeueReusableCellWithIdentifier:adapter.cellReuseIdentifier];
+    cell.dataAdapter   = adapter;
     cell.indexPath     = indexPath;
     
     [cell loadContent];

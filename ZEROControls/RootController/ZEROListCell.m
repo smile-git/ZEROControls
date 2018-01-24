@@ -40,9 +40,9 @@
 
 - (void)loadContent{
     
-    if (self.dataItem.data) {
+    if (self.dataAdapter.data) {
         
-        ZEROListModel *model           = self.dataItem.data;
+        ZEROListModel *model           = self.dataAdapter.data;
         self.titlelabel.attributedText = model.attributeName;
         self.subTitleLabel.text        = model.controller;
     }
