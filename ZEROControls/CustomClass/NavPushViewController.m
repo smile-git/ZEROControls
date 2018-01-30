@@ -7,6 +7,7 @@
 //
 
 #import "NavPushViewController.h"
+#import "StyleKitName.h"
 
 @interface NavPushViewController ()
 
@@ -17,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // ----- [UIImage imageNamed:@"nav_back_white"]
     [self setNavControllerLeftImage:[UIImage imageNamed:@"nav_back_white"]];
 }
 

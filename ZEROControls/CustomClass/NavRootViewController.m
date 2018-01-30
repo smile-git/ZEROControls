@@ -37,9 +37,10 @@
     if (leftImage) {
         UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
         
-        button.frame = CGRectMake(0, 0, 25, 25);
-        
+        button.frame = CGRectMake(0, 0, 50, 30);
+
         [button setImage:leftImage forState:UIControlStateNormal];
+        button.imageEdgeInsets = UIEdgeInsetsMake(0, - 30, 0, 0);
         [button addTarget:self action:@selector(leftNavBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
@@ -48,7 +49,7 @@
     if (rightImage) {
         UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
         
-        button.frame = CGRectMake(0, 0, 25, 25);
+        button.frame = CGRectMake(0, 0, 50, 30);
         
         [button setBackgroundImage:rightImage forState:UIControlStateNormal];
         [button addTarget:self action:@selector(rightNavBtnClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -61,9 +62,10 @@
     
     UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
     
-    button.frame = CGRectMake(0, 0, 25, 25);
+    button.frame = CGRectMake(0, 0, 50, 30);
     
     [button setImage:leftImage forState:UIControlStateNormal];
+    button.imageEdgeInsets = UIEdgeInsetsMake(0, - 30, 0, 0);
     [button addTarget:self action:@selector(leftNavBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
@@ -73,7 +75,7 @@
     
     UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
     
-    button.frame = CGRectMake(0, 0, 25, 25);
+    button.frame = CGRectMake(0, 0, 50, 30);
     
     [button setBackgroundImage:rightImage forState:UIControlStateNormal];
     [button addTarget:self action:@selector(rightNavBtnClick:) forControlEvents:UIControlEventTouchUpInside];

@@ -7,9 +7,9 @@
 //
 
 #import "AddListViewController.h"
-#import "AddSelectListItem.h"
-#import "AddListController.h"
+#import "ZZNavAddListController.h"
 #import "SphereMenu.h"
+#import "StyleKitName.h"
 
 @interface AddListViewController ()
 
@@ -23,9 +23,8 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1];
-    [self setNavControllerRightImage:[UIImage imageNamed:@"barbuttonicon_add"]];
-    
-    [self loadItemData];
+    [self setNavControllerRightImage:[StyleKitName imageOfNavAdd]];
+    // ----- [UIImage imageNamed:@"barbuttonicon_add"]
     
     [[[SphereMenu alloc] initWithFrame:CGRectMake(WIDTH - 100, HEIGHT - 150, 80, 80) menuImage:@"home_start" sphereImages:@[@"home_start_2", @"home_start_2", @"home_start_3"]] showInView:self.view completion:^(NSInteger index) {
         
@@ -33,26 +32,21 @@
     }];
 }
 
-- (void)loadItemData{
-    
-    self.listItems = @[[AddSelectListItem initWithIcon:@"main_add_friend" title:@"添加朋友"],
-                       [AddSelectListItem initWithIcon:@"main_code_friend" title:@"扫一扫"],
-                       [AddSelectListItem initWithIcon:@"main_add_friend" title:nil],
-                       [AddSelectListItem initWithIcon:nil title:@"扫一扫"],
-                       [AddSelectListItem initWithIcon:@"main_add_friend" title:@"添加朋友"],
-                       [AddSelectListItem initWithIcon:@"main_code_friend" title:@"扫一扫"],
-                       [AddSelectListItem initWithIcon:@"main_add_friend" title:nil],
-                       [AddSelectListItem initWithIcon:nil title:@"扫一扫"]];
-    
-    
-}
-
 
 - (void)rightNavBtnClick:(UIButton *)rightBtn{
     
-    [[AddListController addListControllerWithItems:self.listItems] showInViewController:self completion:^(NSInteger selectIndex) {
-        NSLog(@"%zi", selectIndex);
-    }];
+    NSArray *itemDictionarys = @[@{@"title": @"添加朋友", @"icon": @"main_add_friend"},
+                                 @{@"title": @"扫一扫", @"icon": @"main_code_friend"},
+                                 @{@"icon": @"main_add_friend"},
+                                 @{@"title": @"扫一扫"},
+                                 @{@"title": @"添加朋友", @"icon": @"main_add_friend"},
+                                 @{@"title": @"扫一扫", @"icon": @"main_code_friend"}];
+    
+    [[ZZNavAddListController navAddListControllerWithDictionarys:itemDictionarys
+                                                selectCompletion:^(NSInteger selectedIndex) {
+                                                    
+        NSLog(@"selected %ld", selectedIndex);
+    }] showInViewController:self];
 }
 
 @end
