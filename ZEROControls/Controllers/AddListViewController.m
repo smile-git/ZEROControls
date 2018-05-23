@@ -45,7 +45,7 @@
     [[ZZNavAddListController navAddListControllerWithDictionarys:itemDictionarys
                                                 selectCompletion:^(NSInteger selectedIndex) {
                                                     
-        NSLog(@"selected %ld", selectedIndex);
+        NSLog(@"selected %ld", (long)selectedIndex);
     }] showInViewController:self];
 }
 
