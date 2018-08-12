@@ -43,6 +43,7 @@
 		871677D41DE208EC003772C0 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 871677C31DE208EC003772C0 /* UIImageView+WebCache.m */; };
 		871677D51DE208EC003772C0 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 871677C51DE208EC003772C0 /* UIView+WebCacheOperation.m */; };
 		87169D881FD7AC0C00D89B92 /* IconEdgeInsetsLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 87169D871FD7AC0C00D89B92 /* IconEdgeInsetsLabel.m */; };
+		871B8A522120503A00E8FE87 /* DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 871B8A512120503A00E8FE87 /* DateFormatter.m */; };
 		8731C4DF1DF2B48D003082DE /* PhotoChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8731C4DE1DF2B48D003082DE /* PhotoChooseView.m */; };
 		8731EAB61F54220E002DE607 /* TreeStructureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8731EAB51F54220E002DE607 /* TreeStructureViewController.m */; };
 		8731EABC1F542234002DE607 /* TreeStructureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8731EABB1F542234002DE607 /* TreeStructureModel.m */; };
@@ -287,6 +288,8 @@
 		871677C51DE208EC003772C0 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		87169D861FD7AC0C00D89B92 /* IconEdgeInsetsLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IconEdgeInsetsLabel.h; sourceTree = "<group>"; };
 		87169D871FD7AC0C00D89B92 /* IconEdgeInsetsLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IconEdgeInsetsLabel.m; sourceTree = "<group>"; };
+		871B8A502120503A00E8FE87 /* DateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateFormatter.h; sourceTree = "<group>"; };
+		871B8A512120503A00E8FE87 /* DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateFormatter.m; sourceTree = "<group>"; };
 		8731C4DD1DF2B48D003082DE /* PhotoChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoChooseView.h; sourceTree = "<group>"; };
 		8731C4DE1DF2B48D003082DE /* PhotoChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoChooseView.m; sourceTree = "<group>"; };
 		8731EAB41F54220E002DE607 /* TreeStructureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeStructureViewController.h; sourceTree = "<group>"; };
@@ -742,6 +745,15 @@
 			path = IconEdgeInsetsLabel;
 			sourceTree = "<group>";
 		};
+		871B8A4F2120503000E8FE87 /* DateFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				871B8A502120503A00E8FE87 /* DateFormatter.h */,
+				871B8A512120503A00E8FE87 /* DateFormatter.m */,
+			);
+			path = DateFormatter;
+			sourceTree = "<group>";
+		};
 		8725B2981FD802B20047DA5F /* APiTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -1045,6 +1057,7 @@
 		879F59D91DDCD15C000185F8 /* General-Tools */ = {
 			isa = PBXGroup;
 			children = (
+				871B8A4F2120503000E8FE87 /* DateFormatter */,
 				8796717F201B255400522592 /* StyleKitName */,
 				87F801A320185C5000AD1299 /* TwoLevelLinkageView */,
 				87097B721FDA47B3005B6684 /* LineBackgroundView */,
@@ -1775,6 +1788,7 @@
 				87F54F201FD97485009FFA5D /* OffsetCellViewController.m in Sources */,
 				879F5A1A1DDCD1C0000185F8 /* POPGeometry.mm in Sources */,
 				87A12AEC1E278C170047CA12 /* ZEROAlbumListCell.m in Sources */,
+				871B8A522120503A00E8FE87 /* DateFormatter.m in Sources */,
 				8731EAB61F54220E002DE607 /* TreeStructureViewController.m in Sources */,
 				871677D41DE208EC003772C0 /* UIImageView+WebCache.m in Sources */,
 				879F5A2D1DDCD545000185F8 /* NavPushViewController.m in Sources */,

@@ -13,6 +13,7 @@
 #import "OffsetImageCell.h"
 #import "ApiTool.h"
 #import "ZEROAlertView.h"
+#import "DateFormatter.h"
 
 static NSString *offsetImageCellID = @"OffsetImageCellID";
 static NSString *offsetCellHeaderViewID = @"OffsetCellHeaderView";
@@ -36,7 +37,7 @@ static NSString *offsetCellHeaderViewID = @"OffsetCellHeaderView";
 
 - (void)loadWanDouJiaData {
     
-    [[ApiTool shareApiTool] get:@"http://baobab.wandoujia.com/api/v1/feed" params:@{@"num" : @"5", @"vc" : @"67"} success:^(NSDictionary * _Nonnull jsonDic) {
+    [[ApiTool shareApiTool] get:@"http://baobab.wandoujia.com/api/v1/feed" params:@{@"u"    : @"011f2924aa2cf27aa5dc8066c041fe08116a9a0c", @"v"    : @"1.8.0", @"date" : [DateFormatter dateStringFromDate:[NSDate date] outputDateStringFormatter:@"yyyyMMdd"], @"f"    : @"iphone", @"num" : @"5", @"vc" : @"67"} success:^(NSDictionary * _Nonnull jsonDic) {
         
         self.rootModel = [[OffsetCellModel alloc] initWithDictionary:jsonDic];
         [self.tableView reloadData];
