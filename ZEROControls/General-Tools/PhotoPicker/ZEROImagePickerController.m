@@ -352,7 +352,7 @@
         // ----- 这里我有个问题，如果选择了照片和视频，类型type就不能赋值为photo了
         ZEROAssetModel *assetModel = [ZEROAssetModel assetModelWithAsset:asset type:ZEROAssetModelMediaTypePhoto];
         assetModel.isSelected = YES;
-        [_selectedModels addObject:assetModel];
+        [self->_selectedModels addObject:assetModel];
     }];
 }
 
@@ -503,7 +503,7 @@
             
             photoPickerVC.albumModel = model;
             [self pushViewController:photoPickerVC animated:YES];
-            _didPushPhotoPickerVC = YES;
+            self->_didPushPhotoPickerVC = YES;
         }];
     }
 }

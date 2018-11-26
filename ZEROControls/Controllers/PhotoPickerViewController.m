@@ -91,7 +91,7 @@ static const NSInteger maxPhotoNum = 4;
         [pickerVC setDidFinishPickingPhotosHandle:^(NSArray <UIImage *>*photos, NSArray *assets, BOOL isSelectOriginalPhoto) {
             self.photoArray = [NSMutableArray arrayWithArray:photos];
             self.assetArray = [NSMutableArray arrayWithArray:assets];
-            [_collectionView reloadData];
+            [self->_collectionView reloadData];
         }];
         [self presentViewController:pickerVC animated:YES completion:nil];
     }

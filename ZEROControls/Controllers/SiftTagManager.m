@@ -73,7 +73,7 @@
         [tags enumerateObjectsUsingBlock:^(NSString *_Nonnull tag, NSUInteger idx, BOOL * _Nonnull stop) {
             
             CGFloat tagWidth = [tag widthWithStringFont:[UIFont systemFontOfSize:16]];
-            CGSize tagSize   = CGSizeMake((tagWidth + tag_Margin * 2) > minTagWidth ? (tagWidth + tag_Margin * 2) : minTagWidth, _tagHeight);
+            CGSize tagSize   = CGSizeMake((tagWidth + tag_Margin * 2) > minTagWidth ? (tagWidth + tag_Margin * 2) : minTagWidth, self->_tagHeight);
             
             [tagSizes addObject:NSStringFromCGSize(tagSize)];
             
@@ -99,7 +99,7 @@
         
         //可以根据最宽的那一行的所占宽度，提高此section中每一行的间距
         CGFloat minimumInteritem = max_minimumInteritemSpacing < ((containerWidth - congtentMaxWidth) / (maxRowItemNum - 1) + 10) ? max_minimumInteritemSpacing : ((containerWidth - congtentMaxWidth) / (maxRowItemNum - 1) + 10);
-        [_minimumInteritemSpacings addObject:@(minimumInteritem)];
+        [self->_minimumInteritemSpacings addObject:@(minimumInteritem)];
         
         if (lineNum == 1 && rowItemNum <= 3) {
             //一行的时候, 并且个数不超过3个的时候，调节tag显示宽度
@@ -107,12 +107,12 @@
             CGFloat okTagWidth = (containerWidth - max_minimumInteritemSpacing * 2) / 3;
             [tags enumerateObjectsUsingBlock:^(NSString *_Nonnull stringSize, NSUInteger idx, BOOL * _Nonnull stop) {
                 //如果宽度不够适宜宽度，改变
-                CGSize tagSize = CGSizeMake(CGSizeFromString(tagSizes[idx]).width > okTagWidth ? CGSizeFromString(tagSizes[idx]).width : okTagWidth, _tagHeight);
+                CGSize tagSize = CGSizeMake(CGSizeFromString(tagSizes[idx]).width > okTagWidth ? CGSizeFromString(tagSizes[idx]).width : okTagWidth, self->_tagHeight);
                 [tagSizes replaceObjectAtIndex:idx withObject:NSStringFromCGSize(tagSize)];
             }];
         }
         
-        [_sizes addObject:tagSizes];
+        [self->_sizes addObject:tagSizes];
     }];
 }
 

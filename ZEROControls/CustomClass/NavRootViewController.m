@@ -18,7 +18,7 @@
     
     [super viewDidLoad];
     
-    self.view.backgroundColor                        = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
     
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:UIColorRGBA(220, 220, 220, 1)}];
@@ -34,7 +34,9 @@
 }
 
 - (void)setNavControllerLeftImage:(UIImage *)leftImage withRightImage:(UIImage *)rightImage {
+    
     if (leftImage) {
+        
         UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
         
         button.frame = CGRectMake(0, 0, 50, 30);
@@ -47,6 +49,7 @@
     }
     
     if (rightImage) {
+        
         UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
         
         button.frame = CGRectMake(0, 0, 50, 30);

@@ -61,29 +61,29 @@
     ZEROImagePickerController *imagePickerVC = (ZEROImagePickerController *)self.navigationController;
     [[ZEROPhotoManager shareManager] getAllAlbumsVideo:imagePickerVC.allowPickingVideo allowPickingImage:imagePickerVC.allowPickingImage completion:^(NSArray<ZEROAlbumModel *> *albumModels) {
         
-        _albumArray = [NSMutableArray arrayWithArray:albumModels];
-        [_albumArray enumerateObjectsUsingBlock:^(ZEROAlbumModel *_Nonnull albumModel, NSUInteger idx, BOOL * _Nonnull stop) {
+        self.albumArray = [NSMutableArray arrayWithArray:albumModels];
+        [self->_albumArray enumerateObjectsUsingBlock:^(ZEROAlbumModel *_Nonnull albumModel, NSUInteger idx, BOOL * _Nonnull stop) {
             
             albumModel.cellHeight     = cellHeight;
             albumModel.selectedModels = imagePickerVC.selectedModels;
         }];
         
-        if (!_tableView) {
+        if (!self->_tableView) {
             
             CGFloat top = 44;
             if (iOS7Later) top += 20;
             
-            _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, top, self.view.width, self.view.height - top) style:UITableViewStylePlain];
-            _tableView.rowHeight       = cellHeight;
-            _tableView.tableFooterView = [UIView new];
-            _tableView.dataSource      = self;
-            _tableView.delegate        = self;
+            self->_tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, top, self.view.width, self.view.height - top) style:UITableViewStylePlain];
+            self->_tableView.rowHeight       = cellHeight;
+            self->_tableView.tableFooterView = [UIView new];
+            self->_tableView.dataSource      = self;
+            self->_tableView.delegate        = self;
             
-            [_tableView registerClass:[ZEROAlbumListCell class] forCellReuseIdentifier:@"ZEROAlbumListCell"];
-            [self.view addSubview:_tableView];
+            [self->_tableView registerClass:[ZEROAlbumListCell class] forCellReuseIdentifier:@"ZEROAlbumListCell"];
+            [self.view addSubview:self->_tableView];
         } else {
             
-            [_tableView reloadData];
+            [self->_tableView reloadData];
         }
     }];
 }

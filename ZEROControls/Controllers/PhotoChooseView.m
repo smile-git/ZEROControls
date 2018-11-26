@@ -52,14 +52,14 @@ static const NSInteger photoButtonTag = 100;
     
     [photos enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
-        if (idx >= _photoButtonArray.count) {
+        if (idx >= self.photoButtonArray.count) {
             *stop = YES;
         }
-        UIButton *photoButton = _photoButtonArray[idx];
+        UIButton *photoButton = self.photoButtonArray[idx];
         if ([obj isKindOfClass:[UIImage class]]) {
             // -----images
             [photoButton setImage:obj forState:UIControlStateNormal];
-            [_photoArray addObject:obj];
+            [self.photoArray addObject:obj];
         }
         else if ([obj isKindOfClass:[NSString class]]){
             // -----strings
@@ -72,11 +72,11 @@ static const NSInteger photoButtonTag = 100;
                                           
                                           if (image) {
                                               
-                                              [_photoArray addObject:image];
+                                              [self.photoArray addObject:image];
                                           }
                                           else{
                                               
-                                              [_photoArray addObject:[UIImage imageNamed:@"placeholder"]];
+                                              [self.photoArray addObject:[UIImage imageNamed:@"placeholder"]];
                                           }
                                       }];
             }else{
@@ -84,7 +84,7 @@ static const NSInteger photoButtonTag = 100;
                 if ([UIImage imageNamed:obj]) {
                     
                     [photoButton setImage:[UIImage imageNamed:obj] forState:UIControlStateNormal];
-                    [_photoArray addObject:[UIImage imageNamed:obj]];
+                    [self.photoArray addObject:[UIImage imageNamed:obj]];
                 }
             }
         }else if ([obj isKindOfClass:[NSURL class]]){
@@ -96,11 +96,11 @@ static const NSInteger photoButtonTag = 100;
                                       
                                       if (image) {
                                           
-                                          [_photoArray addObject:image];
+                                          [self.photoArray addObject:image];
                                       }
                                       else{
                                           
-                                          [_photoArray addObject:[UIImage imageNamed:@"placeholder"]];
+                                          [self.photoArray addObject:[UIImage imageNamed:@"placeholder"]];
                                       }
                                   }];
         }
@@ -180,9 +180,9 @@ static const NSInteger photoButtonTag = 100;
         
         UIButton *photoButton = [self viewWithTag:idx + photoButtonTag];
         // -----这样写是为了在拖动之后，保证图片按钮顺序（拖动之后，_photoButtonArray顺序并没有改变）
-        if (_photoArray.count > idx) {
+        if (self.photoArray.count > idx) {
             
-            [photoButton setImage:_photoArray[idx] forState:UIControlStateNormal];
+            [photoButton setImage:self.photoArray[idx] forState:UIControlStateNormal];
         }
         else{
             
@@ -218,9 +218,9 @@ static const NSInteger photoButtonTag = 100;
             
             [self clickActionWithIndex:index];
         }
-        if (index == 3 && _photoArray.count > (sender.tag - photoButtonTag)) {
+        if (index == 3 && self.photoArray.count > (sender.tag - photoButtonTag)) {
             // -----点击删除之后，从图片数组中删除该图片，更新图片按钮显示图片
-            [_photoArray removeObjectAtIndex:sender.tag - photoButtonTag];
+            [self.photoArray removeObjectAtIndex:sender.tag - photoButtonTag];
             [self configerPhotoButtonImage];
         }
     } otherButtonTitles:@"拍摄", @"照片库", @"删除", nil] show];
@@ -326,14 +326,14 @@ static const NSInteger photoButtonTag = 100;
                         [UIView animateWithDuration:0.2 animations:^{
                             for (NSInteger i = fromIndex + 1; i <= toIndex; i++) {
                                 UIButton * nextBt = (UIButton*)[self viewWithTag:photoButtonTag+i];
-                                nextPoint = nextBt.center;
+                                self->nextPoint = nextBt.center;
                                 nextBt.tag--;
                                 
                                 if (nextBt.tag == photoButtonTag) {
                                     nextBt.frame = CGRectMake(nextBt.frame.origin.x, nextBt.frame.origin.y, bigWidth - 1, bigWidth - 1);
                                 }
-                                nextBt.center = valuePoint;
-                                valuePoint = nextPoint;
+                                nextBt.center = self->valuePoint;
+                                self->valuePoint = self->nextPoint;
                                 
                             }
                             photoButton.tag = photoButtonTag + toIndex;
@@ -345,7 +345,7 @@ static const NSInteger photoButtonTag = 100;
                         [UIView animateWithDuration:0.2 animations:^{
                             for (NSInteger i = fromIndex - 1; i >= toIndex; i--) {
                                 UIButton * nextBt = (UIButton*)[self viewWithTag:photoButtonTag+i];
-                                nextPoint = nextBt.center;
+                                self->nextPoint = nextBt.center;
                                 
                                 nextBt.tag++;
                                 
@@ -353,8 +353,8 @@ static const NSInteger photoButtonTag = 100;
                                     nextBt.frame = CGRectMake(nextBt.frame.origin.x, nextBt.frame.origin.y, bigWidth - 1, bigWidth - 1);
                                 }else
                                     nextBt.frame = CGRectMake(nextBt.frame.origin.x, nextBt.frame.origin.y, littleWidth - 1, littleWidth - 1);
-                                nextBt.center = valuePoint;
-                                valuePoint = nextPoint;
+                                nextBt.center = self->valuePoint;
+                                self->valuePoint = self->nextPoint;
                                 
                             }
                             photoButton.tag = photoButtonTag + toIndex;
@@ -383,7 +383,7 @@ static const NSInteger photoButtonTag = 100;
                 photoButton.frame = CGRectMake(photoButton.frame.origin.x, photoButton.frame.origin.y, bigWidth - 1, bigWidth - 1);
             }else
                 photoButton.frame = CGRectMake(photoButton.frame.origin.x, photoButton.frame.origin.y, littleWidth - 1, littleWidth - 1);
-            photoButton.center = valuePoint;
+            photoButton.center = self->valuePoint;
             
         }];
     }

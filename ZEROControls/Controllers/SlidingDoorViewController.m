@@ -123,8 +123,8 @@
     
     // ----- 刷新collectionview
     [UIView animateWithDuration:0 animations:^{
-        [_collectionView performBatchUpdates:^{
-            [_collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
+        [self->_collectionView performBatchUpdates:^{
+            [self->_collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
         } completion:nil];
     }];
     

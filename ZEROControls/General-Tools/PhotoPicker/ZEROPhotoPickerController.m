@@ -64,8 +64,8 @@ static CGSize AssetGridThumbnailSize;
         
         [[ZEROPhotoManager shareManager] getCameraRollAlbumVideo:zImagePickerVC.allowPickingVideo allowPickingImage:zImagePickerVC.allowPickingImage completion:^(ZEROAlbumModel *model) {
             
-            _albumModel  = model;
-            _assetModels = [NSMutableArray arrayWithArray:model.models];
+            self->_albumModel  = model;
+            self->_assetModels = [NSMutableArray arrayWithArray:model.models];
             [self initSubviews];
         }];
     } else {
@@ -584,25 +584,25 @@ static CGSize AssetGridThumbnailSize;
     ZEROImagePickerController *zImagePickerVC = (ZEROImagePickerController *)self.navigationController;
     [[ZEROPhotoManager shareManager] getCameraRollAlbumVideo:zImagePickerVC.allowPickingImage allowPickingImage:zImagePickerVC.allowPickingVideo completion:^(ZEROAlbumModel *model) {
         
-        _albumModel = model;
-        [[ZEROPhotoManager shareManager] getAssetsFromFetchResult:_albumModel.result allowPickingVideo:zImagePickerVC.allowPickingImage allowPickingImage:zImagePickerVC.allowPickingVideo completion:^(NSArray<ZEROAssetModel *> *models) {
+        self.albumModel = model;
+        [[ZEROPhotoManager shareManager] getAssetsFromFetchResult:self.albumModel.result allowPickingVideo:zImagePickerVC.allowPickingImage allowPickingImage:zImagePickerVC.allowPickingVideo completion:^(NSArray<ZEROAssetModel *> *models) {
             
             [zImagePickerVC hideProgressHUD];
             
             ZEROAssetModel *assetModel;
             if (zImagePickerVC.sortAscendingByModificationDate) {
                 assetModel = models.lastObject;
-                [_assetModels addObject:assetModel];
+                [self.assetModels addObject:assetModel];
             } else {
                 assetModel = models.firstObject;
-                [_assetModels insertObject:assetModel atIndex:0];
+                [self.assetModels insertObject:assetModel atIndex:0];
             }
             
             if (zImagePickerVC.maxImagesCount <= 1) {
                 if (zImagePickerVC.allowCrop) {
                     ZEROPhotoPreviewController *photoPreviewVC = [[ZEROPhotoPreviewController alloc] init];
-                    photoPreviewVC.currentIndex = _assetModels.count - 1;
-                    photoPreviewVC.assetModels = _assetModels;
+                    photoPreviewVC.currentIndex = self.assetModels.count - 1;
+                    photoPreviewVC.assetModels = self.assetModels;
                     [self pushPhotoPreviewViewController:photoPreviewVC];
                 } else {
                     [zImagePickerVC.selectedModels addObject:assetModel];
@@ -615,9 +615,9 @@ static CGSize AssetGridThumbnailSize;
                 [zImagePickerVC.selectedModels addObject:assetModel];
                 [self refreshBottomToolBarStatus];
             }
-            [_collectionView reloadData];
+            [self.collectionView reloadData];
             
-            _shouldScrollToBottom = YES;
+            self->_shouldScrollToBottom = YES;
             [self scrollCollectionViewToButton];
         }];
     }];
@@ -727,7 +727,7 @@ static CGSize AssetGridThumbnailSize;
     
     [[ZEROPhotoManager shareManager] getPhotosBytesWithArray:zImagePickerVC.selectedModels completion:^(NSString *totalBytes) {
         
-        _originalPhotoLabel.text = [NSString stringWithFormat:@"(%@)", totalBytes];
+        self->_originalPhotoLabel.text = [NSString stringWithFormat:@"(%@)", totalBytes];
     }];
 }
 

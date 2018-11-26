@@ -51,7 +51,7 @@
     PHImageRequestID imageRequestID = [[ZEROPhotoManager shareManager] getPhotoWithAsset:_assetModel.asset photoWidth:self.width completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
         
         if (self.progressView) {
-            _progressView.hidden = YES;
+            self->_progressView.hidden = YES;
             self.imageView.alpha = 1.0;
         }
         
@@ -59,7 +59,7 @@
         if (!iOS8Later) {
             self.imageView.image = photo;   return ;
         }
-        if ([self.representedAssetIdentifier isEqualToString:[[ZEROPhotoManager shareManager] getAssetIdentifier:_assetModel.asset]]) {
+        if ([self.representedAssetIdentifier isEqualToString:[[ZEROPhotoManager shareManager] getAssetIdentifier:self->_assetModel.asset]]) {
             self.imageView.image = photo;
         } else {
             // ----- this cell is showing other asset
@@ -141,12 +141,12 @@
     
     _bigImageRequestID = [[ZEROPhotoManager shareManager] getPhotoWithAsset:_assetModel.asset completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
         
-        if (_progressView) {
+        if (self->_progressView) {
             [self hideProgressView];
         }
     } progressHandler:^(double progress, NSError *error, NSDictionary *info, BOOL *stop) {
         
-        if (_assetModel.isSelected) {
+        if (self->_assetModel.isSelected) {
             
             progress = progress > 0.02 ? progress : 0.02;
             self.progressView.progress = progress;

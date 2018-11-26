@@ -155,7 +155,7 @@ static const CGFloat minRatio = 1.5;
     }
     else {
 
-        if (self.itemCount - indexPath.item <= (endFactor + 2)) {
+        if ((self.itemCount - indexPath.item) <= (endFactor + 2)) {
             // ----- 这个判断，防止不在屏幕内的item乱入（下拉）
             attributes.size = CGSizeMake(self.collectionView.bounds.size.width, self.minHeight);
             translationT = CGAffineTransformMakeTranslation(0 , endTranslateOffset + self.collectionView.contentOffset.y - self.cellHeight +  (self.minHeight * fmin(0, ((float)indexPath.item-currentIndex+1))));

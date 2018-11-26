@@ -65,8 +65,8 @@
     
     [[ZEROPhotoManager shareManager] getAssetsFromFetchResult:result allowPickingVideo:allowPickingVideo allowPickingImage:allowPickingImage completion:^(NSArray<ZEROAssetModel *> *models) {
         
-        _models = models;
-        if (_selectedModels) {
+        self->_models = models;
+        if (self->_selectedModels) {
             
             [self checkSelectedModels];
         }
