@@ -60,7 +60,7 @@
     }
     
     width += _edgeInsets.right;
-    height = [self yPositionByRow:_itemHeights.count - 1] + _itemHeights.lastObject.floatValue + _edgeInsets.bottom;
+    height = [self yPositionByRow:_itemHeights.count] + _edgeInsets.bottom - _gap;
     
     return CGSizeMake(width, height);
 }
@@ -98,18 +98,11 @@
  */
 - (CGFloat)yPositionByRow:(NSInteger)row{
     
-    CGFloat y = 0;
-    row += 1;
+    CGFloat y = _edgeInsets.top;
     
     for (int idx = 0; idx < row; idx++) {
         
-        if (idx == 0) {
-            
-            y = _edgeInsets.top;
-            continue;
-        }
-        
-        y += [_itemHeights[idx - 1] floatValue] + _gap;
+        y += [_itemHeights[idx] floatValue] + _gap;
     }
     
     return y;

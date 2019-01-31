@@ -51,6 +51,13 @@
 		87320F2D1DE3589A00B19A3C /* CircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 87320F2C1DE3589A00B19A3C /* CircleLayout.m */; };
 		87320F311DE358AD00B19A3C /* CircleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87320F2F1DE358AD00B19A3C /* CircleCell.m */; };
 		87320F321DE358AD00B19A3C /* CircleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87320F301DE358AD00B19A3C /* CircleCell.xib */; };
+		873452832202C83500092044 /* MarqueeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 873452822202C83500092044 /* MarqueeViewController.m */; };
+		873452902202DA6500092044 /* MarqueeLayoutH.m in Sources */ = {isa = PBXBuildFile; fileRef = 873452852202DA6500092044 /* MarqueeLayoutH.m */; };
+		873452912202DA6500092044 /* MarqueeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 873452892202DA6500092044 /* MarqueeControl.m */; };
+		873452922202DA6500092044 /* MarqueeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8734528A2202DA6500092044 /* MarqueeCell.m */; };
+		873452932202DA6500092044 /* MarqueeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8734528B2202DA6500092044 /* MarqueeModel.m */; };
+		873452942202DA6500092044 /* MarqueeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8734528E2202DA6500092044 /* MarqueeCell.xib */; };
+		873452952202DA6500092044 /* MarqueeLayoutHManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8734528F2202DA6500092044 /* MarqueeLayoutHManager.m */; };
 		8734CC371DE76D9800F5E976 /* SiftTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8734CC361DE76D9800F5E976 /* SiftTagViewController.m */; };
 		8734CC3B1DE76F1700F5E976 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 8734CC3A1DE76F1700F5E976 /* UIImage+ImageEffects.m */; };
 		8734CC3F1DE76F3900F5E976 /* NSString+LabelWidthAndHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 8734CC3E1DE76F3900F5E976 /* NSString+LabelWidthAndHeight.m */; };
@@ -304,6 +311,19 @@
 		87320F2F1DE358AD00B19A3C /* CircleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleCell.m; sourceTree = "<group>"; };
 		87320F301DE358AD00B19A3C /* CircleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleCell.xib; sourceTree = "<group>"; };
 		87320F331DE35EBD00B19A3C /* study.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = study.h; sourceTree = "<group>"; };
+		873452812202C83500092044 /* MarqueeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarqueeViewController.h; sourceTree = "<group>"; };
+		873452822202C83500092044 /* MarqueeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarqueeViewController.m; sourceTree = "<group>"; };
+		873452852202DA6500092044 /* MarqueeLayoutH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarqueeLayoutH.m; sourceTree = "<group>"; };
+		873452862202DA6500092044 /* MarqueeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarqueeModel.h; sourceTree = "<group>"; };
+		873452872202DA6500092044 /* MarqueeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarqueeCell.h; sourceTree = "<group>"; };
+		873452882202DA6500092044 /* MarqueeLayoutHManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarqueeLayoutHManager.h; sourceTree = "<group>"; };
+		873452892202DA6500092044 /* MarqueeControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarqueeControl.m; sourceTree = "<group>"; };
+		8734528A2202DA6500092044 /* MarqueeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarqueeCell.m; sourceTree = "<group>"; };
+		8734528B2202DA6500092044 /* MarqueeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarqueeModel.m; sourceTree = "<group>"; };
+		8734528C2202DA6500092044 /* MarqueeLayoutH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarqueeLayoutH.h; sourceTree = "<group>"; };
+		8734528D2202DA6500092044 /* MarqueeControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarqueeControl.h; sourceTree = "<group>"; };
+		8734528E2202DA6500092044 /* MarqueeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarqueeCell.xib; sourceTree = "<group>"; };
+		8734528F2202DA6500092044 /* MarqueeLayoutHManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarqueeLayoutHManager.m; sourceTree = "<group>"; };
 		8734CC351DE76D9800F5E976 /* SiftTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiftTagViewController.h; sourceTree = "<group>"; };
 		8734CC361DE76D9800F5E976 /* SiftTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiftTagViewController.m; sourceTree = "<group>"; };
 		8734CC391DE76F1700F5E976 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
@@ -778,6 +798,33 @@
 			name = TreeStructureViewController;
 			sourceTree = "<group>";
 		};
+		87345280220151FE00092044 /* MarqueeViewControl */ = {
+			isa = PBXGroup;
+			children = (
+				873452812202C83500092044 /* MarqueeViewController.h */,
+				873452822202C83500092044 /* MarqueeViewController.m */,
+			);
+			name = MarqueeViewControl;
+			sourceTree = "<group>";
+		};
+		873452842202DA6500092044 /* MarqueeControl */ = {
+			isa = PBXGroup;
+			children = (
+				8734528D2202DA6500092044 /* MarqueeControl.h */,
+				873452892202DA6500092044 /* MarqueeControl.m */,
+				873452862202DA6500092044 /* MarqueeModel.h */,
+				8734528B2202DA6500092044 /* MarqueeModel.m */,
+				873452852202DA6500092044 /* MarqueeLayoutH.m */,
+				8734528C2202DA6500092044 /* MarqueeLayoutH.h */,
+				873452882202DA6500092044 /* MarqueeLayoutHManager.h */,
+				8734528F2202DA6500092044 /* MarqueeLayoutHManager.m */,
+				873452872202DA6500092044 /* MarqueeCell.h */,
+				8734528A2202DA6500092044 /* MarqueeCell.m */,
+				8734528E2202DA6500092044 /* MarqueeCell.xib */,
+			);
+			path = MarqueeControl;
+			sourceTree = "<group>";
+		};
 		8734CC341DE76D6700F5E976 /* SiftTagViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -999,6 +1046,7 @@
 				8731EAB31F5421B7002DE607 /* TreeStructureViewController */,
 				87F54F1D1FD97087009FFA5D /* OffsetCellViewController */,
 				87F801B020185CCB00AD1299 /* TwoLevelLinkageViewController */,
+				87345280220151FE00092044 /* MarqueeViewControl */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1057,6 +1105,7 @@
 		879F59D91DDCD15C000185F8 /* General-Tools */ = {
 			isa = PBXGroup;
 			children = (
+				873452842202DA6500092044 /* MarqueeControl */,
 				871B8A4F2120503000E8FE87 /* DateFormatter */,
 				8796717F201B255400522592 /* StyleKitName */,
 				87F801A320185C5000AD1299 /* TwoLevelLinkageView */,
@@ -1558,7 +1607,7 @@
 				TargetAttributes = {
 					879F59751DDC1F94000185F8 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 9L4D9UQ3SK;
+						DevelopmentTeam = 93GA9YB654;
 						ProvisioningStyle = Automatic;
 					};
 					879F598E1DDC1F94000185F8 = {
@@ -1603,6 +1652,7 @@
 				874BB80B1F029148002C343F /* photo-1445285303476-2f3b16d67b7a.jpg in Resources */,
 				87F801C920185CEE00AD1299 /* liwushuo.json in Resources */,
 				874BB8051F029148002C343F /* menu@2x.png in Resources */,
+				873452942202DA6500092044 /* MarqueeCell.xib in Resources */,
 				874BB8031F029148002C343F /* gallery.json in Resources */,
 				879F5A281DDCD440000185F8 /* ZEROBezierCell.xib in Resources */,
 				879F59891DDC1F94000185F8 /* LaunchScreen.storyboard in Resources */,
@@ -1702,6 +1752,7 @@
 				87FAB9B61F0B960F00B65B0A /* UIColor+Tweak.m in Sources */,
 				87A12AD51E278B0E0047CA12 /* ZEROAlbumListController.m in Sources */,
 				87C1A6C32020621000F5B431 /* ZZNavAddListController.m in Sources */,
+				873452932202DA6500092044 /* MarqueeModel.m in Sources */,
 				8731EABC1F542234002DE607 /* TreeStructureModel.m in Sources */,
 				871677921DE0C8A5003772C0 /* PictureData.m in Sources */,
 				87097B6E1FD9A265005B6684 /* VideoListModel.m in Sources */,
@@ -1776,12 +1827,14 @@
 				87F8019F20185AE100AD1299 /* CustomHeaderFooterView.m in Sources */,
 				87A12AD61E278B0E0047CA12 /* ZEROGifPhotoPreviewController.m in Sources */,
 				87097B751FDA47C3005B6684 /* LineBackgroundView.m in Sources */,
+				873452912202DA6500092044 /* MarqueeControl.m in Sources */,
 				87F801AF20185C5000AD1299 /* LeftLevelLinkageModel.m in Sources */,
 				87C1A6C02020621000F5B431 /* ZZNavAddListView.m in Sources */,
 				8734CC481DE76F8B00F5E976 /* SiftTagCell.m in Sources */,
 				8734CC4A1DE76F8B00F5E976 /* SiftTagManager.m in Sources */,
 				879F5A1B1DDCD1C0000185F8 /* POPLayerExtras.mm in Sources */,
 				879F5A101DDCD1C0000185F8 /* POPAnimation.mm in Sources */,
+				873452922202DA6500092044 /* MarqueeCell.m in Sources */,
 				871677D11DE208EC003772C0 /* UIImage+MultiFormat.m in Sources */,
 				871677C71DE208EC003772C0 /* NSData+ImageContentType.m in Sources */,
 				87A12AE11E278BC90047CA12 /* ZEROPhotoManager.m in Sources */,
@@ -1793,6 +1846,8 @@
 				871677D41DE208EC003772C0 /* UIImageView+WebCache.m in Sources */,
 				879F5A2D1DDCD545000185F8 /* NavPushViewController.m in Sources */,
 				871677C91DE208EC003772C0 /* SDWebImageCompat.m in Sources */,
+				873452832202C83500092044 /* MarqueeViewController.m in Sources */,
+				873452952202DA6500092044 /* MarqueeLayoutHManager.m in Sources */,
 				87F801C820185CEE00AD1299 /* ItemManagerModel.m in Sources */,
 				87F801AC20185C5000AD1299 /* RightLevelLinkageModel.m in Sources */,
 				871677861DE0C87D003772C0 /* WWaterFallLayout.m in Sources */,
@@ -1802,6 +1857,7 @@
 				879F597B1DDC1F94000185F8 /* main.m in Sources */,
 				87F04ECD1FD80467006F46AA /* ApiTool.m in Sources */,
 				87A12AD91E278B0E0047CA12 /* ZEROPhotoPreviewController.m in Sources */,
+				873452902202DA6500092044 /* MarqueeLayoutH.m in Sources */,
 				879F5A161DDCD1C0000185F8 /* POPBasicAnimation.mm in Sources */,
 				8734CC3B1DE76F1700F5E976 /* UIImage+ImageEffects.m in Sources */,
 				87FAB9B41F0B960F00B65B0A /* PhotoTweaksViewController.m in Sources */,
@@ -1976,7 +2032,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9L4D9UQ3SK;
+				DEVELOPMENT_TEAM = 93GA9YB654;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/ZEROControls.pch";
 				INFOPLIST_FILE = ZEROControls/Info.plist;
@@ -1996,7 +2052,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9L4D9UQ3SK;
+				DEVELOPMENT_TEAM = 93GA9YB654;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/ZEROControls.pch";
 				INFOPLIST_FILE = ZEROControls/Info.plist;

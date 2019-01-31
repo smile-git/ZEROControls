@@ -55,7 +55,8 @@
                        [ZEROListModel initWithName:@"照片裁剪(copy)" controller:@"ShowTweakViewController"],
                        [ZEROListModel initWithName:@"多级分组(copy)" controller:@"TreeStructureViewController"],
                        [ZEROListModel initWithName:@"Cell图片视差动画(copy)" controller:@"OffsetCellViewController"],
-                       [ZEROListModel initWithName:@"级联菜单" controller:@"TwoLevelLinkageViewController"]];
+                       [ZEROListModel initWithName:@"级联菜单" controller:@"TwoLevelLinkageViewController"],
+                       [ZEROListModel initWithName:@"跑马灯效果" controller:@"MarqueeViewController"]];
 
     self.items = [NSMutableArray array];
     
