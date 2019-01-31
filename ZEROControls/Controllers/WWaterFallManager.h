@@ -17,7 +17,7 @@
 @property (nonatomic) CGSize        contentSize;    //collectionView的大小
 
 /**
- reset manager
+ reset manager 重置
  */
 - (void)reset;
 

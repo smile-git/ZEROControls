@@ -1,46 +1,71 @@
 //
-//  AddListView.m
-//  ZEROControls
+//  ZZAddListView.m
+//  NavAddList
 //
-//  Created by ZWX on 2016/11/18.
-//  Copyright © 2016年 ZWX. All rights reserved.
+//  Created by ZWX on 27/01/2018.
+//  Copyright © 2018 ZWX. All rights reserved.
 //
 
-#import "AddListView.h"
+#import "ZZNavAddListView.h"
 
-#define AddListViewFillColor    UIColorRGBA(100, 100, 100, 1)
+// ----- 默认数值
+static const CGFloat RightMarginDefault = 17.5f;
+#define ZZNavAddListViewFillColor     UIColorRGBA(100, 100, 100, 1)
 
-@implementation AddListView
+@interface ZZNavAddListView ()
 
-- (instancetype)init{
+@property (nonatomic, assign) CGFloat rightOffset;
+@property (nonatomic, strong) UIColor *viewFillColor;
+
+@end
+
+@implementation ZZNavAddListView
+
+- (instancetype)initWithFrame:(CGRect)frame {
     
-    if (self = [super init]) {
+    if (self = [super initWithFrame: frame]) {
         
         self.backgroundColor = [UIColor clearColor];
+        self.rightOffset     = RightMarginDefault;
+        self.viewFillColor   = ZZNavAddListViewFillColor;
     }
     return self;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame{
+- (instancetype)initWithFrame:(CGRect)frame rightOffset:(CGFloat)rightOffset {
     
     if (self = [super initWithFrame:frame]) {
         
         self.backgroundColor = [UIColor clearColor];
+        self.rightOffset     = rightOffset;
+        self.viewFillColor   = ZZNavAddListViewFillColor;
     }
     return self;
 }
+
+- (instancetype)initWithFrame:(CGRect)frame rightOffset:(CGFloat)rightOffset viewFillColor:(UIColor *)viewFillColor {
+    
+    if (self = [super initWithFrame:frame]) {
+        
+        self.backgroundColor = [UIColor clearColor];
+        self.rightOffset     = rightOffset;
+        self.viewFillColor   = viewFillColor;
+    }
+    return self;
+}
+
 
 - (void)drawRect:(CGRect)rect{
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     
-    /*三角形*/
-    CGFloat centerX    = self.frame.size.width - 17.5;
+    // ----- 三角形
+    CGFloat centerX    = self.frame.size.width - (self.rightOffset == 0.f ? RightMarginDefault : self.rightOffset);
     CGFloat top        = 5;
     CGFloat height     = 5;
     CGFloat layerWidth = height * sqrt(3) / 3;
     
-    UIColor *aColor    = AddListViewFillColor;
+    UIColor *aColor    = self.viewFillColor;
     CGContextSetFillColorWithColor(context, aColor.CGColor);    //填充颜色
     CGContextSetStrokeColorWithColor(context, aColor.CGColor);  //画笔线的颜色
     
@@ -53,7 +78,7 @@
     CGContextDrawPath(context, kCGPathFillStroke);  //根据坐标绘制路径
     
     
-    /*画圆角矩形*/
+    // ----- 圆角矩形
     CGFloat arcTop = top + height + 1;
     float fw       = self.frame.size.width;
     float fh       = self.frame.size.height;
@@ -67,5 +92,4 @@
     CGContextDrawPath(context, kCGPathFillStroke);                  //根据坐标绘制路径
     
 }
-
 @end

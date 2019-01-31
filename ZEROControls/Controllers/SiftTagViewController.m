@@ -190,9 +190,9 @@
             SiftTagCell *sectionCell = (SiftTagCell *)[collectionView cellForItemAtIndexPath:sectionIndexPath];
             sectionCell.chooseTag = NO;
             
-            if ([_chooseTags containsObject:sectionIndexPath]) {
+            if ([self->_chooseTags containsObject:sectionIndexPath]) {
                 
-                [_chooseTags removeObject:sectionIndexPath];
+                [self->_chooseTags removeObject:sectionIndexPath];
             }
         }];
     }
