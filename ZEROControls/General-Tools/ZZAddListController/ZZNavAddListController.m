@@ -104,15 +104,15 @@ static const CGFloat   NavAddTriangleHeight      = 5.f;         // ----- 三角�
     
     [viewController presentViewController:self animated:NO completion:^{
         
-        [self setAnchorPoint:CGPointMake(0.9, 0) forView:_listView];
-        _listView.hidden    = NO;
-        _listView.transform = CGAffineTransformMakeScale(0.2, 0.2);
-        _listView.alpha     = 0;
+        [self setAnchorPoint:CGPointMake(0.9, 0) forView:self.listView];
+        self.listView.hidden    = NO;
+        self.listView.transform = CGAffineTransformMakeScale(0.2, 0.2);
+        self.listView.alpha     = 0;
         
         [UIView animateWithDuration:0.2 animations:^{
             
-            _listView.transform = CGAffineTransformMakeScale(1, 1);
-            _listView.alpha     = 1;
+            self.listView.transform = CGAffineTransformMakeScale(1, 1);
+            self.listView.alpha     = 1;
         }];
     }];
 }
@@ -123,11 +123,11 @@ static const CGFloat   NavAddTriangleHeight      = 5.f;         // ----- 三角�
     
     [UIView animateWithDuration:0.2 animations:^{
         
-        _listView.transform = CGAffineTransformMakeScale(0.5, 0.2);
-        _listView.alpha     = 0;
+        self.listView.transform = CGAffineTransformMakeScale(0.5, 0.2);
+        self.listView.alpha     = 0;
     } completion:^(BOOL finished) {
         
-        _listView.transform = CGAffineTransformMakeScale(1, 1);
+        self.listView.transform = CGAffineTransformMakeScale(1, 1);
         [self dismissViewControllerAnimated:NO completion:nil];
     }];
 }
