@@ -63,8 +63,10 @@
     _rightSideTableView.dataSource = self;
     _rightSideTableView.showsVerticalScrollIndicator  = NO;
     _rightSideTableView.separatorStyle                = UITableViewCellSeparatorStyleNone;
-
+    
     [self addSubview:_rightSideTableView];
+    
+    [_rightSideTableView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
     
 }
 
@@ -116,7 +118,7 @@
     if ([tableView isEqual:_leftSideTableView]) {
         
         return self.leftModels.count;
-    
+        
     } else {
         
         return self.leftModels[section].subModels.count;
@@ -164,12 +166,12 @@
         [headerView loadContent];
         
         return headerView;
-    
+        
     } else {
         
         return nil;
     }
-        
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -198,24 +200,22 @@
         
         NSInteger newSelectIndex = indexPath.row;
         
-        // ----- 点击之后，更新旧的和新的cell的选中状态
-        [self updateSelectedIndexValueWithOldIndex:_leftTableViewCurrentSelectedCellIndex newIndex:newSelectIndex];
-        
-        [_leftSideTableView scrollToRowAtIndexPath:indexPath
-                                  atScrollPosition:UITableViewScrollPositionMiddle
-                                          animated:YES];
-        [_rightSideTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:newSelectIndex]
-                                   atScrollPosition:UITableViewScrollPositionTop
-                                           animated:YES];
-        
         // ----- 触发代理方法
         if ([self.delegate respondsToSelector:@selector(twoLevelLinkageView:selectedLeftSideTableViewItemRow:item:)]) {
             
             [self.delegate twoLevelLinkageView:self selectedLeftSideTableViewItemRow:indexPath.row item:self.leftModels[newSelectIndex].adapter.data];
         }
         
-        // ----- 点击左侧cell状态
+        // ----- 点击之后，更新旧的和新的cell的选中状态
+        [self updateSelectedIndexValueWithOldIndex:_leftTableViewCurrentSelectedCellIndex newIndex:newSelectIndex];
+        
         self.isSelectedLeft = YES;
+        [_rightSideTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:newSelectIndex]
+                                   atScrollPosition:UITableViewScrollPositionTop
+                                           animated:YES];
+        
+        // ----- 点击左侧cell状态
+        [self performSelector:@selector(makeIsInSelectedAnimationDurationEquilNO) withObject:nil afterDelay:0.05f];
         
     } else {
         
@@ -236,11 +236,11 @@
         NSInteger section      = indexPath.section;
         
         if (_leftTableViewCurrentSelectedCellIndex != section) {
-
+            
             NSInteger newLeftSelectIndex = section;
             
             [self updateSelectedIndexValueWithOldIndex:_leftTableViewCurrentSelectedCellIndex newIndex:newLeftSelectIndex];
-
+            
             [_leftSideTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:section inSection:0]
                                       atScrollPosition:UITableViewScrollPositionMiddle
                                               animated:YES];
@@ -250,12 +250,28 @@
 
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
     // ----- 非手动条件下滑动停止，更改状态
-    self.isSelectedLeft = NO;
+    if ([scrollView isEqual:_rightSideTableView]) {
+        
+        self.isSelectedLeft = NO;
+    }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     
+    if ([scrollView isEqual:_rightSideTableView]) {
+        
+        self.isSelectedLeft = NO;
+    }
 }
 
 
 #pragma mark - ---- Whtiin The Method ----
+
+- (void)makeIsInSelectedAnimationDurationEquilNO {
+    
+    NSLog(@"makeIsInSelectedAnimationDurationEquilNO");
+    self.isSelectedLeft = NO;
+}
 
 - (void)updateSelectedIndexValueWithOldIndex:(NSInteger)oldIndex newIndex:(NSInteger)newIndex {
     
@@ -284,7 +300,7 @@
     if ([tableView isEqual:_leftSideTableView]) {
         
         adapter = self.leftModels[row].adapter;
-    
+        
     } else {
         
         adapter = self.leftModels[section].subModels[row].adapter;
@@ -311,4 +327,19 @@
     return data;
 }
 
+#pragma mark -
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    
+    // 点击左侧tableView中的cell触发移动
+    if (self.isSelectedLeft == YES) {
+        
+        [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(makeIsInSelectedAnimationDurationEquilNO) object:nil];
+    }
+}
+
+- (void)dealloc {
+    
+    [_rightSideTableView removeObserver:self forKeyPath:@"contentOffset"];
+}
 @end
