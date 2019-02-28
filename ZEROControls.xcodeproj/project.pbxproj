@@ -152,6 +152,8 @@
 		87A12B001E279E470047CA12 /* PhotoPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A12AFF1E279E470047CA12 /* PhotoPickerViewController.m */; };
 		87B564511E27F11C0089ABE8 /* PhotoPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B564501E27F11C0089ABE8 /* PhotoPickerCell.m */; };
 		87B564531E27F6820089ABE8 /* ZEROImagePicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 87B564521E27F6820089ABE8 /* ZEROImagePicker.bundle */; };
+		87B5C9812227C45B0014EDCD /* FoldingCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B5C9802227C45B0014EDCD /* FoldingCellViewController.m */; };
+		87B5C9852227C47E0014EDCD /* FoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B5C9842227C47E0014EDCD /* FoldingCell.swift */; };
 		87C1A6C02020621000F5B431 /* ZZNavAddListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C1A6BC2020620F00F5B431 /* ZZNavAddListView.m */; };
 		87C1A6C12020621000F5B431 /* ZZNavAddListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C1A6BD2020620F00F5B431 /* ZZNavAddListCell.m */; };
 		87C1A6C22020621000F5B431 /* ZZNavAddListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C1A6BE2020620F00F5B431 /* ZZNavAddListItem.m */; };
@@ -510,6 +512,10 @@
 		87B5644F1E27F11C0089ABE8 /* PhotoPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoPickerCell.h; sourceTree = "<group>"; };
 		87B564501E27F11C0089ABE8 /* PhotoPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoPickerCell.m; sourceTree = "<group>"; };
 		87B564521E27F6820089ABE8 /* ZEROImagePicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZEROImagePicker.bundle; sourceTree = "<group>"; };
+		87B5C97F2227C45B0014EDCD /* FoldingCellViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoldingCellViewController.h; sourceTree = "<group>"; };
+		87B5C9802227C45B0014EDCD /* FoldingCellViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoldingCellViewController.m; sourceTree = "<group>"; };
+		87B5C9832227C47D0014EDCD /* ZEROControls-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZEROControls-Bridging-Header.h"; sourceTree = "<group>"; };
+		87B5C9842227C47E0014EDCD /* FoldingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldingCell.swift; sourceTree = "<group>"; };
 		87C1A6B82020620F00F5B431 /* ZZNavAddListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZNavAddListView.h; sourceTree = "<group>"; };
 		87C1A6B92020620F00F5B431 /* ZZNavAddListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZNavAddListItem.h; sourceTree = "<group>"; };
 		87C1A6BA2020620F00F5B431 /* ZZNavAddListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZNavAddListCell.h; sourceTree = "<group>"; };
@@ -1047,6 +1053,7 @@
 				87F54F1D1FD97087009FFA5D /* OffsetCellViewController */,
 				87F801B020185CCB00AD1299 /* TwoLevelLinkageViewController */,
 				87345280220151FE00092044 /* MarqueeViewControl */,
+				87B5C97E2227C4220014EDCD /* FoldingCellViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1105,6 +1112,7 @@
 		879F59D91DDCD15C000185F8 /* General-Tools */ = {
 			isa = PBXGroup;
 			children = (
+				87B5C9822227C4670014EDCD /* FoldingCell */,
 				873452842202DA6500092044 /* MarqueeControl */,
 				871B8A4F2120503000E8FE87 /* DateFormatter */,
 				8796717F201B255400522592 /* StyleKitName */,
@@ -1322,6 +1330,24 @@
 				87B564501E27F11C0089ABE8 /* PhotoPickerCell.m */,
 			);
 			name = PhotoPickerViewController;
+			sourceTree = "<group>";
+		};
+		87B5C97E2227C4220014EDCD /* FoldingCellViewController */ = {
+			isa = PBXGroup;
+			children = (
+				87B5C97F2227C45B0014EDCD /* FoldingCellViewController.h */,
+				87B5C9802227C45B0014EDCD /* FoldingCellViewController.m */,
+			);
+			name = FoldingCellViewController;
+			sourceTree = "<group>";
+		};
+		87B5C9822227C4670014EDCD /* FoldingCell */ = {
+			isa = PBXGroup;
+			children = (
+				87B5C9842227C47E0014EDCD /* FoldingCell.swift */,
+				87B5C9832227C47D0014EDCD /* ZEROControls-Bridging-Header.h */,
+			);
+			path = FoldingCell;
 			sourceTree = "<group>";
 		};
 		87C1A6B72020620F00F5B431 /* ZZAddListController */ = {
@@ -1608,6 +1634,7 @@
 					879F59751DDC1F94000185F8 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 93GA9YB654;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					879F598E1DDC1F94000185F8 = {
@@ -1818,6 +1845,7 @@
 				87A12AD81E278B0E0047CA12 /* ZEROPhotoPickerController.m in Sources */,
 				879F5A271DDCD440000185F8 /* ZEROBezierCell.m in Sources */,
 				8734CC4E1DE7F50C00F5E976 /* SiftTagFlowLayout.m in Sources */,
+				87B5C9812227C45B0014EDCD /* FoldingCellViewController.m in Sources */,
 				8716779E1DE1EE83003772C0 /* HWaterFallCell.m in Sources */,
 				871677CD1DE208EC003772C0 /* SDWebImageManager.m in Sources */,
 				87F801AD20185C5000AD1299 /* TwoLevelLinkageView.m in Sources */,
@@ -1854,6 +1882,7 @@
 				871677931DE0C8A5003772C0 /* ResponseData.m in Sources */,
 				874475F21DEF522700E5FF2A /* ZEROAlertItem.m in Sources */,
 				87EBFAE71DDEC1E600677DB9 /* UIView+Ext.m in Sources */,
+				87B5C9852227C47E0014EDCD /* FoldingCell.swift in Sources */,
 				879F597B1DDC1F94000185F8 /* main.m in Sources */,
 				87F04ECD1FD80467006F46AA /* ApiTool.m in Sources */,
 				87A12AD91E278B0E0047CA12 /* ZEROPhotoPreviewController.m in Sources */,
@@ -2030,9 +2059,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 93GA9YB654;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/ZEROControls.pch";
 				INFOPLIST_FILE = ZEROControls/Info.plist;
@@ -2042,6 +2073,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pckj.ZEROControls;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ZEROControls/General-Tools/FoldingCell/ZEROControls-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -2050,9 +2084,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 93GA9YB654;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/ZEROControls.pch";
 				INFOPLIST_FILE = ZEROControls/Info.plist;
@@ -2061,12 +2097,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pckj.ZEROControls;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ZEROControls/General-Tools/FoldingCell/ZEROControls-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
 		879F59A71DDC1F94000185F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ZEROControlsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -2079,6 +2118,7 @@
 		879F59A81DDC1F94000185F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ZEROControlsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -2091,6 +2131,7 @@
 		879F59AA1DDC1F94000185F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = ZEROControlsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swkj.ZEROControlsUITests;
@@ -2102,6 +2143,7 @@
 		879F59AB1DDC1F94000185F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = ZEROControlsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swkj.ZEROControlsUITests;
