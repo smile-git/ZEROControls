@@ -18,3 +18,5 @@
 7.https://github.com/awdigital/AWCollectionViewSlidingDoors (滑动门collectionview)
 
 8.https://github.com/itouch2/PhotoTweaks (图片裁剪)
+
+9.https://github.com/Ramotion/folding-cell (折叠cell)  
