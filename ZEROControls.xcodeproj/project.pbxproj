@@ -153,7 +153,9 @@
 		87B564511E27F11C0089ABE8 /* PhotoPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B564501E27F11C0089ABE8 /* PhotoPickerCell.m */; };
 		87B564531E27F6820089ABE8 /* ZEROImagePicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 87B564521E27F6820089ABE8 /* ZEROImagePicker.bundle */; };
 		87B5C9812227C45B0014EDCD /* FoldingCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B5C9802227C45B0014EDCD /* FoldingCellViewController.m */; };
-		87B5C9852227C47E0014EDCD /* FoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B5C9842227C47E0014EDCD /* FoldingCell.swift */; };
+		87B5C9892228FF400014EDCD /* FoldingDemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B5C9862228FF3F0014EDCD /* FoldingDemoCell.swift */; };
+		87B5C98A2228FF400014EDCD /* FoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B5C9872228FF3F0014EDCD /* FoldingCell.swift */; };
+		87B5C98B2228FF400014EDCD /* FoldingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87B5C9882228FF400014EDCD /* FoldingCell.xib */; };
 		87C1A6C02020621000F5B431 /* ZZNavAddListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C1A6BC2020620F00F5B431 /* ZZNavAddListView.m */; };
 		87C1A6C12020621000F5B431 /* ZZNavAddListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C1A6BD2020620F00F5B431 /* ZZNavAddListCell.m */; };
 		87C1A6C22020621000F5B431 /* ZZNavAddListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C1A6BE2020620F00F5B431 /* ZZNavAddListItem.m */; };
@@ -515,7 +517,9 @@
 		87B5C97F2227C45B0014EDCD /* FoldingCellViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoldingCellViewController.h; sourceTree = "<group>"; };
 		87B5C9802227C45B0014EDCD /* FoldingCellViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoldingCellViewController.m; sourceTree = "<group>"; };
 		87B5C9832227C47D0014EDCD /* ZEROControls-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZEROControls-Bridging-Header.h"; sourceTree = "<group>"; };
-		87B5C9842227C47E0014EDCD /* FoldingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldingCell.swift; sourceTree = "<group>"; };
+		87B5C9862228FF3F0014EDCD /* FoldingDemoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldingDemoCell.swift; sourceTree = "<group>"; };
+		87B5C9872228FF3F0014EDCD /* FoldingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldingCell.swift; sourceTree = "<group>"; };
+		87B5C9882228FF400014EDCD /* FoldingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoldingCell.xib; sourceTree = "<group>"; };
 		87C1A6B82020620F00F5B431 /* ZZNavAddListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZNavAddListView.h; sourceTree = "<group>"; };
 		87C1A6B92020620F00F5B431 /* ZZNavAddListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZNavAddListItem.h; sourceTree = "<group>"; };
 		87C1A6BA2020620F00F5B431 /* ZZNavAddListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZNavAddListCell.h; sourceTree = "<group>"; };
@@ -1344,7 +1348,9 @@
 		87B5C9822227C4670014EDCD /* FoldingCell */ = {
 			isa = PBXGroup;
 			children = (
-				87B5C9842227C47E0014EDCD /* FoldingCell.swift */,
+				87B5C9872228FF3F0014EDCD /* FoldingCell.swift */,
+				87B5C9882228FF400014EDCD /* FoldingCell.xib */,
+				87B5C9862228FF3F0014EDCD /* FoldingDemoCell.swift */,
 				87B5C9832227C47D0014EDCD /* ZEROControls-Bridging-Header.h */,
 			);
 			path = FoldingCell;
@@ -1685,6 +1691,7 @@
 				879F59891DDC1F94000185F8 /* LaunchScreen.storyboard in Resources */,
 				874BB80C1F029148002C343F /* photo-1446752875215-b2761acb3c5d.jpg in Resources */,
 				87320F321DE358AD00B19A3C /* CircleCell.xib in Resources */,
+				87B5C98B2228FF400014EDCD /* FoldingCell.xib in Resources */,
 				874BB80D1F029148002C343F /* photo-1446771326090-d910bfaf00f6.jpg in Resources */,
 				874BB80A1F029148002C343F /* photo-1443890923422-7819ed4101c0.jpg in Resources */,
 				87B564531E27F6820089ABE8 /* ZEROImagePicker.bundle in Resources */,
@@ -1726,6 +1733,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87F54EF71FD8102D009FFA5D /* AFAutoPurgingImageCache.m in Sources */,
+				87B5C98A2228FF400014EDCD /* FoldingCell.swift in Sources */,
 				87F54EF91FD8102D009FFA5D /* AFImageDownloader.m in Sources */,
 				87F54EFB1FD8102D009FFA5D /* AFNetworkActivityIndicatorManager.m in Sources */,
 				879671F0201C1B1200522592 /* StyleKitName.m in Sources */,
@@ -1855,6 +1863,7 @@
 				87F8019F20185AE100AD1299 /* CustomHeaderFooterView.m in Sources */,
 				87A12AD61E278B0E0047CA12 /* ZEROGifPhotoPreviewController.m in Sources */,
 				87097B751FDA47C3005B6684 /* LineBackgroundView.m in Sources */,
+				87B5C9892228FF400014EDCD /* FoldingDemoCell.swift in Sources */,
 				873452912202DA6500092044 /* MarqueeControl.m in Sources */,
 				87F801AF20185C5000AD1299 /* LeftLevelLinkageModel.m in Sources */,
 				87C1A6C02020621000F5B431 /* ZZNavAddListView.m in Sources */,
@@ -1882,7 +1891,6 @@
 				871677931DE0C8A5003772C0 /* ResponseData.m in Sources */,
 				874475F21DEF522700E5FF2A /* ZEROAlertItem.m in Sources */,
 				87EBFAE71DDEC1E600677DB9 /* UIView+Ext.m in Sources */,
-				87B5C9852227C47E0014EDCD /* FoldingCell.swift in Sources */,
 				879F597B1DDC1F94000185F8 /* main.m in Sources */,
 				87F04ECD1FD80467006F46AA /* ApiTool.m in Sources */,
 				87A12AD91E278B0E0047CA12 /* ZEROPhotoPreviewController.m in Sources */,
