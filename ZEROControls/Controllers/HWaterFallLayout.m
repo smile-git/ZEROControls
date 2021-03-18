@@ -30,11 +30,14 @@
     
     [super prepareLayout];
     
-    [self.hManager reset];
-    
     NSInteger itemCount = [self.collectionView numberOfItemsInSection:0];
+
+    if (itemCount <= 10 || self.attributes.count == 0) {
+        [self.attributes removeAllObjects];
+        [self.hManager reset];
+    }
     
-    for (int idx = 0; idx < itemCount; idx ++) {
+    for (NSInteger idx = self.attributes.count; idx < itemCount; idx ++) {
         
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:idx inSection:0];
         

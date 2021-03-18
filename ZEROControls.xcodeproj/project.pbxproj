@@ -1639,7 +1639,7 @@
 				TargetAttributes = {
 					879F59751DDC1F94000185F8 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 93GA9YB654;
+						DevelopmentTeam = 9L4D9UQ3SK;
 						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
@@ -1660,6 +1660,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -2070,7 +2071,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 93GA9YB654;
+				DEVELOPMENT_TEAM = 9L4D9UQ3SK;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/ZEROControls.pch";
@@ -2095,7 +2096,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 93GA9YB654;
+				DEVELOPMENT_TEAM = 9L4D9UQ3SK;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/ZEROControls.pch";

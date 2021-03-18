@@ -106,16 +106,16 @@
         
         self.imageView.image = photo;
         [self resizeSubviews];
-        _progressView.hidden = YES;
+        self.progressView.hidden = YES;
         if (self.imageProgressUpdateBlock) {
             self.imageProgressUpdateBlock(1);
         }
     }progressHandler:^(double progress, NSError *error, NSDictionary *info, BOOL *stop) {
         
-        _progressView.hidden = NO;
-        [self bringSubviewToFront:_progressView];
+        self.progressView.hidden = NO;
+        [self bringSubviewToFront:self.progressView];
         progress = progress > 0.02 ? progress : 0.02;
-        _progressView.progress = progress;
+        self.progressView.progress = progress;
         if (self.imageProgressUpdateBlock) {
             self.imageProgressUpdateBlock(progress);
         }

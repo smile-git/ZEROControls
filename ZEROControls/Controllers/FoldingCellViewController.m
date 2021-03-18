@@ -49,7 +49,10 @@
     tableView.dataSource = self;
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableView.estimatedRowHeight = 0;
+    // ----- 虽然可以预估高度，但是，如果预估高度之后，会存在一个bug：展开顶部的某个cell，再滑到底部，点击打开底部的cell时，会有高度计算错误导致的cell漂移。
+    // ----- estimatedRowHeight在iOS11之前默认值为0，在iOS11之后，默认值为非0值
 //    tableView.estimatedRowHeight = _closeCellHeight;
+    
     tableView.rowHeight = UITableViewAutomaticDimension;
     tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
     
