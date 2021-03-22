@@ -75,7 +75,7 @@
     
     __weak OffsetImageCell *weakSelf = self;
     
-    [_pictureView sd_setImageWithURL:[NSURL URLWithString:model.coverForFeed] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    [_pictureView sd_setImageWithURL:[NSURL URLWithString:model.coverForDetail] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         
         if (cacheType == SDImageCacheTypeNone) {
             

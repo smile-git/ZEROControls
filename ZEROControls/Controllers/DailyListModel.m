@@ -22,7 +22,7 @@
         return;
     }
     
-    if ([key isEqualToString:@"videoList"] && [value isKindOfClass:[NSArray class]]) {
+    if ([key isEqualToString:@"list"] && [value isKindOfClass:[NSArray class]]) {
         
         NSArray *array = value;
         NSMutableArray *dataArray = [NSMutableArray array];
@@ -47,12 +47,6 @@
             
             [self setValuesForKeysWithDictionary:dictionary];
             
-            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-            dateFormatter.dateFormat       = @"yyyy.MM.dd";
-            
-            NSString *tmpDateString = [[_date stringValue] substringToIndex:10];
-            NSDate *tmpDate         = [NSDate dateWithTimeIntervalSince1970:tmpDateString.integerValue];
-            self.dateString         = [dateFormatter stringFromDate:tmpDate];
         }
     }
     

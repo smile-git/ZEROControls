@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong) NSNumber *date;
 @property (nonatomic, strong) NSNumber *total;
-@property (nonatomic, strong) NSMutableArray <VideoListModel *>*videoList;
+@property (nonatomic, strong) NSMutableArray <VideoListModel *>*list;
 
 #pragma Calculatoin Properties.
 @property (nonatomic, strong) NSString *dateString;

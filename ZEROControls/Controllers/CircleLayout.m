@@ -16,12 +16,13 @@
 
 - (instancetype)init{
     
-    if (self = [super init]) {
-        
-        self.offset = 0.0;
-        shouldSnap  = YES;
-    }
-    return self;
+    CGFloat radius          = 380.0 / 667.0 * HEIGHT;
+    CGFloat angularSpacing  = 12.0 / 667.0 * HEIGHT;
+    CGFloat xOffset         = 155.0 / 375.0 * WIDTH;
+    CGFloat cell_width      = 220.0 / 375.0 * WIDTH;
+    CGFloat cell_height     = 75.0 / 667.0 * HEIGHT;
+    
+    return [self initWithRadius:radius angularSpacing:angularSpacing cellSize:CGSizeMake(cell_width, cell_height) xOffset:xOffset];
 }
 
 - (instancetype)initWithRadius:(CGFloat)dialRadius angularSpacing:(CGFloat)angularSpacing cellSize:(CGSize)itemSize xOffset:(CGFloat)xOffset{
@@ -58,7 +59,7 @@
 }
 
 
-- (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect{
+- (NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect {
     
     NSMutableArray *layoutAttributes = [NSMutableArray arrayWithCapacity:0];
     

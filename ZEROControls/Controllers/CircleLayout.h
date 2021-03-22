@@ -18,6 +18,6 @@
 @property (nonatomic, assign) CGFloat   angularSpacing; //角间距
 @property (nonatomic, assign) CGFloat   dialRadius;     //半径
 
--(id)initWithRadius: (CGFloat)dialRadius angularSpacing: (CGFloat)angularSpacing cellSize: (CGSize)itemSize xOffset: (CGFloat)xOffset;
+- (instancetype)initWithRadius:(CGFloat)dialRadius angularSpacing:(CGFloat)angularSpacing cellSize:(CGSize)itemSize xOffset:(CGFloat)xOffset;
 
 @end

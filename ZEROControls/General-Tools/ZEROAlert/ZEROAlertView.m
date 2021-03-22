@@ -211,7 +211,7 @@
             [_buttons enumerateObjectsUsingBlock:^(ZEROAlertItem *_Nonnull item, NSUInteger idx, BOOL * _Nonnull stop) {
                 
                 UIButton *button = [self alertButtonWith:item];
-                button.frame     = [_frameManager calculateNormalButtonFrame:idx];
+                button.frame     = [self.frameManager calculateNormalButtonFrame:idx];
                 button.tag       = buttonTag + idx;
                 
                 [self addSubview:button];
@@ -368,7 +368,7 @@
         }
         else{
             // -----按钮列表模式
-            if (idx == 0 && _cancelButtonTitle) {
+            if (idx == 0 && self.cancelButtonTitle) {
                 // -----第一个是cancel
                 buttonType = ZEROAlertViewButtonTypeButtonsCancel;
             }

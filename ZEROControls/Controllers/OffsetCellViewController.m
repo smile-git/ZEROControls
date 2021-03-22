@@ -21,7 +21,8 @@ static NSString *offsetCellHeaderViewID = @"OffsetCellHeaderView";
 @interface OffsetCellViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) OffsetCellModel *rootModel;
+//@property (nonatomic, strong) OffsetCellModel *rootModel;
+@property (nonatomic, strong) NSMutableArray <DailyListModel *> *dailyList;
 
 @end
 
@@ -37,21 +38,40 @@ static NSString *offsetCellHeaderViewID = @"OffsetCellHeaderView";
 
 - (void)loadWanDouJiaData {
     
-    [[ApiTool shareApiTool] get:@"http://baobab.wandoujia.com/api/v1/feed" params:@{@"u"    : @"011f2924aa2cf27aa5dc8066c041fe08116a9a0c", @"v"    : @"1.8.0", @"date" : [DateFormatter dateStringFromDate:[NSDate date] outputDateStringFormatter:@"yyyyMMdd"], @"f"    : @"iphone", @"num" : @"5", @"vc" : @"67"} success:^(NSDictionary * _Nonnull jsonDic) {
+    NSArray *datas = @[@{@"dateString" : @"2020-06-18",
+                         @"list"       : @[@{@"title"          : @"我们的征途是星辰大海 [1]",
+                                             @"coverForDetail" : @"https://hbimg.huabanimg.com/95c1a74073e3fd69c9e7af637632fde7027b4d6a86124-g1qYW4_fw658",}]},
+                       @{@"dateString" : @"2020-06-19",
+                         @"list"       : @[@{@"title"          : @"我们的征途是星辰大海 [2]",
+                                             @"coverForDetail" : @"https://hbimg.huabanimg.com/41e430a58e083b5df8b29828194d4c8cf6b8080e17e35-gRW2z5_fw658",}]},
+                       @{@"dateString" : @"2020-06-20",
+                         @"list"       : @[@{@"title"          : @"我们的征途是星辰大海 [3]",
+                                             @"coverForDetail" : @"https://hbimg.huabanimg.com/463cda475956270d6d605ebacd865a80169a57967579f-0pe50Y_fw658",}]},
+                       @{@"dateString" : @"2020-06-21",
+                         @"list"       : @[@{@"title"          : @"我们的征途是星辰大海 [4]",
+                                             @"coverForDetail" : @"https://hbimg.huabanimg.com/fae81cd6c474e36586a2b9327eecaf9bca46fa068c812-sdLSnP_fw658",}]},
+                       @{@"dateString" : @"2020-06-22",
+                         @"list"       : @[@{@"title"          : @"我们的征途是星辰大海 [5]",
+                                             @"coverForDetail" : @"https://hbimg.huabanimg.com/648bc2e1a6350a1d48b331168000697696cdf4b136928-dgFED1_fw658",}]},
+                       @{@"dateString" : @"2020-06-23",
+                         @"list"       : @[@{@"title"          : @"我们的征途是星辰大海 [6]",
+                                             @"coverForDetail" : @"https://hbimg.huabanimg.com/7de62a3fa6b4c98a9128ff73071e596cf7de898226d30-uDl8i5_fw658",}]},
+                       @{@"dateString" : @"2020-06-24",
+                         @"list"       : @[@{@"title"          : @"我们的征途是星辰大海 [7]",
+                                             @"coverForDetail" : @"https://hbimg.huabanimg.com/85359db24a13794021bc6c3f609ce640f8a248f7b868c-PhP0iD_fw658",}]},
+                       @{@"dateString" : @"2020-06-25",
+                         @"list"       : @[@{@"title"          : @"我们的征途是星辰大海 [8]",
+                                             @"coverForDetail" : @"https://hbimg.huabanimg.com/dae0e0a17d430af8f129113d12488f73f64043481ced1-FL88bJ_fw658",}]}];
+    
+    self.dailyList = [NSMutableArray array];
+    [datas enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        DailyListModel *model = [[DailyListModel alloc] initWithDictionary:obj];
+        [self.dailyList addObject:model];
+    }];
+    [self.tableView reloadData];
+    [UIView animateWithDuration:0.5f animations:^{
         
-        self.rootModel = [[OffsetCellModel alloc] initWithDictionary:jsonDic];
-        [self.tableView reloadData];
-        [UIView animateWithDuration:0.5f animations:^{
-            
-            self.tableView.alpha = 1.f;
-        }];
-    } failure:^(NSError * _Nonnull error) {
-        
-        [[[ZEROAlertView alloc] initWithTitle:@"错误提示"
-                                      message:@"网络异常，数据加载失败，请稍后重试"
-                                  clickHandle:nil
-                            cancelButtonTitle:nil
-                            otherButtonTitles:@"确定", nil] show];
+        self.tableView.alpha = 1.f;
     }];
 }
 
@@ -79,13 +99,13 @@ static NSString *offsetCellHeaderViewID = @"OffsetCellHeaderView";
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return self.rootModel.dailyList.count;
+    return self.dailyList.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    DailyListModel *dailyModel = self.rootModel.dailyList[section];
-    return dailyModel.videoList.count;
+    DailyListModel *dailyModel = self.dailyList[section];
+    return dailyModel.list.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -97,7 +117,7 @@ static NSString *offsetCellHeaderViewID = @"OffsetCellHeaderView";
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
-    DailyListModel *dailyModel = self.rootModel.dailyList[section];
+    DailyListModel *dailyModel = self.dailyList[section];
     
     OffsetCellHeaderView *titleView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:offsetCellHeaderViewID];
     
@@ -111,8 +131,8 @@ static NSString *offsetCellHeaderViewID = @"OffsetCellHeaderView";
     
     [cell cellOffset];
     
-    DailyListModel *dailyModel = self.rootModel.dailyList[indexPath.section];
-    VideoListModel *model      = dailyModel.videoList[indexPath.row];
+    DailyListModel *dailyModel = self.dailyList[indexPath.section];
+    VideoListModel *model      = dailyModel.list[indexPath.row];
     
     cell.data      = model;
     cell.indexPath = indexPath;

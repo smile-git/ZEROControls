@@ -37,9 +37,7 @@
     [self prepare];
 }
 
-/**
- 准备工作，每行首个item的起始位置
- */
+/** 准备工作，每行首个item的起始位置 */
 - (void)prepare{
     
     for (int idx = 0; idx < _itemHeights.count; idx ++) {

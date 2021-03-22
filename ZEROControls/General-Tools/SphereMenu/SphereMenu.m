@@ -92,18 +92,18 @@ static const NSInteger kShpereButtonTag = 100;
         
         [sphereButton setImage:[UIImage imageNamed:obj] forState:UIControlStateNormal];
         [sphereButton addTarget:self action:@selector(sphereItemClick:) forControlEvents:UIControlEventTouchUpInside];
-        [_sphereItems addObject:sphereButton];
-        [_spherePositions addObject:NSStringFromCGPoint([self pointForSphereAtIndex:idx])];
+        [self.sphereItems addObject:sphereButton];
+        [self.spherePositions addObject:NSStringFromCGPoint([self pointForSphereAtIndex:idx])];
         
         // ----- 缩回动画
         UISnapBehavior *shrinkSnap = [[UISnapBehavior alloc] initWithItem:sphereButton snapToPoint:self.center];
         shrinkSnap.damping = kSphereDamping;
-        [_shrinkSnaps addObject:shrinkSnap];
+        [self.shrinkSnaps addObject:shrinkSnap];
         
         // ----- 弹出动画
         UISnapBehavior *expandSnap = [[UISnapBehavior alloc] initWithItem:sphereButton snapToPoint:[self pointForSphereAtIndex:idx]];
         expandSnap.damping = kSphereDamping;
-        [_expandSnaps addObject:expandSnap];
+        [self.expandSnaps addObject:expandSnap];
     }];
 }
 
