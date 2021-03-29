@@ -73,6 +73,13 @@ static NSString *offsetCellHeaderViewID = @"OffsetCellHeaderView";
         
         self.tableView.alpha = 1.f;
     }];
+    
+    if (@available(iOS 11.0,*)) {
+        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+    
 }
 
 - (void)createTableView {
