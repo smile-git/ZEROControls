@@ -16,7 +16,7 @@
 // 标准的RGBA设置
 #define UIColorRGBA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
 
-#define  iPhoneX        (WIDTH == 375.f && HEIGHT == 812.f ? YES : NO)
+#define  iPhoneX        (HEIGHT == 812.0f || HEIGHT == 896.0f || HEIGHT == 844.0f || HEIGHT == 926.0f)
 #define NavHeight       (iPhoneX ? 88 : 64)
 
 #endif /* Define_h */
