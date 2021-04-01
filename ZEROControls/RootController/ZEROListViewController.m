@@ -58,7 +58,8 @@
                        [ZEROListModel initWithName:@"级联菜单" controller:@"TwoLevelLinkageViewController"],
                        [ZEROListModel initWithName:@"跑马灯效果" controller:@"MarqueeViewController"],
                        [ZEROListModel initWithName:@"折叠cell" controller:@"FoldingCellViewController"],
-                       [ZEROListModel initWithName:@"UIScrollView视差效果动画" controller:@"ScrollImageViewController"],
+                       [ZEROListModel initWithName:@"UIScrollView视差效果动画(copy)" controller:@"ScrollImageViewController"],
+                       [ZEROListModel initWithName:@"刮奖效果(copy)" controller:@"ScratchImageViewController"],
     ];
 
     self.items = [NSMutableArray array];
