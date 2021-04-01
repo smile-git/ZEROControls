@@ -196,14 +196,28 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    // 右边tableView正在滑动而此时正在点击左边tableView的cell
+    if ([tableView isEqual:_leftSideTableView] && _rightSideTableView.isDecelerating && _rightSideTableView.isDragging) {
+
+        [_rightSideTableView setContentOffset:_rightSideTableView.contentOffset animated:NO];
+        [_leftSideTableView setContentOffset:_leftSideTableView.contentOffset animated:NO];
+//        return;
+    }
+    
     if ([tableView isEqual:_leftSideTableView]) {
         
+        NSInteger oldSelectedIndex = [self leftTableViewCurrentSelectedCellIndex];
         NSInteger newSelectIndex = indexPath.row;
         
         // ----- 触发代理方法
         if ([self.delegate respondsToSelector:@selector(twoLevelLinkageView:selectedLeftSideTableViewItemRow:item:)]) {
             
             [self.delegate twoLevelLinkageView:self selectedLeftSideTableViewItemRow:indexPath.row item:self.leftModels[newSelectIndex].adapter.data];
+        }
+        
+        // ----- 重复点击同一个cell无效
+        if (oldSelectedIndex == newSelectIndex) {
+            return;;
         }
         
         // ----- 点击之后，更新旧的和新的cell的选中状态
@@ -269,7 +283,7 @@
 
 - (void)makeIsInSelectedAnimationDurationEquilNO {
     
-    NSLog(@"makeIsInSelectedAnimationDurationEquilNO");
+//    NSLog(@"makeIsInSelectedAnimationDurationEquilNO");
     self.isSelectedLeft = NO;
 }
 

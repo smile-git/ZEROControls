@@ -99,8 +99,8 @@ static int viewTag = 0x11;
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
     CGFloat X = scrollView.contentOffset.x;
-    NSLog(@"scrollView.contentSize.height=%f", scrollView.contentSize.height);
-    NSLog(@"scrollView.height=%f", scrollView.height);
+//    NSLog(@"scrollView.contentSize.height=%f", scrollView.contentSize.height);
+//    NSLog(@"scrollView.height=%f", scrollView.height);
     for (NSInteger i = 0; i < self.picturesArray.count; i++) {
         
         MoreInfoView *show = [scrollView viewWithTag:viewTag + i];

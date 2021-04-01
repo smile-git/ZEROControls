@@ -92,8 +92,11 @@
 		874BB80F1F029148002C343F /* photo-1447877015176-3099cb49cd6a.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 874BB8001F029148002C343F /* photo-1447877015176-3099cb49cd6a.jpg */; };
 		874BB8101F029148002C343F /* photo-1448318440207-ef1893eb8ac0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 874BB8011F029148002C343F /* photo-1448318440207-ef1893eb8ac0.jpg */; };
 		874BB8111F029148002C343F /* photo-1449157291145-7efd050a4d0e.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 874BB8021F029148002C343F /* photo-1449157291145-7efd050a4d0e.jpg */; };
+		877706AD26156EF30078F438 /* ScratchImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 877706AC26156EF30078F438 /* ScratchImageViewController.m */; };
 		87879E481F0363C7007EF6ED /* SlidingDoor1Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87879E471F0363C7007EF6ED /* SlidingDoor1Cell.xib */; };
 		879671F0201C1B1200522592 /* StyleKitName.m in Sources */ = {isa = PBXBuildFile; fileRef = 879671EF201C1B1200522592 /* StyleKitName.m */; };
+		879BB0D12611C74E00F33E55 /* MDMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 879BB0D02611C74E00F33E55 /* MDMatrix.m */; };
+		879BB0DA2611CDD900F33E55 /* MDScratchImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 879BB0D92611CDD800F33E55 /* MDScratchImageView.m */; };
 		879F597B1DDC1F94000185F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F597A1DDC1F94000185F8 /* main.m */; };
 		879F597E1DDC1F94000185F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F597D1DDC1F94000185F8 /* AppDelegate.m */; };
 		879F59811DDC1F94000185F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F59801DDC1F94000185F8 /* ViewController.m */; };
@@ -383,9 +386,15 @@
 		874BB8001F029148002C343F /* photo-1447877015176-3099cb49cd6a.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-1447877015176-3099cb49cd6a.jpg"; sourceTree = "<group>"; };
 		874BB8011F029148002C343F /* photo-1448318440207-ef1893eb8ac0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-1448318440207-ef1893eb8ac0.jpg"; sourceTree = "<group>"; };
 		874BB8021F029148002C343F /* photo-1449157291145-7efd050a4d0e.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-1449157291145-7efd050a4d0e.jpg"; sourceTree = "<group>"; };
+		877706AB26156EF30078F438 /* ScratchImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScratchImageViewController.h; sourceTree = "<group>"; };
+		877706AC26156EF30078F438 /* ScratchImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScratchImageViewController.m; sourceTree = "<group>"; };
 		87879E471F0363C7007EF6ED /* SlidingDoor1Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlidingDoor1Cell.xib; sourceTree = "<group>"; };
 		879671EE201C1B1200522592 /* StyleKitName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleKitName.h; sourceTree = "<group>"; };
 		879671EF201C1B1200522592 /* StyleKitName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleKitName.m; sourceTree = "<group>"; };
+		879BB0CF2611C74E00F33E55 /* MDMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDMatrix.h; sourceTree = "<group>"; };
+		879BB0D02611C74E00F33E55 /* MDMatrix.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDMatrix.m; sourceTree = "<group>"; };
+		879BB0D82611CDD800F33E55 /* MDScratchImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDScratchImageView.h; sourceTree = "<group>"; };
+		879BB0D92611CDD800F33E55 /* MDScratchImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDScratchImageView.m; sourceTree = "<group>"; };
 		879F59761DDC1F94000185F8 /* ZEROControls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZEROControls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879F597A1DDC1F94000185F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		879F597C1DDC1F94000185F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -955,6 +964,15 @@
 			path = assets;
 			sourceTree = "<group>";
 		};
+		877706AA26156ED30078F438 /* ScratchImageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				877706AB26156EF30078F438 /* ScratchImageViewController.h */,
+				877706AC26156EF30078F438 /* ScratchImageViewController.m */,
+			);
+			name = ScratchImageViewController;
+			sourceTree = "<group>";
+		};
 		8796717F201B255400522592 /* StyleKitName */ = {
 			isa = PBXGroup;
 			children = (
@@ -962,6 +980,17 @@
 				879671EF201C1B1200522592 /* StyleKitName.m */,
 			);
 			path = StyleKitName;
+			sourceTree = "<group>";
+		};
+		879BB0CE2611C1ED00F33E55 /* MDScratchImageView */ = {
+			isa = PBXGroup;
+			children = (
+				879BB0CF2611C74E00F33E55 /* MDMatrix.h */,
+				879BB0D02611C74E00F33E55 /* MDMatrix.m */,
+				879BB0D82611CDD800F33E55 /* MDScratchImageView.h */,
+				879BB0D92611CDD800F33E55 /* MDScratchImageView.m */,
+			);
+			path = MDScratchImageView;
 			sourceTree = "<group>";
 		};
 		879F596D1DDC1F94000185F8 = {
@@ -1068,6 +1097,7 @@
 				87345280220151FE00092044 /* MarqueeViewControl */,
 				87B5C97E2227C4220014EDCD /* FoldingCellViewController */,
 				87F5C2162609BD000098FFD4 /* ScrollImageViewController */,
+				877706AA26156ED30078F438 /* ScratchImageViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1126,6 +1156,7 @@
 		879F59D91DDCD15C000185F8 /* General-Tools */ = {
 			isa = PBXGroup;
 			children = (
+				879BB0CE2611C1ED00F33E55 /* MDScratchImageView */,
 				87F5C1FD2608A11D0098FFD4 /* Math */,
 				87B5C9822227C4670014EDCD /* FoldingCell */,
 				873452842202DA6500092044 /* MarqueeControl */,
@@ -1914,6 +1945,7 @@
 				871B8A522120503A00E8FE87 /* DateFormatter.m in Sources */,
 				8731EAB61F54220E002DE607 /* TreeStructureViewController.m in Sources */,
 				871677D41DE208EC003772C0 /* UIImageView+WebCache.m in Sources */,
+				879BB0DA2611CDD900F33E55 /* MDScratchImageView.m in Sources */,
 				879F5A2D1DDCD545000185F8 /* NavPushViewController.m in Sources */,
 				871677C91DE208EC003772C0 /* SDWebImageCompat.m in Sources */,
 				87F5C2002608A14B0098FFD4 /* Math.m in Sources */,
@@ -1924,6 +1956,7 @@
 				87F801AC20185C5000AD1299 /* RightLevelLinkageModel.m in Sources */,
 				871677861DE0C87D003772C0 /* WWaterFallLayout.m in Sources */,
 				871677931DE0C8A5003772C0 /* ResponseData.m in Sources */,
+				877706AD26156EF30078F438 /* ScratchImageViewController.m in Sources */,
 				874475F21DEF522700E5FF2A /* ZEROAlertItem.m in Sources */,
 				87EBFAE71DDEC1E600677DB9 /* UIView+Ext.m in Sources */,
 				879F597B1DDC1F94000185F8 /* main.m in Sources */,
@@ -1933,6 +1966,7 @@
 				879F5A161DDCD1C0000185F8 /* POPBasicAnimation.mm in Sources */,
 				8734CC3B1DE76F1700F5E976 /* UIImage+ImageEffects.m in Sources */,
 				87FAB9B41F0B960F00B65B0A /* PhotoTweaksViewController.m in Sources */,
+				879BB0D12611C74E00F33E55 /* MDMatrix.m in Sources */,
 				87A12ADA1E278B0E0047CA12 /* ZEROVideoPlayerController.m in Sources */,
 				879F5A181DDCD1C0000185F8 /* POPCustomAnimation.mm in Sources */,
 				87F4CEE21DF110FD008B6586 /* AlertListViewController.m in Sources */,

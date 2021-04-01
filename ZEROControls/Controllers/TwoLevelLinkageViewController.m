@@ -43,7 +43,7 @@
     self.linkageView = [[TwoLevelLinkageView alloc] initWithFrame:CGRectMake(0, NavHeight, WIDTH, HEIGHT - NavHeight) leftSideWidth:leftSideWidth];
     
     //----- 注册两个tableView的cell和header
-    [_linkageView registCellWithTableViews:^(UITableView *leftSideTableView, UITableView *rightSideTableView) {
+    [self.linkageView registCellWithTableViews:^(UITableView *leftSideTableView, UITableView *rightSideTableView) {
 
         [leftSideTableView registerClass:[LeftSideLinkageCell class] forCellReuseIdentifier:@"LeftSideLinkageCell"];
 
@@ -51,7 +51,7 @@
         [rightSideTableView registerClass:[RightSideLinkageHeaderView class] forHeaderFooterViewReuseIdentifier:@"RightSideLinkageHeaderView"];
     }];
     
-    [self.view addSubview:_linkageView];
+    [self.view addSubview:self.linkageView];
 }
 
 - (void)reloadData {
