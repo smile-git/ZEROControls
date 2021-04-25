@@ -1,32 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="526" id="KGk-i7-Jjw" customClass="FoldingDemoCell" customModule="FoldingCell" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="526" id="KGk-i7-Jjw" customClass="FoldingDemoCell" customModule="ZEROControls" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="600" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="600" height="666.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="600" height="667"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmu-er-Gj9" customClass="RotatedView" customModule="FoldingCell" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmu-er-Gj9" customClass="RotatedView" customModule="ZEROControls" customModuleProvider="target">
                         <rect key="frame" x="20" y="7" width="560" height="165"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u68-Fs-Yc9" userLabel="LeftView">
                                 <rect key="frame" x="0.0" y="0.0" width="88" height="165"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgR-FO-dPg" userLabel="Close Number">
-                                        <rect key="frame" x="22" y="33" width="44" height="29"/>
+                                        <rect key="frame" x="22.5" y="33" width="43" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -34,7 +32,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TODAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcg-SU-cLh">
                                         <rect key="frame" x="18" y="103" width="34" height="12"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <color key="textColor" systemColor="lightTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="06:30 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYx-xC-y52">
@@ -107,7 +105,7 @@
                                     <constraint firstItem="seQ-gF-f5b" firstAttribute="top" secondItem="jlg-Q9-TNf" secondAttribute="top" id="MDM-Oa-3MS"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PXH-em-z1S" secondAttribute="trailing" id="TV5-HP-oub"/>
                                     <constraint firstAttribute="height" constant="40" id="elZ-Vh-fF0"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="seQ-gF-f5b" secondAttribute="trailing" constant="97" id="vdQ-wD-xeg"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="seQ-gF-f5b" secondAttribute="trailing" id="vdQ-wD-xeg"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s7T-wf-oTE" userLabel="CenterView">
@@ -140,7 +138,7 @@
                                 <rect key="frame" x="410" y="100" width="150" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="light" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rL8-Gq-TYr">
-                                        <rect key="frame" x="0.0" y="19.5" width="33.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="19.5" width="33" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.20000000000000001" green="0.23921568630000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -253,7 +251,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="light" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUx-k9-A0e">
-                                                <rect key="frame" x="146" y="19" width="33.5" height="21"/>
+                                                <rect key="frame" x="146.5" y="19" width="33" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -344,7 +342,7 @@
                                     <constraint firstItem="j1Q-dL-xKB" firstAttribute="top" secondItem="KK2-ZU-1E1" secondAttribute="bottom" id="zUF-7P-e4i"/>
                                 </constraints>
                             </view>
-                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uu6-Xb-xzX" userLabel="Second Container View" customClass="RotatedView" customModule="FoldingCell" customModuleProvider="target">
+                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uu6-Xb-xzX" userLabel="Second Container View" customClass="RotatedView" customModule="ZEROControls" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="165" width="560" height="165"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u4w-Ro-NfX" userLabel="center line">
@@ -488,7 +486,7 @@
                                     <constraint firstItem="5rm-x0-8Qg" firstAttribute="leading" secondItem="uu6-Xb-xzX" secondAttribute="leading" id="wbt-SJ-h0D"/>
                                 </constraints>
                             </view>
-                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MWD-VS-5yM" userLabel="Third Container View" customClass="RotatedView" customModule="FoldingCell" customModuleProvider="target">
+                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MWD-VS-5yM" userLabel="Third Container View" customClass="RotatedView" customModule="ZEROControls" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="330" width="560" height="72"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F3g-r2-ycA" userLabel="fromView">
@@ -566,10 +564,10 @@
                                     <constraint firstItem="pid-Or-bTf" firstAttribute="width" secondItem="F3g-r2-ycA" secondAttribute="width" id="raQ-8r-vW4"/>
                                 </constraints>
                             </view>
-                            <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvt-Y0-YVL" customClass="RotatedView" customModule="FoldingCell" customModuleProvider="target">
+                            <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvt-Y0-YVL" customClass="RotatedView" customModule="ZEROControls" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="402" width="560" height="72"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gy1-UA-UiW">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gy1-UA-UiW">
                                         <rect key="frame" x="22" y="3" width="516" height="42"/>
                                         <color key="backgroundColor" red="0.99607843137254903" green="0.74509803921568629" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -652,5 +650,8 @@
         <image name="image" width="681" height="330"/>
         <image name="photo" width="98" height="98"/>
         <image name="stars" width="97" height="17"/>
+        <systemColor name="lightTextColor">
+            <color white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
